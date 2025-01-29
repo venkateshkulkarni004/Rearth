@@ -578,7 +578,169 @@
            
     </main>
 
-    
+
+    <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials section light-background">
+    <div class="container section-title" style="text-align: center;">
+      <h2>What People Say About REarth</h2>
+    </div>
+  
+    <div class="container">
+      <div class="testimonials-grid">
+        <!-- Testimonial Items (3 rows x 3 columns) -->
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"REarth's approach to sustainability is both innovative and practical. Their products have made a huge difference to our operations!"</p>
+          <div class="profile"><h3>Neha Sharma</h3><h4>Environmental Activist</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"The eco-friendly solutions from REarth helped us reduce our waste significantly. Their commitment to sustainability is evident in their work!"</p>
+          <div class="profile"><h3>Amit Verma</h3><h4>CEO, GreenTech Solutions</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"Thanks to REarth's initiatives, our entire community has adopted greener practices. Their programs are easy to follow and highly effective!"</p>
+          <div class="profile"><h3>Rahul Desai</h3><h4>Founder, EcoLiving India</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"REarth's solutions helped us significantly lower our carbon footprint. It's truly a win-win for both business and the environment!"</p>
+          <div class="profile"><h3>Priya Kapoor</h3><h4>Eco-conscious Consumer</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"The products from REarth are not only sustainable but also extremely durable. We are thrilled with the impact they’ve had on our operations!"</p>
+          <div class="profile"><h3>Rohan Gupta</h3><h4>Head of Operations, CleanFuture Inc.</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"REarth’s commitment to sustainability has been a game-changer for our company. Their products are top-quality and impactful!"</p>
+          <div class="profile"><h3>Simran Kaur</h3><h4>Climate Advocate</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"Working with REarth has been a rewarding experience. They provided actionable solutions that helped us meet our sustainability goals."</p>
+          <div class="profile"><h3>Vikram Soni</h3><h4>COO, GreenTech Solutions</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"Thanks to REarth, we’ve adopted more sustainable practices that have led to long-term cost savings. Highly recommended!"</p>
+          <div class="profile"><h3>Anita Deshmukh</h3><h4>Director, CleanFuture Corp.</h4></div>
+        </div>
+  
+        <div class="testimonial-item">
+          <div class="stars">★★★★★</div>
+          <p>"The innovative products by REarth have allowed us to stay ahead of the curve in terms of sustainability. Truly impressive!"</p>
+          <div class="profile"><h3>Rajesh Patel</h3><h4>Founder, Green Enterprises</h4></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <style>
+    /* Testimonials Section */
+    .testimonials {
+      padding: 60px 0;
+      background-color: #f8f9fa;
+    }
+  
+    .testimonials .section-title {
+      margin-bottom: 30px;
+    }
+  
+    /* Grid Layout for 3x3 Testimonials */
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* 3 columns */
+      grid-gap: 30px; /* Increased spacing between boxes */
+      justify-items: center;
+    }
+  
+    .testimonial-item {
+      background: #fff;
+      padding: 40px; /* Increased padding inside the box */
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      width: 100%;
+      height: 400px; /* Increased box height */
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+  
+    .testimonial-item .stars {
+      color: #FFD700;
+      font-size: 1.5rem; /* Increased star size */
+      margin-bottom: 20px; /* Increased spacing below stars */
+    }
+  
+    .testimonial-item p {
+      color: #555;
+      font-size: 16px; /* Increased font size for text */
+      line-height: 1.6; /* Increased line height for better readability */
+      margin: 20px 0; /* Increased margin around text */
+      flex-grow: 1;
+    }
+  
+    .profile h3 {
+      font-size: 18px; /* Increased name font size */
+      color: #2c3e50;
+      margin-top: 20px;
+    }
+  
+    .profile h4 {
+      font-size: 14px; /* Increased role font size */
+      color: #7f8c8d;
+    }
+  
+    /* Mobile-Friendly Adjustments */
+    @media (max-width: 767px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr; /* Show 1 column for small screens */
+        padding: 0 10px;
+      }
+  
+      .testimonial-item {
+        padding: 25px;
+        margin: 0 10px;
+        height: 400px; /* Adjust height for mobile */
+      }
+  
+      .testimonials {
+        padding: 40px 0;
+      }
+    }
+  
+    @media (max-width: 1024px) {
+      .testimonials-grid {
+        grid-template-columns: 1fr 1fr; /* Show 2 columns for medium screens */
+      }
+    }
+  
+    @media (max-width: 480px) {
+      .testimonial-item {
+        height: 300px; /* Adjust height for very small screens */
+      }
+  
+      .testimonial-item .stars {
+        font-size: 1.3rem;
+      }
+  
+      .testimonial-item p {
+        font-size: 14px;
+      }
+    }
+  </style>
+  
     <footer>
         <div class="footer-wrapper">
            <!-- Footer Start-->
