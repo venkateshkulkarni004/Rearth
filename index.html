@@ -24,6 +24,8 @@
     <link rel="stylesheet" href="assets/css/slick.css">
     <link rel="stylesheet" href="assets/css/nice-select.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
+    
 </head>
 
 <body>
@@ -49,13 +51,23 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                            <!-- Logo -->
+<!-- <div class="col-xl-2 col-lg-2">
+    <div class="logo">
+        <a href="index.html">
+            <img src="assets\img\logo\Rearth.Big.png" alt="" style="width:200px; height: auto;">
+        </a>
+    </div>
+</div> -->
 <div class="col-xl-2 col-lg-2">
     <div class="logo">
         <a href="index.html">
-            <img src="assets/img/logo/logo.png" alt="" style="width: 300px; height: auto;">
+            <img src="assets\img\logo\Rearth.Big.png" alt="" style="width:180px; height: auto;">
         </a>
+        <!-- Text Below the Image with matching size -->
+        
     </div>
 </div>
+
 <div class="col-xl-10 col-lg-10">
 
                                 <div class="menu-wrapper  d-flex align-items-center justify-content-end">
@@ -102,104 +114,87 @@
     </header>
     <main>
         
-             
-        <section class="slider-section">
-            <button class="slider-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-        
-            <div class="slider-container" id="slider">
-                <div class="slide">
-                    <img src="assets/img/images/7.jpg" alt="Image 1">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/images/g1.jpg" alt="Image 2">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/images/g2.jpg" alt="Image 3">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/images/g3.jpg" alt="Image 4">
-                </div>
-                <div class="slide">
-                    <img src="assets/img/images/g5.jpg" alt="Image 5">
-                </div>
-            </div>
-        
-            <button class="slider-btn next" onclick="moveSlide(1)">&#10095;</button>
-        </section>
-        
-        <style>
-            .slider-section {
-                width: 100%;
-                position: relative;
-                overflow: hidden;
-                border-radius: 15px; /* Add rounded corners for a sleek look */
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
-            }
-        
-            .slider-container {
-                display: flex;
-                transition: transform 0.5s ease-in-out;
-                width: 500%; /* 100% for each of the 5 slides */
-            }
-        
-            .slide {
-                width: 20%; /* Each slide takes 20% width */
-                flex-shrink: 0;
-                position: relative;
-            }
-        
-            .slide img {
-                width: 100%; /* Full width of its container */
-                height: 400px; /* Keeps the height fixed */
-                object-fit: cover; /* Ensures the image covers the space */
-                border-radius: 15px; /* Round the corners of the images */
-            }
-        
-            .slider-btn {
-                position: absolute;
-                top: 50%;
-                transform: translateY(-50%);
-                background: rgba(0, 0, 0, 0.6); /* Darker background for better visibility */
-                color: white;
-                border: none;
-                cursor: pointer;
-                padding: 15px;
-                font-size: 25px;
-                z-index: 100;
-                border-radius: 50%;
-                transition: background 0.3s ease;
-            }
-        
-            .slider-btn:hover {
-                background: rgba(0, 0, 0, 0.8); /* Change the background on hover */
-            }
-        
-            .prev {
-                left: 20px;
-            }
-        
-            .next {
-                right: 20px;
-            }
-        </style>
-        
-        <script>
-            let slideIndex = 0;
-        
-            function moveSlide(step) {
-                const slider = document.getElementById("slider");
-                const totalSlides = document.querySelectorAll(".slide").length;
-        
-                slideIndex += step;
-                if (slideIndex >= totalSlides) slideIndex = 0;
-                if (slideIndex < 0) slideIndex = totalSlides - 1;
-        
-                slider.style.transform = `translateX(-${slideIndex * 20}%)`; // Adjust for 5 slides
-            }
-        
-            setInterval(() => moveSlide(1), 5000); // Auto-slide every 5 seconds
-        </script>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<div class="gradient-container">
+    <section class="slider-section">
+        <button class="slider-btn prev btn btn-outline-light btn-sm mt-4 know-more-btn" onclick="moveSlide(-1)">&#10094;</button>
+
+        <div class="slider-container" id="slider">
+            <div class="slide"><img src="assets/img/gallery/h1.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="assets/img/gallery/h2.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="assets/img/gallery/h3.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="assets/img/gallery/h4.jpg" alt="Image 4"></div>
+            <div class="slide"><img src="assets/img/gallery/h5.jpg" alt="Image 5"></div>
+            <div class="slide"><img src="assets/img/gallery/h6.jpg" alt="Image 6"></div>
+            <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div>
+            <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div>
+        </div>
+
+        <button class="slider-btn next btn btn-outline-light btn-sm mt-4 know-more-btn" onclick="moveSlide(1)">&#10095;</button>
+    </section>
+</div>
+
+<style>
+    .gradient-container {
+        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+        padding: 30px;
+    }
+
+    .slider-section {
+        width: 60%;
+        margin: 0 auto;
+        overflow: hidden;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        position: relative;
+        background: transparent;
+    }
+
+    .slider-container {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+        width: 800%; /* 100% for each of the 8 slides */
+    }
+
+    .slide {
+        width: 12.5%; /* Each slide takes 12.5% width */
+        flex-shrink: 0;
+        position: relative;
+    }
+
+    .slide img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    .slider-btn {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border: none;
+        cursor: pointer;
+        z-index: 100;
+    }
+
+    .prev { left: 20px; }
+    .next { right: 20px; }
+</style>
+
+<script>
+    let slideIndex = 0;
+    function moveSlide(step) {
+        const slider = document.getElementById("slider");
+        const totalSlides = document.querySelectorAll(".slide").length;
+        slideIndex += step;
+        if (slideIndex >= totalSlides) slideIndex = 0;
+        if (slideIndex < 0) slideIndex = totalSlides - 1;
+        slider.style.transform = `translateX(-${slideIndex * 12.5}%)`; // Adjust for 8 slides
+    }
+    setInterval(() => moveSlide(1), 5000);
+</script>
+
         
 <!-- Video Player Area End -->
 
@@ -214,7 +209,9 @@
                 At REarth, our goal is to inspire and mobilize individuals, communities, and organizations worldwide to take immediate and impactful action on climate change, fostering a collective movement towards a sustainable, resilient, and equitable planet for future generations. Through education, awareness, innovative solutions, and collaborative partnerships, we aim to contribute significantly to achieving the United Nations Sustainable Development Goals (SDGs) and resolving global environmental challenges.
             </p>
             <!-- Read More Button -->
-            <button class="btn-read-more">Read More</button>
+            <a href="#know-more" class="btn btn-outline-light btn-sm mt-4 know-more-btn">Know More</a>
+
+
         </div>
     </div>
 
@@ -264,24 +261,23 @@
         }
 
         .btn-read-more {
-            background-color: #288421;
-            color: #ffffff;
-            padding: 12px 30px; /* Smaller padding for the button */
-            border: none;
-            cursor: pointer;
-            font-size: 1rem; /* Smaller font size for the button */
-            transition: background-color 0.3s ease, color 0.3s ease;
-            border-radius: 5px; /* Rounded edges for a modern look */
-            font-weight: bold;
-            display: inline-block;
-            margin-top: 20px; /* Add spacing above button */
-        }
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 15px;
+    background-color: #2c6b2f; /* Nature-inspired green */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    transition: background-color 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+}
 
-        .btn-read-more:hover {
-            background-color: #53eb12;
-            color: #000000;
-            border: 1px solid #000000;
-        }
+.btn-read-more:hover {
+    background-color: #4a9d4f; /* Lighter green on hover */
+}
 
         /* Responsive design improvements */
         @media (max-width: 768px) {
@@ -305,52 +301,6 @@
 <br>
 
 
-        <!-- Our Reach Section -->
-        
-
-
-        <!--? Services Area Start -->
-        <!-- <div class="service-area section-padding30">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-4 col-md-6 col-sm-11">
-                        <div class="single-cat text-center mb-30">
-                            <div class="cat-icon">
-                                <img src="assets\img\gallery\8418350-removebg-preview.png" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="#">Climate Education</a></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-11">
-                        <div class="single-cat active text-center mb-30">
-                            <div class="cat-icon">
-                                <img src="assets\img\gallery\3358001.jpg" alt="">
-                            </div>
-                            <div class="cat-cap">
-                                <h5><a href="#">Community Engagement</a></h5>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-sm-11">
-                        <div class="single-cat text-center mb-30">
-                            <div class="cat-icon">
-                                <img src="assets\img\gallery\2102.i301.005_World_Health_Day_isometric_composition.jpg" alt="">
-                            </div>
-                            <br>
-                            <br>
-                            <div class="cat-cap">
-                                <h5><a href="#">Climate Research</a></h5>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Services Area End -->
-         <!-- Programs Section -->
-
          <section class="focus-section">
             <h2>Our Focus Areas</h2>
             <div class="container">
@@ -359,7 +309,7 @@
                     <div class="overlay">Climate Education</div>
                     <div class="details">
                         Empowering individuals, especially students and educators, with scientific knowledge and tools to understand climate change.
-                        <a href="#" class="btn">Know More</a>
+                        <a href="#know-more" class="btn btn-outline-light btn-sm mt-4 know-more-btn">Know More</a>
                     </div>
                 </div>
         
@@ -368,7 +318,7 @@
                     <div class="overlay">Climate Awareness</div>
                     <div class="details">
                         Bridging the gap between academic research and public understanding through campaigns, discussions, and interactive simulations.
-                        <a href="#" class="btn">Know More</a>
+                        <a href="#know-more" class="btn header-btn">Know More</a>
                     </div>
                 </div>
         
@@ -377,7 +327,7 @@
                     <div class="overlay">Community Engagement</div>
                     <div class="details">
                         Mobilizing communities to take collective action through hands-on initiatives, fostering collaboration for a sustainable future.
-                        <a href="#" class="btn">Know More</a>
+                        <a href="#" class="btn header-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -501,8 +451,8 @@
 
 /* Section Styling */
 .rearth-intro {
-    background: rgb(9, 204, 127); /* Green Background */
-    color: white; /* All Text in Section is White */
+    background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE); /* Gradient Background */
+    color: #fff; /* White Text */
     padding: 80px 10%;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
@@ -510,17 +460,17 @@
 
 /* Title Styling */
 .rearth-intro .title {
-    font-size: 3rem; /* Large Title */
+    font-size: 3rem;
     font-weight: bold;
     margin-bottom: 20px;
-    color: white;
+    color: #fff; /* White Title */
 }
 
 /* Paragraph Styling */
 .rearth-intro .description {
-    font-size: 1.5rem; /* Big Font for Readability */
+    font-size: 1.5rem;
     line-height: 1.8;
-    color: white;
+    color: #fff; /* White Text */
 }
 
 /* Responsive Design */
@@ -563,7 +513,7 @@
                         <div class="duration">2.5 hours</div>
                         <h3>EnROADS Workshop</h3>
                         <p class="description">Cutting-edge climate simulation tool developed with MIT Sloan to explore policy impacts through real-time modeling.</p>
-                        <a href="#" class="program-btn">Know More</a>
+                        <a href="#" class="btn header-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -578,7 +528,7 @@
                         <div class="duration">3 hours</div>
                         <h3>Climate Fresk</h3>
                         <p class="description">Collaborative card-based workshop revealing climate change complexity through interactive systems mapping.</p>
-                        <a href="#" class="program-btn">Know More</a>
+                        <a href="#" class="btn header-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -594,7 +544,7 @@
                         <h3>Biodiversity</h3>
                         <p class="description">Exploring biodiversity's critical role in climate systems and practical conservation strategies.</p>
                        <br>
-                        <a href="#" class="program-btn">Know More</a>
+                        <a href="#" class="btn header-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -609,7 +559,7 @@
                         <div class="duration">1.5 hours</div>
                         <h3>2 Tonnes Challenge</h3>
                         <p class="description">Practical carbon footprint reduction workshop targeting 2 tonnes CO2/year through actionable planning.</p>
-                        <a href="#" class="program-btn">Know More</a>
+                        <a href="#" class="btn header-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -759,7 +709,7 @@ h3 {
             </div>
     
             <!-- Image Grid -->
-            <div class="row">
+            <!-- <div class="row">
                 <div class="col-md-4 col-sm-6">
                     <div class="home-blog-single">
                         <div class="blog-img">
@@ -770,7 +720,7 @@ h3 {
                             <p>Innovative ways to combat climate change.</p>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <div class="col-md-4 col-sm-6">
                     <div class="home-blog-single">
                         <div class="blog-img">
@@ -782,7 +732,7 @@ h3 {
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4 col-sm-6">
+                <!-- <div class="col-md-4 col-sm-6">
                     <div class="home-blog-single">
                         <div class="blog-img">
                             <img src="assets/img/gallery/g3.jpg" alt="Eco-friendly Lifestyle">
@@ -849,7 +799,7 @@ h3 {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
     </section>
     
     <style>
