@@ -80,7 +80,7 @@
                                                 <li><a href="#">Projects</a>
                                                     <ul class="submenu">
                                                         <li><a href="sdgstarschool.html">SDG Star School Project</a></li>
-                                                        <li><a href="women_climate_leadership.html">Women in Climate Leadership</a></li>
+                                                        <li><a href="wicl.html">Women in Climate Leadership</a></li>
                                                         <li><a href="climate_awareness_workshops.html">Climate Awareness Workshops</a></li>
                                                         <li><a href="climate_fresk.html">Climate Fresk</a></li>
                                                         <li><a href="biodiversity_collage.html">Biodiversity Collage</a></li>
@@ -115,86 +115,71 @@
     <main>
         
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-<div class="gradient-container">
-    <section class="slider-section">
-        <button class="slider-btn prev btn btn-outline-light btn-sm mt-4 know-more-btn" onclick="moveSlide(-1)">&#10094;</button>
 
-        <div class="slider-container" id="slider">
-            <div class="slide"><img src="assets/img/gallery/h1.jpg" alt="Image 1"></div>
-            <div class="slide"><img src="assets/img/gallery/h2.jpg" alt="Image 2"></div>
-            <div class="slide"><img src="assets/img/gallery/h3.jpg" alt="Image 3"></div>
-            <div class="slide"><img src="assets/img/gallery/h4.jpg" alt="Image 4"></div>
-            <div class="slide"><img src="assets/img/gallery/h5.jpg" alt="Image 5"></div>
-            <div class="slide"><img src="assets/img/gallery/h6.jpg" alt="Image 6"></div>
-            <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div>
-            <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div>
+        <div class="gradient-container">
+            <section class="slider-section">
+                <div class="slider-container" id="slider">
+                    <div class="slide"><img src="assets/img/gallery/h1.jpg" alt="Image 1"></div>
+                    <div class="slide"><img src="assets/img/gallery/h2.jpg" alt="Image 2"></div>
+                    <div class="slide"><img src="assets/img/gallery/h3.jpg" alt="Image 3"></div>
+                    <div class="slide"><img src="assets/img/gallery/h4.jpg" alt="Image 4"></div>
+                    <div class="slide"><img src="assets/img/gallery/h5.jpg" alt="Image 5"></div>
+                    <div class="slide"><img src="assets/img/gallery/h6.jpg" alt="Image 6"></div>
+                    <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div>
+                    <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div>
+                </div>
+            </section>
         </div>
-
-        <button class="slider-btn next btn btn-outline-light btn-sm mt-4 know-more-btn" onclick="moveSlide(1)">&#10095;</button>
-    </section>
-</div>
-
-<style>
-    .gradient-container {
-        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
-        padding: 30px;
-    }
-
-    .slider-section {
-        width: 60%;
-        margin: 0 auto;
-        overflow: hidden;
-        border-radius: 15px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        position: relative;
-        background: transparent;
-    }
-
-    .slider-container {
-        display: flex;
-        transition: transform 0.5s ease-in-out;
-        width: 800%; /* 100% for each of the 8 slides */
-    }
-
-    .slide {
-        width: 12.5%; /* Each slide takes 12.5% width */
-        flex-shrink: 0;
-        position: relative;
-    }
-
-    .slide img {
-        width: 100%;
-        height: 400px;
-        object-fit: cover;
-        border-radius: 15px;
-    }
-
-    .slider-btn {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        border: none;
-        cursor: pointer;
-        z-index: 100;
-    }
-
-    .prev { left: 20px; }
-    .next { right: 20px; }
-</style>
-
-<script>
-    let slideIndex = 0;
-    function moveSlide(step) {
-        const slider = document.getElementById("slider");
-        const totalSlides = document.querySelectorAll(".slide").length;
-        slideIndex += step;
-        if (slideIndex >= totalSlides) slideIndex = 0;
-        if (slideIndex < 0) slideIndex = totalSlides - 1;
-        slider.style.transform = `translateX(-${slideIndex * 12.5}%)`; // Adjust for 8 slides
-    }
-    setInterval(() => moveSlide(1), 5000);
-</script>
-
+        
+        <style>
+            .gradient-container {
+                background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+                padding: 30px;
+            }
+        
+            .slider-section {
+                width: 80%;
+                margin: 0 auto;
+                overflow: hidden;
+                border-radius: 15px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+                position: relative;
+                background: transparent;
+            }
+        
+            .slider-container {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+                width: 900%; /* 100% for each of the 8 slides */
+            }
+        
+            .slide {
+                width: 12.5%; /* Each slide takes 12.5% width */
+                flex-shrink: 0;
+                position: relative;
+            }
+        
+            .slide img {
+                width: 100%;
+                height: 400px;
+                object-fit: cover;
+                border-radius: 15px;
+            }
+        </style>
+        
+        <script>
+            let slideIndex = 0;
+            function moveSlide(step) {
+                const slider = document.getElementById("slider");
+                const totalSlides = document.querySelectorAll(".slide").length;
+                slideIndex += step;
+                if (slideIndex >= totalSlides) slideIndex = 0;
+                if (slideIndex < 0) slideIndex = totalSlides - 1;
+                slider.style.transform = `translateX(-${slideIndex * 12.5}%)`; // Adjust for 8 slides
+            }
+            setInterval(() => moveSlide(1), 5000);
+        </script>
+        
         
 <!-- Video Player Area End -->
 
@@ -696,158 +681,189 @@ h3 {
 
        <!--? Blog Area Start -->
 
-       <section class="home-blog-area pb-padding">
-        <div class="container">
-            <!-- Section Title -->
-            <div class="row justify-content-center">
-                <div class="col-12 text-center">
-                    <div class="section-title">
-                        <h2>Latest from REarth</h2>
-                        <p>Stay updated with insights, news, and stories about climate change, sustainability, and community initiatives. Join us in making a difference.</p>
+            <section class="home-blog-area pb-padding">
+                <div class="container">
+                    <!-- Section Title -->
+                    <div class="row justify-content-center">
+                        <div class="col-12 text-center">
+                            <div class="section-title">
+                                <h2>Latest from REarth</h2>
+                                <p>Stay updated with insights, news, and stories about climate change, sustainability, and community initiatives. Join us in making a difference.</p>
+                            </div>
+                        </div>
                     </div>
+            
+                    <section class="gallery-section">
+                        <div class="gallery-container">
+                            <a href="https://example.com/event1" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 1" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>En-ROADS, the Climate Policy Simulator: free session</h3>
+                                    <p>23rd March 2025, Tokyo</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event2" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 2" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Sport For Smile & Ichigo Bloom partner to accelerate climate action</h3>
+                                    <p>January 31, 2025</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event3" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 3" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Plastic Collage: free session</h3>
+                                    <p>16th February 2025, Tokyo</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event4" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 4" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Become a professional Climate Fresk Facilitator</h3>
+                                    <p>January 17, 2025</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event5" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 5" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Exploring the links between Biodiversity and Animal Welfare</h3>
+                                    <p>December 27, 2024</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event6" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 6" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Ichigo Bloom organized the first public Planetary Boundaries Fresco workshop</h3>
+                                    <p>November 29, 2024</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event7" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 7" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Biodiversity Collage, a Holiday Edition</h3>
+                                    <p>15th December 2024, Tokyo</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event8" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 8" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>Biodiversity X Animal Welfare: Special Session</h3>
+                                    <p>November 9, 2024</p>
+                                </div>
+                            </a>
+                            <a href="https://example.com/event9" class="gallery-item">
+                                <img src="assets/img/gallery/g2.jpg" alt="Image 9" class="gallery-image">
+                                <div class="gallery-text">
+                                    <h3>2tonnes, the climate action game: join the first public session</h3>
+                                    <p>November 9, 2024</p>
+                                </div>
+                            </a>
+                        </div>
+            
+                        <style>
+                            .gallery-section {
+                                padding: 20px;
+                                background-color: #ffffff;
+                                border-radius: 10px;
+                                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                            }
+            
+                            .gallery-container {
+                                display: grid;
+                                grid-template-columns: repeat(3, 1fr);
+                                gap: 20px;
+                            }
+            
+                            .gallery-item {
+                                text-decoration: none;
+                                color: inherit;
+                                border-radius: 10px;
+                                overflow: hidden;
+                                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+                                transition: transform 0.3s ease;
+                            }
+            
+                            .gallery-item:hover {
+                                transform: translateY(-5px);
+                            }
+            
+                            .gallery-image {
+                                width: 100%;
+                                height: auto;
+                                display: block;
+                                border-radius: 10px 10px 0 0;
+                                border: 5px solid transparent;
+                                border-image: linear-gradient(45deg, #46C0BE, #6DD56F, #46C0BE) 1;
+                            }
+            
+                            .gallery-text {
+                                padding: 15px;
+                                background-color: #f9f9f9;
+                                border: 1px solid #ddd;
+                                border-radius: 0 0 10px 10px;
+                                text-align: center;
+                                font-family: 'Montserrat', sans-serif;
+                            }
+            
+                            .gallery-text h3 {
+                                font-size: 1.50rem;
+                                margin: 0;
+                                color: #000000;
+                            }
+            
+                            .gallery-text p {
+                                font-size: 1.25rem;
+                                margin: 5px 0 0;
+                                color: #000000;
+                            }
+            
+                            @media (max-width: 768px) {
+                                .gallery-container {
+                                    grid-template-columns: 1fr;
+                                }
+            
+                                .gallery-text h3 {
+                                    font-size: 1rem;
+                                }
+            
+                                .gallery-text p {
+                                    font-size: 0.8rem;
+                                }
+                            }
+                        </style>
+                    </section>
                 </div>
-            </div>
+            </section>
+            
     
-            <!-- Image Grid -->
-            <!-- <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g1.jpg" alt="Climate Solutions">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Climate Solutions</a></h3>
-                            <p>Innovative ways to combat climate change.</p>
-                        </div>
-                    </div>
-                </div> -->
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g2.jpg" alt="Sustainability Actions">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Sustainability Actions</a></h3>
-                            <p>Steps towards a greener future.</p>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g3.jpg" alt="Eco-friendly Lifestyle">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Eco-friendly Lifestyle</a></h3>
-                            <p>Simple changes for a sustainable life.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g4.jpg" alt="Community Initiatives">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Community Initiatives</a></h3>
-                            <p>How local groups make a big impact.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g5.jpg" alt="Green Technology">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Green Technology</a></h3>
-                            <p>The latest advancements in eco-friendly tech.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g6.jpg" alt="Climate Awareness">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Climate Awareness</a></h3>
-                            <p>Raising consciousness about climate issues.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g7.jpg" alt="Nature Conservation">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Nature Conservation</a></h3>
-                            <p>Protecting wildlife and natural habitats.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="home-blog-single">
-                        <div class="blog-img">
-                            <img src="assets/img/gallery/g8.jpg" alt="Sustainable Development">
-                        </div>
-                        <div class="blog-cap">
-                            <h3><a href="blog_details.html">Sustainable Development</a></h3>
-                            <p>Building a future for the next generation.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-    </section>
-    
-    <style>
-    .home-blog-area {
-        padding: 50px 0;
-    }
-    
-    .section-title h2 {
-        font-size: 36px;
-        font-weight: 700;
-        color: rgb(46, 125, 50);
-        text-align: center;
-    }
-    
-    .section-title p {
-        font-size: 20px;
-        font-weight: 400;
-        text-align: center;
-        color: #555;
-    }
-    
-    .blog-cap h3 {
-        font-size: 26px;
-        font-weight: 700;
-        color: rgb(46, 125, 50);
-    }
-    
-    .blog-cap p {
-        font-size: 20px;
-        font-weight: 400;
-        color: #555;
-    }
-    
-    .blog-img img {
-        width: 100%;
-        height: auto;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition: transform 0.3s ease-in-out;
-    }
-    
-    .blog-img img:hover {
-        transform: scale(1.05);
-    }
-    </style>
-    
-<!-- REarth Testimonials Section -->
-
+<!-- Blog Post Section -->
+<section id="blog-post" class="blog-post py-5 bg-white">
+    <div class="container">
+      <!-- Blog Image -->
+      <div class="blog-img" style="text-align: center; margin-bottom: 30px;">
+        <img src="assets/img/gallery/g2.jpg" alt="Sustainability Actions" style="max-width: 500px; display: block; margin: 0 auto; height: auto;">
+      </div>
+      <!-- Blog Content -->
+      <div class="blog-cap">
+        <h3 style="font-family: 'Montserrat', sans-serif; font-weight: 700; color: rgb(46, 125, 50); font-size: 28px; text-align: center;">
+          Community Disaster Risk Reduction (DRR) for Foreign Residents 
+        </h3>
+        <p style="font-family: 'Helvetica Neue', sans-serif; font-size: 16px; line-height: 24px; color: #333; text-align: center; max-width: 900px; margin: 20px auto;">
+          We are excited to share that recently we had our first preliminary meeting of the Indian community members to discuss developing a (Local) Community Disaster Risk Reduction (DRR) Plan for non-Japanese speakers of our area in Yokohama, Japan. The need for such a program was unanimously recognized, and many valuable ideas were exchanged.
+          <br><br>
+          Living in an earthquake-prone country, foreign residents often struggle with access to critical disaster information, preparedness measures, and communication platforms. Through this initiative, we aim to bridge this gap and create a structured DRR plan tailored to the needs of non-Japanese speakers.
+          <br><br>
+          At REarth, we believe that community-led action is key to building resilience in a changing world. Through Women in Climate Leadership (#WICL), we are focusing on #DRR activities to empower and prepare ourselves and communities together. Our vision is to collaborate with key stakeholders—local government, embassy, fire departments, universities, and training institutions—to make this initiative a reality.
+          <br><br>
+          <strong>How You Can Support This Initiative:</strong><br>
+          Expert Guidance  If you know any individuals, organizations, or resources that can help or guide us, please connect us.<br>
+          Research & Collaboration  If you're working on DRR and want to co-develop localized content, we’d love to collaborate.<br>
+          Sponsorship & Funding  This is a big initiative, and we need financial support to take it forward.
+        </p>
+      </div>
+    </div>
+  </section>
+  
 
 
            
@@ -864,7 +880,7 @@ h3 {
       <div class="testimonials-grid">
         <!-- Testimonial Items (3 rows x 3 columns) -->
         <div class="testimonial-item">
-          <div class="stars">★★★★★</div>
+  
           <p>I didn
             ’t know there were so
             many simulations! I was
@@ -879,7 +895,7 @@ h3 {
         </div>
   
         <div class="testimonial-item">
-          <div class="stars">★★★★★</div>
+
           <p>The workshop helped us understand
             the vicious circle we are in vis-a-vis our
             environment and lifestyle. We
@@ -893,7 +909,7 @@ h3 {
         </div>
   
         <div class="testimonial-item">
-          <div class="stars">★★★★★</div>
+     
           <p>The session deepened our understanding of biodiversity's crucial role in sustaining climate balance. It emphasized the urgency of conservation and inspired us to adopt practical strategies to protect our ecosystems for a resilient future.</p>  
 <div class="profile"><h4>Biodiversity Workshop Participant</h4></div>
   
@@ -1052,12 +1068,7 @@ h3 {
                                 <div class="footer-logo mb-35">
                                     <a href="index.html"><img src="assets/img/logo/logo2_footer.png" alt=""></a>
                                 </div>
-                                <div class="footer-tittle">
-                                    <div class="footer-pera">
-                                        <p><strong>What is the Climate Clock?</strong><br>  
-                                            The Climate Clock deadline shows how long we have left until the Earth's carbon budget runs out. It visually represents the time remaining to stay within our carbon budget and avoid surpassing critical temperature thresholds. The clock serves as a stark reminder of the urgency to take immediate and substantial action to reduce CO₂ emissions.</p>
-                                    </div>
-                                </div>
+                                
                                 <!-- social -->
                                 <div class="footer-social">
                                     <a href="#"><i class="fab fa-instagram"></i></a>
@@ -1194,14 +1205,14 @@ h3 {
     </div>
 </footer>
 
+    
       <!-- Scroll Up -->
       <div id="back-top" >
         <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
     </div>
 
     <!-- JS here -->
-    <script src="https://climateclock.world/widget-v2.js" async></script>
-    <climate-clock />
+    
     <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
     <!-- Jquery, Popper, Bootstrap -->
     <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
