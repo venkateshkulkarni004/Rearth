@@ -1046,30 +1046,34 @@ h3 {
 <footer id="footer" class="footer-area position-relative light-background">
     <div class="footer-wrapper">
         <div class="container footer-top footer-area">
-            <div class="row gy-4">
-                <div class="col-lg-4 col-md-6 footer-about footer-pera footer-pera2">
+            <div class="row gy-4 justify-content-between">
+
+                <!-- Column 1: About & Contact -->
+                <div class="col-lg-4 col-md-6 footer-about text-center px-4">
                     <a href="index.html" class="logo d-flex align-items-center justify-content-center mb-3">
-                        <h4><span style="color: #ffffff;">REarth</span></h4>
+                        <h3><span style="color: #ffffff;">REarth</span></h3>
                     </a>
-                    <div class="footer-contact text-center">
-                        <p><strong>Address:</strong> Midori-ku, Yokohama-shi,</p>
-                <p>Japan 226-0016</p>
+                    <div class="footer-contact">
+                        <p><strong>Address:</strong></p>
+                        <p>Yokohama-shi,</p>
+                        <p>Japan 226-0016</p>
                         <p><strong>Email:</strong> <span>contact.rearth@gmail.com</span></p>
                     </div>
                     <div class="social-links footer-social d-flex justify-content-center mt-4">
-                        <a href="https://www.instagram.com/rearthcommunity" target="_blank" class="instagram-link me-3">
+                        <a href="https://www.instagram.com/rearthcommunity" target="_blank" class="me-3">
                             <i class="fab fa-instagram" style="color: #fff;"></i>
                         </a>
-                        <a href="https://whatsapp.com/channel/0029Vaix7dJ0G0Xihuesov1M" target="_blank" class="whatsapp-link me-3">
+                        <a href="https://whatsapp.com/channel/0029Vaix7dJ0G0Xihuesov1M" target="_blank" class="me-3">
                             <i class="fab fa-whatsapp" style="color: #fff;"></i>
                         </a>
-                        <a href="https://www.linkedin.com/in/bageshree-katneshwarkar-phd-07956a50/" target="_blank" class="linkedin-link">
+                        <a href="https://www.linkedin.com/in/bageshree-katneshwarkar-phd-07956a50/" target="_blank">
                             <i class="fab fa-linkedin" style="color: #fff;"></i>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links footer-tittle">
+                <!-- Column 2: Useful Links -->
+                <div class="col-lg-3 col-md-3 footer-links px-4">
                     <h4>Useful Links</h4>
                     <ul>
                         <li><a href="index.html">Home</a></li>
@@ -1077,41 +1081,22 @@ h3 {
                         <li><a href="resources.html">Resources</a></li>
                         <li><a href="events.html">Events</a></li>
                         <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#">Projects</a></li>
                     </ul>
                 </div>
 
-                <div class="col-lg-2 col-md-3 footer-links footer-tittle">
-                    <h4>Projects</h4>
-                    <ul>
-                        <li><a href="sdgstarschool.html">SDG Star School Project</a></li>
-                        <li><a href="wicl.html">Women in Climate Leadership</a></li>
-                        <li><a href="ddr.html">Community Disaster Risk Reduction (DRR)</a></li>
-                        <li><a href="climate_awareness_workshops.html">Climate Awareness Workshops</a></li>
-                        
-                    </ul>
-                  
-                </div>
-                <div class="col-lg-2 col-md-3 footer-links footer-tittle">
-                    
-                    <ul>
-                        <li><a href="climate_fresk.html">Climate Fresk</a></li>
-                        <li><a href="biodiversity_collage.html">Biodiversity Collage</a></li>
-                        <li><a href="enroads_climate_workshop.html">EnROADS Climate Workshop</a></li>
-                        <li><a href="after_school_program.html">After School Program</a></li>
-                    </ul>
-                  
-                </div>
-
-
-                <div class="col-lg-4 col-md-12 footer-newsletter footer-pera text-center">
-                    <h4> Follow Us on Instagram</h4>
+                <!-- Column 3: Instagram Follow -->
+                <div class="col-lg-4 col-md-12 footer-newsletter text-center px-4">
+                    <h4>Follow Us on Instagram</h4>
                     <p>Stay up-to-date</p>
-                    <h4> @rearthcommunity</h4>
+                    <h4>@rearthcommunity</h4>
                     <div class="social-links footer-social d-flex justify-content-center mt-4">
-                        <a href="https://www.instagram.com/rearthcommunity" target="_blank" class="instagram-link me-3">
+                        <a href="https://www.instagram.com/rearthcommunity" target="_blank" class="instagram-link">
                             <i class="fab fa-instagram" style="color: #fff;"></i>
                         </a>
+                    </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -1119,22 +1104,19 @@ h3 {
 
 <style>
     .footer-wrapper {
-        background: #6fd66c;
         background: linear-gradient(90deg, #6fd66c 0%, #48c1b9 100%);
+        padding: 60px 0;
     }
 
-    .footer-area .footer-pera p {
+    .footer-area p, .footer-area a {
         color: #fff;
         font-size: 16px;
-        margin-bottom: 20px;
         line-height: 1.8;
+        text-decoration: none;
     }
 
-    .footer-area .footer-pera.footer-pera2 p {
-        padding: 0;
-    }
-
-    .footer-area .footer-tittle h4 {
+    .footer-area .footer-links h4,
+    .footer-area .footer-newsletter h4 {
         color: #fff;
         font-size: 20px;
         margin-bottom: 20px;
@@ -1142,32 +1124,28 @@ h3 {
         font-family: "Montserrat", sans-serif;
     }
 
-    .footer-area .footer-tittle ul li {
+    .footer-area .footer-links ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-area .footer-links ul li {
         margin-bottom: 10px;
     }
 
-    .footer-area .footer-tittle ul li a {
-        color: #fff;
-        font-weight: 400;
-        font-size: 15px;
-        text-decoration: none;
-    }
-
-    .footer-area .footer-tittle ul li a:hover {
+    .footer-area .footer-links ul li a:hover {
         text-decoration: underline;
     }
 
     .footer-social a {
-        color: #fff;
         background: rgba(255, 254, 254, 0.1);
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        font-size: 14px;
+        font-size: 18px;
         line-height: 40px;
-        display: inline-block;
         text-align: center;
-        margin-right: 8px;
+        display: inline-block;
         transition: background 0.3s, color 0.3s;
     }
 
