@@ -286,8 +286,147 @@
 
   
 <br>
+<section class="did-you-know-squares">
+    <h2 class="section-title">DID YOU KNOW?</h2>
+    <div class="square-container">
+        <div class="knowledge-square">
+            <div class="square-content">
+                <div class="icon-title">
+                    <i class="fa fa-thermometer-full" aria-hidden="true"></i>
+                    <h3>2024: The Hottest Year</h3>
+                </div>
+                <p>Global temperatures exceeded the critical 1.5°C threshold, making it the hottest year recorded.</p>
+            </div>
+        </div>
+        
+        <div class="knowledge-square">
+            <div class="square-content">
+                <div class="icon-title">
+                    <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+                    <h3>Planetary Boundaries</h3>
+                </div>
+                <p>6 out of 9 planetary boundaries breached, pushing Earth's systems beyond safe limits.</p>
+            </div>
+        </div>
+        
+        <div class="knowledge-square">
+            <div class="square-content">
+                <div class="icon-title">
+                    <i class="fa fa-globe" aria-hidden="true"></i>
+                    <h3>Triple Planetary Crisis</h3>
+                </div>
+                <p>Climate change, biodiversity loss, and pollution - interconnected crises impacting all life.</p>
+            </div>
+        </div>
+        
+        <div class="knowledge-square">
+            <div class="square-content">
+                <div class="icon-title">
+                    <i class="fa fa-handshake-o" aria-hidden="true"></i>
+                    <h3>Your Impact Matters</h3>
+                </div>
+                <p>Reduce emissions, minimize waste (especially food), and conserve resources.</p>
+            </div>
+        </div>
+    </div>
+</section>
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+    
+    .did-you-know-squares {
+        padding: 50px 15px;
+        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+        font-family: "Montserrat", sans-serif;
+        text-align: center;
+    }
+    
+    .section-title {
+        color: white;
+        font-size: 2rem;
+        font-weight: 700;
+        margin-bottom: 30px;
+        text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        letter-spacing: 1px;
+    }
+    
+    .square-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+    
+    .knowledge-square {
+        width: calc(25% - 15px);
+        min-height: 220px;
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        display: flex;
+    }
+    
+    .square-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    
+    .icon-title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    
+    .icon-title i {
+        font-size: 2rem;
+        color: #04310b;
+    }
+    
+    .knowledge-square h3 {
+        color: #175f06;
+        margin: 0;
+        font-size: 2 rem;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .knowledge-square p {
+        color: #555;
+        margin: 10px 0 0 0;
+        font-size: 2 rem;
+        line-height: 2;
+    }
+    
+    @media (max-width: 900px) {
+        .knowledge-square {
+            width: calc(50% - 15px);
+            min-height: 200px;
+        }
+    }
+    
+    @media (max-width: 600px) {
+        .section-title {
+            font-size: 1.5rem;
+        }
+        
+        .knowledge-square {
+            width: 100%;
+            max-width: 350px;
+            min-height: auto;
+        }
+    }
+</style>
+
+<br>
          <section class="focus-section">
             <h2>Our Focus Areas</h2>
             <div class="container">
@@ -296,7 +435,10 @@
                     <div class="overlay">Climate Education</div>
                     <div class="details">
                         Empowering individuals, especially students and educators, with scientific knowledge and tools to understand climate change.
-                        <a href="#know-more" class="btn btn-outline-light btn-sm mt-4 know-more-btn">Know More</a>
+                        <a href="#education" class="btn btn-outline-light btn-sm mt-4 know-more-btn" onclick="document.getElementById('education').scrollIntoView({behavior: 'smooth'});">
+                            Know More
+                        </a>
+                        
                     </div>
                 </div>
         
@@ -305,7 +447,9 @@
                     <div class="overlay">Climate Awareness</div>
                     <div class="details">
                         Bridging the gap between academic research and public understanding through campaigns, discussions, and interactive simulations.
-                        <a href="#know-more" class="btn header-btn">Know More</a>
+                        <a href="#community-engagement" class="btn header-btn" onclick="document.getElementById('community-engagement').scrollIntoView({behavior: 'smooth'});">
+                            Know More
+                        </a>
                     </div>
                 </div>
         
@@ -425,6 +569,7 @@
          
 <br>
 
+
 <section class="rearth-intro">
     <h1 class="title">Responsible Earthlings for a Sustainable Planet</h1>
     <p class="description">
@@ -475,6 +620,212 @@
     }
 }
 </style>
+
+
+
+
+
+
+<br>
+
+<!-- Button to scroll to the Education Programs section -->
+
+<section id="education" class="education section light-background">
+    <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h2 style="color: #2E7D32; font-size: 3rem; font-weight: bold;">REarth Education Programs</h2>
+        <p class="subtitle" style="color: #666; font-size: 1.5rem; margin-top: 15px; font-weight: bold;">Empowering students and educators to drive sustainable change</p>
+    </div>
+
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <!-- SDG Star School -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="program-item">
+                    <div class="image-container">
+                        <img src="assets/img/images/workshop.jpg" alt="SDG Star School" class="workshop-image">
+                    </div>
+                    <div class="content">
+                        <div class="duration">3 hours</div>
+                        <h3>SDG Star School</h3>
+                        <p class="description">Integrating sustainable development goals into the curriculum to foster global citizenship.</p>
+                        <a href="#" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- After School Program -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="program-item">
+                    <div class="image-container">
+                        <img src="assets/img/images/4.jpg" alt="After School Program" class="workshop-image">
+                    </div>
+                    <div class="content">
+                        <div class="duration">2.5 hours</div>
+                        <h3>After School Program</h3>
+                        <p class="description">Engaging students in extracurricular activities focused on environmental conservation and sustainability.</p>
+                        <a href="#" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Climate Warrior Club -->
+            <div class="col-lg-3 col-md-6" data-aos="fade-up">
+                <div class="program-item">
+                    <div class="image-container">
+                        <img src="assets/img/images/8.jpg" alt="Climate Warrior Club" class="workshop-image">
+                    </div>
+                    <div class="content">
+                        <div class="duration">2 hours</div>
+                        <h3>Climate Warrior Club</h3>
+                        <p class="description">Empowering students to become climate leaders through interactive projects and campaigns.</p>
+                        <a href="#" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.education {
+    padding: 60px 0;
+    background-color: #E8F5E9;
+}
+
+.program-item {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+    overflow: hidden;
+}
+
+.image-container {
+    height: 200px;
+    overflow: hidden;
+}
+
+.workshop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.content {
+    padding: 25px;
+}
+
+.duration {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+h3 {
+    color: #2E7D32;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.description {
+    color: #555;
+    margin-bottom: 15px;
+    min-height: 80px;
+}
+
+.program-btn {
+    display: block;
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #2E7D32;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.program-btn:hover {
+    background-color: #1B5E20;
+}
+
+.subtitle {
+    color: #666;
+    font-size: 1.5rem;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    .description {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .program-item {
+        margin-bottom: 30px;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+        padding: 0 15px;
+    }
+}
+</style>
+<section class="rearth-intro">
+    <h1 class="title">Responsible Earthlings for a Sustainable Planet</h1>
+    <p class="description">
+        Dedicated to fostering climate education, awareness, and action, we empower individuals, especially youth, with knowledge and tools to promote sustainability and eco-conscious actions. Through education, collaboration, and innovation, we bridge the gap between academic insights and real-world climate solutions. Our programs, such as the <strong>SDG Star School</strong>, <strong>Women in Climate Leadership</strong>, and other educational workshops, engage communities to take collective action towards a sustainable future.
+    </p>
+</section>
+
+<style>
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+/* Section Styling */
+.rearth-intro {
+    background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE); /* Gradient Background */
+    color: #fff; /* White Text */
+    padding: 80px 10%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Title Styling */
+.rearth-intro .title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* White Title */
+}
+
+/* Paragraph Styling */
+.rearth-intro .description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #fff; /* White Text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rearth-intro {
+        padding: 60px 5%;
+    }
+
+    .rearth-intro .title {
+        font-size: 2.2rem;
+    }
+
+    .rearth-intro .description {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
 
 
 
@@ -647,6 +998,202 @@ h3 {
 
 
 <br>
+<section class="rearth-intro">
+    <h1 class="title">Responsible Earthlings for a Sustainable Planet</h1>
+    <p class="description">
+        Dedicated to fostering climate education, awareness, and action, we empower individuals, especially youth, with knowledge and tools to promote sustainability and eco-conscious actions. Through education, collaboration, and innovation, we bridge the gap between academic insights and real-world climate solutions. Our programs, such as the <strong>SDG Star School</strong>, <strong>Women in Climate Leadership</strong>, and other educational workshops, engage communities to take collective action towards a sustainable future.
+    </p>
+</section>
+
+<style>
+/* Import Montserrat Font */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+
+/* Section Styling */
+.rearth-intro {
+    background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE); /* Gradient Background */
+    color: #fff; /* White Text */
+    padding: 80px 10%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Title Styling */
+.rearth-intro .title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #fff; /* White Title */
+}
+
+/* Paragraph Styling */
+.rearth-intro .description {
+    font-size: 1.5rem;
+    line-height: 1.8;
+    color: #fff; /* White Text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .rearth-intro {
+        padding: 60px 5%;
+    }
+
+    .rearth-intro .title {
+        font-size: 2.2rem;
+    }
+
+    .rearth-intro .description {
+        font-size: 1.3rem;
+    }
+}
+</style>
+
+
+
+
+
+
+<br>
+<br>
+
+<section id="community-engagement" class="community-engagement section light-background">
+    <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <h2 style="color: #2E7D32; font-size: 3rem; font-weight: bold;">REarth Community Engagement</h2>
+        <p class="subtitle" style="color: #666; font-size: 1.5rem; margin-top: 15px; font-weight: bold;">Mobilizing communities for a sustainable future</p>
+    </div>
+
+    <div class="container">
+        <div class="row g-4 justify-content-center">
+            <!-- Women in Climate Leadership -->
+            <div class="col-lg-6 col-md-10" data-aos="fade-up">
+                <div class="program-item">
+                    <div class="image-container">
+                        <img src="assets/img/images/leadership.jpg" alt="Women in Climate Leadership" class="workshop-image">
+                    </div>
+                    <div class="content">
+                        <div class="duration">2.5 hours</div>
+                        <h3>Women in Climate Leadership</h3>
+                        <p class="description">Empowering women to lead climate action initiatives and drive sustainable change.</p>
+                        <a href="#community-engagement" class="btn header-btn" onclick="document.getElementById('community-engagement').scrollIntoView({behavior: 'smooth'});">Know More</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REady Japan - DRRPF -->
+            <div class="col-lg-6 col-md-10" data-aos="fade-up">
+                <div class="program-item">
+                    <div class="image-container">
+                        <img src="assets/img/images/ready-japan.jpg" alt="REady Japan - DRRPF" class="workshop-image">
+                    </div>
+                    <div class="content">
+                        <div class="duration">3 hours</div>
+                        <h3>REady Japan - DRRPF</h3>
+                        <p class="description">Preparing communities for disaster risk reduction and promoting resilience through collaborative efforts.</p>
+                        <a href="#community-engagement" class="btn header-btn" onclick="document.getElementById('community-engagement').scrollIntoView({behavior: 'smooth'});">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Scoped styles for the Community Engagement section */
+#community-engagement {
+    padding: 60px 0;
+    background-color: #E8F5E9; /* Ensure the same background color */
+}
+
+#community-engagement .program-item {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    height: 100%;
+    overflow: hidden;
+    width: 100%;
+    max-width: 500px; /* Normal max-width */
+    margin: 0 auto;
+}
+
+#community-engagement .image-container {
+    height: 200px; /* Normal height */
+    overflow: hidden;
+}
+
+#community-engagement .workshop-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+#community-engagement .content {
+    padding: 25px; /* Normal padding */
+}
+
+#community-engagement .duration {
+    color: #666;
+    font-size: 0.9rem; /* Normal font size */
+    margin-bottom: 8px; /* Normal margin */
+}
+
+#community-engagement h3 {
+    color: #2E7D32;
+    margin-bottom: 15px; /* Normal margin */
+    font-size: 2 rem; /* Increased font size */
+    font-weight: bold;
+}
+
+#community-engagement .description {
+    color: #555;
+    margin-bottom: 15px; /* Normal margin */
+    min-height: 80px; /* Normal min-height */
+    font-size:  2 rem; /* Increased font size */
+}
+
+#community-engagement .program-btn {
+    display: block;
+    text-align: center;
+    padding: 12px 20px; /* Normal padding */
+    background-color: #2E7D32;
+    color: white;
+    border-radius: 5px; /* Normal border-radius */
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+#community-engagement .program-btn:hover {
+    background-color: #1B5E20;
+}
+
+#community-engagement .subtitle {
+    color: #666;
+    font-size: 2 rem; /* Normal font size */
+    margin-top: 15px; /* Normal margin */
+    font-weight: bold;
+}
+
+@media (max-width: 992px) {
+    #community-engagement .description {
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    #community-engagement .program-item {
+        margin-bottom: 30px;
+    }
+
+    #community-engagement .subtitle {
+        font-size: 2 rem; /* Normal font size */
+        padding: 0 15px;
+    }
+}
+</style>
+
+
 
 <!-- Add this in your head section -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
