@@ -5,4 +5,39 @@
 }
 
 
+/* Ensure submenus are positioned correctly */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 100%; /* Position to the right */
+    display: none;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Show submenu on hover */
+.has-submenu:hover > .submenu {
+    display: block;
+}
+
+/* Adjust submenu items */
+.submenu li {
+    width: 200px;
+    padding: 10px;
+}
+
+.submenu li a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.submenu li a:hover {
+    background-color: #f0f0f0;
+}
 
