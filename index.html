@@ -52,7 +52,7 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2">
+                            <div class="col-xl-2 col-lg-2 col-md-2 col-6">
                                 <div class="logo">
                                     <a href="index.html">
                                         <img src="assets/img/logo/Rearth.Big.png" alt="" style="width:120px; height: auto;">
@@ -60,7 +60,7 @@
                                 </div>
                             </div>
     
-                            <div class="col-xl-10 col-lg-10">
+                            <div class="col-xl-10 col-lg-10 col-md-10 col-6">
                                 <div class="menu-wrapper d-flex align-items-center justify-content-end">
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
@@ -103,7 +103,49 @@
                             </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+                                <div class="mobile-menu d-block d-lg-none">
+                                    <div class="mobile-menu-btn">
+                                        <i class="fas fa-bars"></i>
+                                    </div>
+                                    <div class="mobile-menu-content">
+                                        <ul>
+                                            <li><a href="index.html"><strong>Home</strong></a></li>
+                                            <li><a href="about.html"><strong>About Us</strong></a></li>
+                                            <li class="mobile-submenu">
+                                                <a href="#"><strong>Projects</strong> <i class="fas fa-chevron-down"></i></a>
+                                                <ul class="mobile-submenu-content">
+                                                    <li class="mobile-submenu">
+                                                        <a href="#"><strong>Education</strong> <i class="fas fa-chevron-down"></i></a>
+                                                        <ul>
+                                                            <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
+                                                            <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
+                                                            <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mobile-submenu">
+                                                        <a href="#"><strong>Awareness Workshops</strong> <i class="fas fa-chevron-down"></i></a>
+                                                        <ul>
+                                                            <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
+                                                            <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
+                                                            <li><a href="biodiversity_college.html"><strong>Biodiversity</strong></a></li>
+                                                            <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li class="mobile-submenu">
+                                                        <a href="#"><strong>Community Engagement</strong> <i class="fas fa-chevron-down"></i></a>
+                                                        <ul>
+                                                            <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
+                                                            <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                                        </ul>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="resources.html"><strong>Resources</strong></a></li>
+                                            <li><a href="eventdetials.html"><strong>Events</strong></a></li>
+                                            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -178,7 +220,128 @@
                 left: 100%;
                 top: 0;
             }
+
+            /* Mobile Menu Styles */
+            .mobile-menu {
+                position: relative;
+            }
+
+            .mobile-menu-btn {
+                text-align: right;
+                padding: 15px;
+                cursor: pointer;
+            }
+
+            .mobile-menu-btn i {
+                font-size: 24px;
+                color: #333;
+            }
+
+            .mobile-menu-content {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background-color: #fff;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+                z-index: 1000;
+            }
+
+            .mobile-menu-content ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .mobile-menu-content ul li {
+                border-bottom: 1px solid #eee;
+            }
+
+            .mobile-menu-content ul li a {
+                display: block;
+                padding: 15px 20px;
+                color: #333;
+                text-decoration: none;
+                position: relative;
+            }
+
+            .mobile-submenu-content {
+                display: none;
+                background-color: #f9f9f9;
+            }
+
+            .mobile-submenu-content ul {
+                padding-left: 20px;
+            }
+
+            .mobile-submenu i {
+                position: absolute;
+                right: 20px;
+                top: 50%;
+                transform: translateY(-50%);
+                transition: transform 0.3s ease;
+            }
+
+            .mobile-submenu.active i {
+                transform: translateY(-50%) rotate(180deg);
+            }
+
+            @media (max-width: 991px) {
+                .main-menu {
+                    display: none;
+                }
+
+                .mobile-menu {
+                    display: block;
+                }
+
+                .logo {
+                    text-align: left;
+                }
+
+                .mobile-menu-btn {
+                    text-align: right;
+                }
+            }
+
+            @media (min-width: 992px) {
+                .mobile-menu {
+                    display: none;
+                }
+            }
         </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+                const mobileMenuContent = document.querySelector('.mobile-menu-content');
+                const mobileSubmenus = document.querySelectorAll('.mobile-submenu');
+
+                // Toggle mobile menu
+                mobileMenuBtn.addEventListener('click', function() {
+                    mobileMenuContent.style.display = mobileMenuContent.style.display === 'block' ? 'none' : 'block';
+                });
+
+                // Toggle submenus
+                mobileSubmenus.forEach(submenu => {
+                    const link = submenu.querySelector('a');
+                    link.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const submenuContent = this.nextElementSibling;
+                        submenuContent.style.display = submenuContent.style.display === 'block' ? 'none' : 'block';
+                        this.parentElement.classList.toggle('active');
+                    });
+                });
+
+                // Close mobile menu when clicking outside
+                document.addEventListener('click', function(e) {
+                    if (!mobileMenuBtn.contains(e.target) && !mobileMenuContent.contains(e.target)) {
+                        mobileMenuContent.style.display = 'none';
+                    }
+                });
+            });
+        </script>
     </header>
     
     
