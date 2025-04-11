@@ -117,6 +117,12 @@
                                                 <li><a href="resources.html"><strong>Resources</strong></a></li>
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+                                                <li>
+                                                    <a href="#" id="translate-btn" class="translate-btn">
+                                                        <img src="https://flagcdn.com/w20/jp.png" alt="Japanese Flag" style="width: 20px; height: 15px; margin-right: 5px;">
+                                                        <span>日本語</span>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -198,6 +204,53 @@
             .main-menu ul li .submenu li .submenu {
                 left: 100%;
                 top: 0;
+            }
+
+            /* Translation Button Styles */
+            .translate-btn {
+                display: flex;
+                align-items: center;
+                padding: 8px 12px;
+                background-color: #f8f9fa;
+                border-radius: 4px;
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .translate-btn:hover {
+                background-color: #e9ecef;
+                color: #2E7D32;
+            }
+
+            .translate-btn img {
+                margin-right: 5px;
+                width: 20px;
+                height: 15px;
+            }
+
+            /* Hide Google Translate Widget */
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+
+            .goog-te-menu-value {
+                display: none !important;
+            }
+
+            body {
+                top: 0 !important;
+            }
+
+            /* Mobile Responsive Styles */
+            @media (max-width: 768px) {
+                .translate-btn {
+                    padding: 6px 10px;
+                    font-size: 14px;
+                }
             }
         </style>
     </header>
@@ -989,6 +1042,71 @@
                 point.querySelector('.point-content').style.opacity = '0';
                 point.querySelector('.point-content').style.transform = 'translateX(-50%)';
             });
+        });
+    </script>
+
+    <!-- Add this before the closing body tag -->
+    <div id="google_translate_element"></div>
+    <script type="text/javascript">
+        // Function to initialize Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement(
+                {
+                    pageLanguage: 'en',
+                    includedLanguages: 'ja',
+                    layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                    autoDisplay: false
+                },
+                'google_translate_element'
+            );
+        }
+
+        // Load Google Translate script
+        function loadGoogleTranslate() {
+            var script = document.createElement('script');
+            script.src = '//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+            document.body.appendChild(script);
+        }
+
+        // Function to toggle translation
+        function toggleTranslation() {
+            const select = document.querySelector('.goog-te-combo');
+            if (select) {
+                const currentLang = select.value;
+                if (currentLang === 'en') {
+                    select.value = 'ja';
+                    document.getElementById('translate-btn').querySelector('span').textContent = 'English';
+                } else {
+                    select.value = 'en';
+                    document.getElementById('translate-btn').querySelector('span').textContent = '日本語';
+                }
+                select.dispatchEvent(new Event('change'));
+            }
+        }
+
+        // Initialize translation functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Load Google Translate
+            loadGoogleTranslate();
+
+            // Add click handler to translation button
+            const translateBtn = document.getElementById('translate-btn');
+            if (translateBtn) {
+                translateBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleTranslation();
+                });
+            }
+
+            // Wait for Google Translate to initialize
+            const checkTranslate = setInterval(function() {
+                const select = document.querySelector('.goog-te-combo');
+                if (select) {
+                    clearInterval(checkTranslate);
+                    // Set initial state
+                    select.value = 'en';
+                }
+            }, 100);
         });
     </script>
 </main>

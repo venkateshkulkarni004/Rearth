@@ -81,7 +81,7 @@
                                                             <ul class="submenu">
                                                                 <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
                                                                 <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
-                                                                <li><a href="biodiversity_collage.html"><strong>Biodiversity</strong></a></li>
+                                                                <li><a href="biodiversity_college.html"><strong>Biodiversity</strong></a></li>
                                                                 <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
                                                             </ul>
                                                         </li>
@@ -96,6 +96,12 @@
                                                 <li><a href="resources.html"><strong>Resources</strong></a></li>
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+                                                <li>
+                                                    <a href="#" id="translate-btn" class="translate-btn">
+                                                        <img src="https://flagcdn.com/w20/jp.png" alt="Japanese Flag" style="width: 20px; height: 15px; margin-right: 5px;">
+                                                        <span>日本語</span>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -178,6 +184,53 @@
                 left: 100%;
                 top: 0;
             }
+
+            /* Translation Button Styles */
+            .translate-btn {
+                display: flex;
+                align-items: center;
+                padding: 8px 12px;
+                background-color: #f8f9fa;
+                border-radius: 4px;
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .translate-btn:hover {
+                background-color: #e9ecef;
+                color: #2E7D32;
+            }
+
+            .translate-btn img {
+                margin-right: 5px;
+                width: 20px;
+                height: 15px;
+            }
+
+            /* Hide Google Translate Widget */
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+
+            .goog-te-menu-value {
+                display: none !important;
+            }
+
+            body {
+                top: 0 !important;
+            }
+
+            /* Mobile Responsive Styles */
+            @media (max-width: 768px) {
+                .translate-btn {
+                    padding: 6px 10px;
+                    font-size: 14px;
+                }
+            }
         </style>
     </header>
     
@@ -242,7 +295,7 @@
   <div class="container custom-container">
       <div class="center-block custom-center-block">
           <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-              At WICL, we believe that leadership is not just about titles—it’s about influence, courage, and resilience. Through insightful discussions, skill-building sessions, and a strong support network, we are shaping a world where women’s voices in climate and sustainability matter.
+              At WICL, we believe that leadership is not just about titles—it's about influence, courage, and resilience. Through insightful discussions, skill-building sessions, and a strong support network, we are shaping a world where women's voices in climate and sustainability matter.
           </p>
       </div>
 
@@ -340,15 +393,15 @@
         </div>
       </div>
 
-      <!-- Strengthening women’s roles -->
+      <!-- Strengthening women's roles -->
       <div class="col-md-6 col-lg-3">
         <div class="program-item">
           <div class="icon-container">
             <i class="fa fa-female"></i>
           </div>
           <div class="content">
-            <h3>Women’s Empowerment</h3>
-            <p class="description">Strengthening women’s roles in climate and sustainability.</p>
+            <h3>Women's Empowerment</h3>
+            <p class="description">Strengthening women's roles in climate and sustainability.</p>
           </div>
         </div>
       </div>
@@ -852,9 +905,6 @@
                                 <!-- social -->
                                 <div class="footer-social">
                                     <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <!-- <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a> -->
                                 </div>
                             </div>
                         </div>
@@ -1033,6 +1083,73 @@
     <!-- Jquery Plugins, main Jquery -->	
     <script src="./assets/js/plugins.js"></script>
     <script src="./assets/js/main.js"></script>
-    
+
+    <!-- Google Translate Element -->
+    <div id="google_translate_element" style="display: none;"></div>
+
+    <!-- Google Translate Script -->
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+                autoDisplay: false
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+    <!-- Translation Toggle Function -->
+    <script>
+        let isTranslated = false;
+        
+        // Wait for Google Translate to load
+        function waitForGoogleTranslate() {
+            if (typeof google !== 'undefined' && google.translate) {
+                document.getElementById('translate-btn').addEventListener('click', function(e) {
+                    e.preventDefault();
+                    toggleTranslation();
+                });
+            } else {
+                setTimeout(waitForGoogleTranslate, 100);
+            }
+        }
+
+        // Start waiting for Google Translate to load
+        waitForGoogleTranslate();
+
+        function toggleTranslation() {
+            const translateBtn = document.getElementById('translate-btn');
+            
+            if (!isTranslated) {
+                // Translate to Japanese
+                const iframe = document.querySelector('.goog-te-menu-frame');
+                if (iframe) {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    const select = iframeDoc.querySelector('select');
+                    if (select) {
+                        select.value = 'ja';
+                        select.dispatchEvent(new Event('change'));
+                    }
+                }
+                translateBtn.innerHTML = '<img src="https://flagcdn.com/w20/gb.png" alt="English Flag" style="width: 20px; height: 15px; margin-right: 5px;"><span>English</span>';
+                isTranslated = true;
+            } else {
+                // Translate back to English
+                const iframe = document.querySelector('.goog-te-menu-frame');
+                if (iframe) {
+                    const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+                    const select = iframeDoc.querySelector('select');
+                    if (select) {
+                        select.value = 'en';
+                        select.dispatchEvent(new Event('change'));
+                    }
+                }
+                translateBtn.innerHTML = '<img src="https://flagcdn.com/w20/jp.png" alt="Japanese Flag" style="width: 20px; height: 15px; margin-right: 5px;"><span>日本語</span>';
+                isTranslated = false;
+            }
+        }
+    </script>
 </body>
 </html>

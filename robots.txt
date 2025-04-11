@@ -1,0 +1,36 @@
+# REarth Website Robots.txt
+User-agent: *
+Allow: /
+Allow: /assets/
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+# Sitemap
+Sitemap: https://rearth.org/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /includes/
+Disallow: /config/
+
+# Allow search engines to crawl all public pages
+Allow: /index.html
+Allow: /about.html
+Allow: /contact.html
+Allow: /projects.html
+Allow: /resources.html
+Allow: /events.html
+Allow: /wicl.html
+Allow: /sdgstarschool.html
+Allow: /Afterschool.html
+Allow: /Climate_Warrior_club.html
+Allow: /Enroads.html
+Allow: /Climate_Fresk.html
+Allow: /biodiversity_college.html
+Allow: /two_tones.html
+Allow: /ReadyJapan.html
+
+# Crawl-delay to prevent server overload
+Crawl-delay: 10 

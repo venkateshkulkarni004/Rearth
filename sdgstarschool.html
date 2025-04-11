@@ -81,8 +81,8 @@
                                                             <ul class="submenu">
                                                                 <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
                                                                 <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
-                                                                <li><a href="biodiversity_collage.html"><strong>Biodiversity</strong></a></li>
-                                                                <li><a href="two_tonnes.html"><strong>2 Tonnes</strong></a></li>
+                                                                <li><a href="biodiversity_college.html"><strong>Biodiversity</strong></a></li>
+                                                                <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
                                                             </ul>
                                                         </li>
                                                         <li class="has-submenu"><a href=""><strong>Community Engagement</strong></a>
@@ -96,6 +96,12 @@
                                                 <li><a href="resources.html"><strong>Resources</strong></a></li>
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+                                                <li>
+                                                    <a href="#" id="translate-btn" class="translate-btn">
+                                                        <img src="https://flagcdn.com/w20/jp.png" alt="Japanese Flag" style="width: 20px; height: 15px; margin-right: 5px;">
+                                                        <span>日本語</span>
+                                                    </a>
+                                                </li>
                                             </ul>
                                         </nav>
                                     </div>
@@ -177,6 +183,53 @@
             .main-menu ul li .submenu li .submenu {
                 left: 100%;
                 top: 0;
+            }
+
+            /* Translation Button Styles */
+            .translate-btn {
+                display: flex;
+                align-items: center;
+                padding: 8px 12px;
+                background-color: #f8f9fa;
+                border-radius: 4px;
+                text-decoration: none;
+                color: #333;
+                font-weight: 500;
+                transition: all 0.3s ease;
+                margin-left: 10px;
+                cursor: pointer;
+            }
+
+            .translate-btn:hover {
+                background-color: #e9ecef;
+                color: #2E7D32;
+            }
+
+            .translate-btn img {
+                margin-right: 5px;
+                width: 20px;
+                height: 15px;
+            }
+
+            /* Hide Google Translate Widget */
+            .goog-te-banner-frame {
+                display: none !important;
+            }
+
+            .goog-te-menu-value {
+                display: none !important;
+            }
+
+            body {
+                top: 0 !important;
+            }
+
+            /* Mobile Responsive Styles */
+            @media (max-width: 768px) {
+                .translate-btn {
+                    padding: 6px 10px;
+                    font-size: 14px;
+                }
             }
         </style>
     </header>
@@ -1023,9 +1076,6 @@
                                 <!-- social -->
                                 <div class="footer-social">
                                     <a href="#"><i class="fab fa-instagram"></i></a>
-                                    <!-- <a href="#"><i class="fab fa-twitter"></i></a>
-                                    <a href="https://bit.ly/sai4ull"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="#"><i class="fab fa-pinterest-p"></i></a> -->
                                 </div>
                             </div>
                         </div>
