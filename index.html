@@ -33,16 +33,16 @@
     <meta property="og:image" content="assets/img/logo/logo.png">
     <meta property="og:locale" content="ja_JP">
     <meta property="og:site_name" content="REarth">
-    
+
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="REarth | Climate Education & Sustainability in Japan">
     <meta name="twitter:description" content="Join REarth for climate education, sustainability workshops, and environmental awareness programs. Leading climate action in Japan.">
     <meta name="twitter:image" content="assets/img/logo/logo.png">
-    
+
     <!-- Canonical URL -->
     <link rel="canonical" href="https://rearth.org/">
-    
+
     <!-- Structured Data -->
     <script type="application/ld+json">
     {
@@ -89,7 +89,7 @@
         }]
     }
     </script>
-    
+
     <!-- FAQ Schema -->
     <script type="application/ld+json">
     {
@@ -162,6 +162,8 @@
     </div>
     <!-- Preloader Start -->
    
+
+   
     <header>
         <!-- Header Start -->
         <div class="header-area">
@@ -170,15 +172,15 @@
                     <div class="container-fluid">
                         <div class="row align-items-center">
                             <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2 col-md-2 col-6">
+                            <div class="col-xl-2 col-lg-2">
                                 <div class="logo">
                                     <a href="index.html">
                                         <img src="assets/img/logo/Rearth.Big.png" alt="" style="width:120px; height: auto;">
                                     </a>
-                                 </div>
+                                </div>
                             </div>
     
-                            <div class="col-xl-10 col-lg-10 col-md-10 col-6">
+                            <div class="col-xl-10 col-lg-10">
                                 <div class="menu-wrapper d-flex align-items-center justify-content-end">
                                     <!-- Main-menu -->
                                     <div class="main-menu d-none d-lg-block">
@@ -214,30 +216,15 @@
                                                 <li><a href="resources.html"><strong>Resources</strong></a></li>
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
-                                                <li>
-                                                    
+                                                
                                             </ul>
                                         </nav>
                                     </div>
                                 </div>
                             </div>
-
                             <!-- Mobile Menu -->
                             <div class="col-12">
-                                <div class="mobile-menu d-block d-lg-none">
-                                    <div class="mobile-menu-btn">
-                                        <i class="fas fa-bars"></i>
-                                    </div>
-                                    <div class="mobile-menu-content">
-                                        <ul>
-                                            <li><a href="index.html"><strong>Home</strong></a></li>
-                                            <li><a href="about.html"><strong>About Us</strong></a></li>
-                                            <li><a href="resources.html"><strong>Resources</strong></a></li>
-                                            <li><a href="eventdetials.html"><strong>Events</strong></a></li>
-                                            <li><a href="contact.html"><strong>Contact Us</strong></a></li>
-                                        </ul>
-                                    </div>
-                                </div>
+                                <div class="mobile_menu d-block d-lg-none"></div>
                             </div>
                         </div>
                     </div>
@@ -312,128 +299,7 @@
                 left: 100%;
                 top: 0;
             }
-
-            /* Mobile Menu Styles */
-            .mobile-menu {
-                position: relative;
-            }
-
-            .mobile-menu-btn {
-                text-align: right;
-                padding: 15px;
-                cursor: pointer;
-            }
-
-            .mobile-menu-btn i {
-                font-size: 24px;
-                color: #333;
-            }
-
-            .mobile-menu-content {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                width: 100%;
-                background-color: #fff;
-                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-                z-index: 1000;
-            }
-
-            .mobile-menu-content ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-
-            .mobile-menu-content ul li {
-                border-bottom: 1px solid #eee;
-            }
-
-            .mobile-menu-content ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-                position: relative;
-            }
-
-            .mobile-submenu-content {
-                display: none;
-                background-color: #f9f9f9;
-            }
-
-            .mobile-submenu-content ul {
-                padding-left: 20px;
-            }
-
-            .mobile-submenu i {
-                position: absolute;
-                right: 20px;
-                top: 50%;
-                transform: translateY(-50%);
-                transition: transform 0.3s ease;
-            }
-
-            .mobile-submenu.active i {
-                transform: translateY(-50%) rotate(180deg);
-            }
-
-            @media (max-width: 991px) {
-                .main-menu {
-                    display: none;
-                }
-
-                .mobile-menu {
-                    display: block;
-                }
-
-                .logo {
-                    text-align: left;
-                }
-
-                .mobile-menu-btn {
-                    text-align: right;
-                }
-            }
-
-            @media (min-width: 992px) {
-                .mobile-menu {
-                    display: none;
-                }
-            }
         </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function() {
-                const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-                const mobileMenuContent = document.querySelector('.mobile-menu-content');
-                const mobileSubmenus = document.querySelectorAll('.mobile-submenu');
-
-                // Toggle mobile menu
-                mobileMenuBtn.addEventListener('click', function() {
-                    mobileMenuContent.style.display = mobileMenuContent.style.display === 'block' ? 'none' : 'block';
-                });
-
-                // Toggle submenus
-                mobileSubmenus.forEach(submenu => {
-                    const link = submenu.querySelector('a');
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        const submenuContent = this.nextElementSibling;
-                        submenuContent.style.display = submenuContent.style.display === 'block' ? 'none' : 'block';
-                        this.parentElement.classList.toggle('active');
-                    });
-                });
-
-                // Close mobile menu when clicking outside
-                document.addEventListener('click', function(e) {
-                    if (!mobileMenuBtn.contains(e.target) && !mobileMenuContent.contains(e.target)) {
-                        mobileMenuContent.style.display = 'none';
-                    }
-                });
-            });
-        </script>
     </header>
     
     
@@ -619,7 +485,7 @@
                     <i class="fa fa-thermometer-full" aria-hidden="true"></i>
                     <h3>2024: The Hottest Year</h3>
                 </div>
-                <p>Global temperatures exceeded the critical 1.5°C threshold, making it the hottest year recorded.</p>
+                <p>Global temperatures in 2024 exceeded the critical 1.5°C threshold, marking it as the hottest year ever recorded. </p>
             </div>
         </div>
 
@@ -629,7 +495,7 @@
                     <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
                     <h3>Planetary Boundaries</h3>
                 </div>
-                <p>6 out of 9 planetary boundaries breached, pushing Earth's systems beyond safe limits.</p>
+                <p>Scientists warn that we have already breached 6 out of 9 planetary boundaries, pushing Earth's systems beyond safe limits and threatening global stability.</p>
             </div>
         </div>
 
@@ -639,7 +505,7 @@
                     <i class="fa fa-globe" aria-hidden="true"></i>
                     <h3>Triple Planetary Crisis</h3>
                 </div>
-                <p>Climate change, biodiversity loss, and pollution - interconnected crises impacting all life.</p>
+                <p>Climate change, Biodiversity collapse, and Pollution are the main three interconnected planetary crises that impact ecosystems, human health, and economies.</p>
             </div>
         </div>
 
@@ -649,7 +515,7 @@
                     <i class="fa fa-handshake-o" aria-hidden="true"></i>
                     <h3>Your Impact Matters</h3>
                 </div>
-                <p>Reduce emissions, minimize waste (especially food), and conserve resources.</p>
+                <p>Research indicates that when just 25% of a population adopts a new behavior, it can trigger a societal shift, leading the majority to follow suit.</p>
             </div>
         </div>
     </div>
@@ -762,6 +628,10 @@
 <br>
          <section class="focus-section">
             <h2>Our Focus Areas</h2>
+            <p style="text-align: center; margin: 0 auto; max-width: 800px;">
+                At REarth, we empower communities with science-based climate education and actionable solutions, inspiring collective responsibility, and turning awareness into meaningful climate actions, building a sustainable planet for future generations
+            </p>
+            <br>
             <div class="container">
                 <div class="card">
                     <img src="assets\img\images\main.jpg" alt="Climate Education">
@@ -904,9 +774,9 @@
 
 
 <section class="rearth-intro">
-    <h1 class="title">At REarth, we empower communities with science-based climate education and actionable solutions, inspiring collective responsibility, and turning awareness into meaningful climate actions, building a sustainable planet for future generations</h1>
+    <h1 class="title"></h1>
     <p class="description">
-       
+        At REarth, we believe education must go beyond textbooks—it must inspire curiosity, build climate literacy, and equip generations with the tools to design real-world solutions. By integrating SDGs, experiential learning, and climate science into our educational initiatives, we are nurturing future climate leaders who can shape resilient communities
     </p>
 </section>
 
@@ -933,7 +803,7 @@
 
 /* Paragraph Styling */
 .rearth-intro .description {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.8;
     color: #fff; /* White Text */
 }
@@ -1109,9 +979,9 @@ h3 {
 }
 </style>
 <section class="rearth-intro">
-    <h1 class="title">Responsible Earthlings for a Sustainable Planet</h1>
+    <h1 class="title"></h1>
     <p class="description">
-        Dedicated to fostering climate education, awareness, and action, we empower individuals, especially youth, with knowledge and tools to promote sustainability and eco-conscious actions. Through education, collaboration, and innovation, we bridge the gap between academic insights and real-world climate solutions. Our programs, such as the <strong>SDG Star School</strong>, <strong>Women in Climate Leadership</strong>, and other educational workshops, engage communities to take collective action towards a sustainable future.
+        Awareness is the first step toward meaningful change. In a world overwhelmed by misinformation and inaction, REarth focuses on simplifying complex climate issues and making them accessible to everyone—from school children to professionals. Our goal is to bridge the gap between academic science and public understanding and transform awareness into informed choices that ripple outward through society.
     </p>
 </section>
 
@@ -1138,7 +1008,7 @@ h3 {
 
 /* Paragraph Styling */
 .rearth-intro .description {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.8;
     color: #fff; /* White Text */
 }
@@ -1332,9 +1202,9 @@ h3 {
 
 <br>
 <section class="rearth-intro">
-    <h1 class="title">Responsible Earthlings for a Sustainable Planet</h1>
+   
     <p class="description">
-        Dedicated to fostering climate education, awareness, and action, we empower individuals, especially youth, with knowledge and tools to promote sustainability and eco-conscious actions. Through education, collaboration, and innovation, we bridge the gap between academic insights and real-world climate solutions. Our programs, such as the <strong>SDG Star School</strong>, <strong>Women in Climate Leadership</strong>, and other educational workshops, engage communities to take collective action towards a sustainable future.
+        When individuals collaborate locally, they build strong connections and a shared sense of purpose, which enhances collective efficacy and drives sustainable change. At REarth, we believe that collaborative approach not only amplifies the impact of climate initiatives but also alleviates feelings of isolation and anxiety associated with environmental concerns
     </p>
 </section>
 
@@ -1361,7 +1231,7 @@ h3 {
 
 /* Paragraph Styling */
 .rearth-intro .description {
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 1.8;
     color: #fff; /* White Text */
 }
@@ -1532,35 +1402,304 @@ h3 {
 <!-- Add this in your head section -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<section class="rearth-section py-5 bg-light" style="background: url('https://images.unsplash.com/photo-1469474968028-56623f02e42e') no-repeat center center/cover;">
-    <!-- Hero Section -->
-    <div class="container-fluid px-0 mb-5">
-        <div class="position-relative">
-            <div class="hero-overlay d-flex flex-column justify-content-center align-items-center text-center" style="padding: 50px; border-radius: 10px;">
-                <h1 class="display-4 text-white mb-4">Our Impact</h1>
-                <div class="row text-white mt-3">
-                    <div class="col-md-4">
-                        <i class="fas fa-chalkboard-teacher fa-3x mb-2 text-white"></i>
-                        <h3 class="text-white">Workshops Conducted</h3>
-                        <p class="impact-number text-white" data-count="20">22+</p>
+<section class="impact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center mb-5">
+                <h2 class="impact-title">Our Impact</h2>
+                <p class="impact-subtitle">Making a difference in climate education and awareness</p>
                     </div>
-                    <div class="col-md-4">
-                        <i class="fas fa-users fa-3x mb-2 text-white"></i>
-                        <h3 class="text-white">Students Reached</h3>
-                        <p class="impact-number text-white" data-count="350">360+</p>
                     </div>
-                    <div class="col-md-4">
-                        <i class="fas fa-briefcase fa-3x mb-2 text-white"></i>
-                        <h3 class="text-white">Professionals Reached</h3>
-                        <p class="impact-number text-white" data-count="90">10+</p>
+        <div class="row">
+            <div class="col-md-4 mb-4">
+                <div class="impact-card">
+                    <div class="impact-icon-wrapper">
+                        <i class="fas fa-chalkboard-teacher"></i>
                     </div>
+                    <div class="impact-counter-wrapper">
+                        <span class="impact-counter">25</span>
+                        <span class="impact-plus">+</span>
                 </div>
-                <a href="#know-more" class="btn btn-outline-light btn-sm mt-4 know-more-btn">Know More</a>
+                    <h3 class="impact-card-title">Climate Dialog Sessions</h3>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="impact-card">
+                    <div class="impact-icon-wrapper">
+                        <i class="fas fa-briefcase"></i>
+                    </div>
+                    <div class="impact-counter-wrapper">
+                        <span class="impact-counter">100</span>
+                        <span class="impact-plus">+</span>
+                    </div>
+                    <h3 class="impact-card-title">Professionals and Adults</h3>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="impact-card">
+                    <div class="impact-icon-wrapper">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="impact-counter-wrapper">
+                        <span class="impact-counter">350</span>
+                        <span class="impact-plus">+</span>
+                    </div>
+                    <h3 class="impact-card-title">Students Reached</h3>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<br>
+
+<style>
+    /* Impact Section Animations */
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes scaleIn {
+        from {
+            transform: scale(0.8);
+            opacity: 0;
+        }
+        to {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+        50% {
+            transform: scale(1.05);
+        }
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    .impact-section {
+        padding: 60px 0;
+        background: linear-gradient(135deg, #46C0BE, #6DD56F);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .impact-section .impact-title {
+        font-size: 3rem;
+        font-weight: 800;
+        color: white;
+        margin-bottom: 15px;
+        position: relative;
+        display: inline-block;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        animation: fadeInUp 1s ease-out;
+    }
+
+    .impact-section .impact-subtitle {
+        color: rgba(255, 255, 255, 0.95);
+        font-size: 1.5rem;
+        margin: 20px auto 0;
+        max-width: 800px;
+        line-height: 1.4;
+        font-weight: 500;
+        animation: fadeInUp 1s ease-out 0.3s both;
+    }
+
+    .impact-section .impact-card {
+        background: rgba(255, 255, 255, 0.95);
+        border-radius: 15px;
+        padding: 25px 20px;
+        text-align: center;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        min-height: 200px;
+        animation: scaleIn 0.8s ease-out;
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    .impact-section .impact-card.visible {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .impact-section .impact-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        background: linear-gradient(135deg, #46C0BE, #6DD56F);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto 15px;
+        color: white;
+        font-size: 1.5rem;
+        box-shadow: 0 5px 15px rgba(70, 192, 190, 0.3);
+        transition: all 0.3s ease;
+    }
+
+    .impact-section .impact-card:hover .impact-icon-wrapper {
+        animation: pulse 1s infinite;
+    }
+
+    .impact-section .impact-counter-wrapper {
+        margin-bottom: 15px;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease;
+    }
+
+    .impact-section .impact-card.visible .impact-counter-wrapper {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .impact-section .impact-counter {
+        font-size: 2.5rem;
+        font-weight: 700;
+        color: #2E7D32;
+        line-height: 1;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .impact-section .impact-plus {
+        font-size: 1.5rem;
+        color: #2E7D32;
+        margin-left: 5px;
+        display: inline-block;
+        transition: all 0.3s ease;
+    }
+
+    .impact-section .impact-card-title {
+        color: #333;
+        font-size: 1.2rem;
+        margin: 0;
+        font-weight: 600;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: all 0.5s ease 0.2s;
+    }
+
+    .impact-section .impact-card.visible .impact-card-title {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    @media (max-width: 768px) {
+        .impact-section {
+            padding: 40px 0;
+        }
+
+        .impact-section .impact-title {
+            font-size: 2.5rem;
+        }
+
+        .impact-section .impact-subtitle {
+            font-size: 1.2rem;
+        }
+
+        .impact-section .impact-card {
+            padding: 20px 15px;
+            min-height: 180px;
+        }
+
+        .impact-section .impact-icon-wrapper {
+            width: 50px;
+            height: 50px;
+            font-size: 1.2rem;
+        }
+
+        .impact-section .impact-counter {
+            font-size: 2rem;
+        }
+
+        .impact-section .impact-card-title {
+            font-size: 1.1rem;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Counter animation
+        const counters = document.querySelectorAll('.impact-counter');
+        const targetValues = {
+            'Climate Dialog Sessions': 25,
+            'Professionals and Adults': 100,
+            'Students Reached': 350
+        };
+        const speed = 200;
+        const updateInterval = 3000;
+
+        const animateCounter = (counter, target) => {
+            const count = +counter.innerText;
+            const increment = (target - count) / speed;
+
+            if (count < target) {
+                counter.innerText = Math.ceil(count + increment);
+                setTimeout(() => animateCounter(counter, target), 1);
+            } else {
+                counter.innerText = target;
+            }
+        };
+
+        const updateCounters = () => {
+            counters.forEach(counter => {
+                const currentValue = +counter.innerText;
+                const cardTitle = counter.closest('.impact-card').querySelector('.impact-card-title').textContent;
+                const targetValue = targetValues[cardTitle];
+                const randomIncrement = Math.floor(Math.random() * 5) + 1;
+                const newTarget = Math.min(currentValue + randomIncrement, targetValue);
+                
+                animateCounter(counter, newTarget);
+            });
+        };
+
+        // Intersection Observer for card animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const card = entry.target;
+                    card.classList.add('visible');
+                    
+                    // Start counter animation
+                    const counter = card.querySelector('.impact-counter');
+                    counter.innerText = '0';
+                    const cardTitle = card.querySelector('.impact-card-title').textContent;
+                    const targetValue = targetValues[cardTitle];
+                    animateCounter(counter, targetValue);
+                    
+                    observer.unobserve(card);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        // Observe all impact cards
+        document.querySelectorAll('.impact-card').forEach(card => {
+            observer.observe(card);
+        });
+
+        // Start continuous updates after initial animation
+        setTimeout(() => {
+            setInterval(updateCounters, updateInterval);
+        }, 2000);
+    });
+</script>
 
        <!--? Blog Area Start -->
 
@@ -1571,7 +1710,11 @@ h3 {
                         <div class="col-12 text-center">
                             <div class="section-title">
                                 <h2>Latest from REarth</h2>
-                                <p>Stay updated with insights, news, and stories about climate change, sustainability, and community initiatives. Join us in making a difference.</p>
+                                <p>Stay updated with our work on climate education, sustainability, guest sessions and community initiatives.</p>
+                                <div class="action-buttons">
+                                    <a href="contact.html" class="btn btn-primary">Join Us</a>
+                                    <a href="events.html" class="btn btn-secondary">Know More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2411,14 +2554,7 @@ h3 {
         document.addEventListener('DOMContentLoaded', function() {
             const nav = document.querySelector('.main-menu');
             if (nav) {
-                const translationBtn = document.createElement('li');
-                translationBtn.innerHTML = `
-                    <a href="#" class="translation-btn" onclick="translatePage()">
-                        <img src="assets/img/japan-flag.png" alt="Japanese Flag">
-                        <span>日本語</span>
-                    </a>
-                `;
-                nav.appendChild(translationBtn);
+                // Remove translation button code
             }
         });
 
@@ -2474,5 +2610,7 @@ h3 {
             }
         });
     </script>
+
+    
 </body>
 </html>
