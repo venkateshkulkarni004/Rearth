@@ -30,7 +30,7 @@
         }
         .header-area {
             background: #fff;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
         .main-menu ul li a {
             color: #333;
@@ -55,12 +55,9 @@
             margin-top: 10px;
         }
         .contact-section {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            margin: -60px auto 40px auto;
             padding: 40px 30px;
             max-width: 1000px;
+            margin: 0 auto;
         }
         .form-control, .button-contactForm {
             border-radius: 8px;
@@ -105,7 +102,7 @@
             color: #fff;
         }
         .footer-social a {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             width: 40px;
             height: 40px;
             border-radius: 50%;
@@ -196,14 +193,6 @@
         .is-invalid,
         .was-validated :invalid {
             border-color: #dc3545;
-        }
-        .contact-form-container {
-            background: #fff;
-            border-radius: 20px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            padding: 40px;
-            margin: -60px auto 40px auto;
-            max-width: 1000px;
         }
         .form-input {
             width: 100%;
@@ -308,7 +297,7 @@
         </div>
     </div>
     <!-- Preloader Start -->
-   
+
     <header>
         <!-- Header Start -->
         <div class="header-area">
@@ -324,7 +313,7 @@
                                     </a>
                                 </div>
                             </div>
-    
+
                             <div class="col-xl-10 col-lg-10">
                                 <div class="menu-wrapper d-flex align-items-center justify-content-end">
                                     <!-- Main-menu -->
@@ -338,7 +327,7 @@
                                                         <li class="has-submenu"><a href=""><strong>Education</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
-                                                                 <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
+                                                                <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
                                                                 <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
                                                             </ul>
                                                         </li>
@@ -376,13 +365,13 @@
             </div>
         </div>
         <!-- Header End -->
-    
+
         <style>
             /* Ensure submenus are positioned correctly */
             .submenu {
                 position: absolute;
-                top: 0;
-                left: 100%; /* Position to the right */
+                top: 100%; /* Position below the parent menu item */
+                left: 0; /* Align with the parent menu item */
                 display: none;
                 list-style: none;
                 padding: 0;
@@ -392,333 +381,531 @@
                 z-index: 1000;
                 min-width: 200px; /* Ensure enough width for clickable area */
             }
-    
+
             /* Show submenu on hover */
-            .has-submenu:hover > .submenu {
+            .has-submenu:hover > .submenu,
+            .has-submenu:focus-within > .submenu {
                 display: block;
             }
-    
+
             /* Adjust submenu items */
             .submenu li {
                 position: relative;
                 width: 100%;
             }
-    
+
             .submenu li a {
                 display: block;
                 padding: 10px;
                 color: #333;
                 text-decoration: none;
             }
-    
+
             .submenu li a:hover {
                 background-color: #f0f0f0;
             }
-    
+
             /* Additional styling for main menu */
             .main-menu ul {
                 list-style: none;
                 padding: 0;
                 margin: 0;
             }
-    
+
             .main-menu ul li {
                 position: relative;
                 display: inline-block;
             }
-    
+
             .main-menu ul li a {
                 display: block;
                 padding: 15px 20px;
                 color: #333;
                 text-decoration: none;
             }
-    
+
             .main-menu ul li a:hover {
                 background-color: #f0f0f0;
             }
-    
+
             /* Ensure submenus are easily accessible */
             .main-menu ul li .submenu li .submenu {
                 left: 100%;
                 top: 0;
             }
+
+            /* Mobile Menu Toggle Button */
+            .mobile-menu-toggle {
+                display: flex;
+                align-items: center;
+            }
+
+            .mobile-menu-toggle button {
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+            }
+
+            /* Mobile Menu Styles */
+            .mobile_menu {
+                display: none;
+                flex-direction: column;
+                background-color: #fff;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                z-index: 1000;
+            }
+
+            .mobile_menu.active {
+                display: flex;
+            }
+
+            .mobile_menu ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            .mobile_menu ul li {
+                width: 100%;
+            }
+
+            .mobile_menu ul li a {
+                display: block;
+                padding: 15px 20px;
+                color: #333;
+                text-decoration: none;
+            }
+
+            .mobile_menu ul li a:hover {
+                background-color: #f0f0f0;
+            }
+
+            /* Media Queries for Responsiveness */
+            @media (max-width: 991px) {
+                .main-menu {
+                    display: none;
+                }
+
+                .mobile-menu-toggle {
+                    display: flex;
+                }
+
+                .submenu {
+                    position: static;
+                    display: none;
+                }
+
+                .has-submenu > a:after {
+                    content: '▼';
+                    margin-left: 10px;
+                }
+
+                .has-submenu.active > .submenu {
+                    display: block;
+                }
+            }
         </style>
     </header>
-    
-<main>
-    <!-- Hero Section -->
-    <div class="slider-area2">
-        <div class="slider-height2 d-flex align-items-center">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-12">
-                        <div class="hero-cap hero-cap2 pt-70">
-                            <h1>Contact Us</h1>
-                            <p class="hero-description">Get in touch with our team to learn more about our environmental education programs and sustainability initiatives.</p>
+
+    <main>
+        <!-- Hero Section -->
+        <div class="slider-area2">
+            <div class="slider-height2 d-flex align-items-center">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-12">
+                            <div class="hero-cap hero-cap2 pt-70">
+                                <h1>Contact Us</h1>
+                                <p class="hero-description">Get in touch with our team to learn more about our environmental education programs and sustainability initiatives.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-   <!-- Contact Section -->
-<section class="contact-section">
-    <div class="container">
-        <div class="contact-form-container">
-            <div class="form-header text-center mb-6">
-                <img src="assets/img/logo/Rearth.Big.png" alt="Rearth Logo" style="width: 120px; height: auto; margin-bottom: 20px;">
-                <p class="text-gray-600">Fill up the form below to send us a message</p>
+        <!-- Contact Section -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-form-container">
+                    <div class="form-header text-center mb-6">
+                        <img src="assets/img/logo/Rearth.Big.png" alt="Rearth Logo" style="width: 120px; height: auto; margin-bottom: 20px;">
+                        <p class="text-gray-600">Fill up the form below to send us a message</p>
+                    </div>
+                    <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
+                        <input type="hidden" name="access_key" value="8a06d80f-b37d-4d8d-9a12-4648d56b6aee" />
+                        <input type="hidden" name="subject" value="New Contact Form Submission from Rearth Website" />
+                        <input type="checkbox" name="botcheck" id="" style="display: none;" />
+
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Enter your name" required class="form-input" />
+                            <i class="fas fa-check validation-icon valid"></i>
+                            <i class="fas fa-times validation-icon invalid"></i>
+                            <div class="error-message">Please enter a valid name</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address</label>
+                            <input type="email" name="email" id="email" placeholder="Enter your email address" required class="form-input" />
+                            <i class="fas fa-check validation-icon valid"></i>
+                            <i class="fas fa-times validation-icon invalid"></i>
+                            <div class="error-message">Please enter a valid email address</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea rows="5" name="message" id="message" placeholder="Type your message here..." class="form-input" required minlength="10"></textarea>
+                            <i class="fas fa-check validation-icon valid"></i>
+                            <i class="fas fa-times validation-icon invalid"></i>
+                            <div class="error-message">Please enter a message (minimum 10 characters)</div>
+                        </div>
+
+                        <div class="form-group">
+                            <button type="submit" class="submit-button">Submit</button>
+                        </div>
+                        <div id="result" class="form-result"></div>
+                    </form>
+                </div>
             </div>
-            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="needs-validation" novalidate>
-                <input type="hidden" name="access_key" value="8a06d80f-b37d-4d8d-9a12-4648d56b6aee" />
-                <input type="hidden" name="subject" value="New Contact Form Submission from Rearth Website" />
-                <input type="checkbox" name="botcheck" id="" style="display: none;" />
+        </section>
 
-                <div class="form-group">
-                    <label for="name" class="form-label">Name</label>
-                    <input type="text" name="name" id="name" placeholder="Enter your name" required class="form-input" />
-                    <i class="fas fa-check validation-icon valid"></i>
-                    <i class="fas fa-times validation-icon invalid"></i>
-                    <div class="error-message">Please enter a valid name</div>
-                </div>
 
-                <div class="form-group">
-                    <label for="email" class="form-label">Email Address</label>
-                    <input type="email" name="email" id="email" placeholder="Enter your email address" required class="form-input" />
-                    <i class="fas fa-check validation-icon valid"></i>
-                    <i class="fas fa-times validation-icon invalid"></i>
-                    <div class="error-message">Please enter a valid email address</div>
-                </div>
-
-                <div class="form-group">
-                    <label for="message" class="form-label">Message</label>
-                    <textarea rows="5" name="message" id="message" placeholder="Type your message here..." class="form-input" required minlength="10"></textarea>
-                    <i class="fas fa-check validation-icon valid"></i>
-                    <i class="fas fa-times validation-icon invalid"></i>
-                    <div class="error-message">Please enter a message (minimum 10 characters)</div>
-                </div>
-
-                <div class="form-group">
-                    <button type="submit" class="submit-button">Submit</button>
-                </div>
-                <div id="result" class="form-result"></div>
-            </form>
+        <!-- FAQ Section -->
+<section class="faq-section">
+    <div class="container">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq-item">
+            <h3 class="faq-question">What is Rearth?</h3>
+            <div class="faq-answer">
+                <p>Rearth is a non-profit organization based in Yokohama and Tokyo, focusing on climate change education and sustainability initiatives.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">What programs does Rearth offer?</h3>
+            <div class="faq-answer">
+                <p>Rearth offers a variety of programs including SDG Star School, After School Program, Climate Warrior Club, ENROADS workshops, Climate Fresk, Biodiversity workshops, Women in Climate Leadership, and Ready Japan - DRRPF.</p>
+            </div>
+        </div>
+        <div class="faq-item">
+            <h3 class="faq-question">How can I get involved?</h3>
+            <div class="faq-answer">
+                <p>You can get involved by participating in our programs, volunteering, or supporting our initiatives. Contact us for more information.</p>
+            </div>
         </div>
     </div>
 </section>
 
+<style>
+    .faq-section {
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .faq-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .faq-item {
+        margin-bottom: 20px;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 20px;
+    }
+    .faq-item:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .faq-question {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .faq-question::after {
+        content: '▼';
+        font-size: 1.2rem;
+        margin-left: 10px;
+        transition: transform 0.3s;
+    }
+    .faq-question.active::after {
+        content: '▲';
+        transform: rotate(180deg);
+    }
+    .faq-answer {
+        display: none;
+        margin-top: 10px;
+        font-size: 1rem;
+    }
+    .faq-answer p {
+        margin-bottom: 10px;
+    }
+</style>
 
-    <footer>
-        <div class="footer-wrapper">
-            <div class="footer-area">
-                <div class="container">
-                    <div class="row justify-content-between">
-                        <div class="col-xl-4 col-lg-3 col-md-8 col-sm-8">
-                            <div class="single-footer-caption">
-                                <div class="footer-logo">
-                                    <a href="index.html"><img src="assets/img/logo/Rearth.Big.png" alt="Rearth Community Logo - Climate Education Yokohama" style="max-width: 120px; height: auto;"></a>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            const answer = item.querySelector('.faq-answer');
+
+            question.addEventListener('click', function() {
+                if (answer.style.display === 'block') {
+                    answer.style.display = 'none';
+                    question.classList.remove('active');
+                } else {
+                    answer.style.display = 'block';
+                    question.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
+<!-- Additional Section -->
+<section class="additional-section">
+    <div class="container">
+        <h2>More About Rearth</h2>
+        <p>Rearth is dedicated to creating a sustainable future through education and action. Our programs are designed to educate and empower individuals to take action against climate change and promote sustainability.</p>
+        <p>Join us in our mission to create a better future for all.</p>
+    </div>
+</section>
+
+<style>
+    .additional-section {
+        margin: 40px auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .additional-section h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .additional-section p {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+</style>
+
+
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-area">
+                    <div class="container">
+                        <div class="row justify-content-between">
+                            <div class="col-xl-4 col-lg-3 col-md-8 col-sm-8">
+                                <div class="single-footer-caption">
+                                    <div class="footer-logo">
+                                        <a href="index.html"><img src="assets/img/logo/Rearth.Big.png" alt="Rearth Community Logo - Climate Education Yokohama" style="max-width: 120px; height: auto;"></a>
                                     </div>
                                     <div class="footer-tittle">
                                         <div class="footer-pera">
-                                        <p>Leading climate education and sustainability initiatives, Join us in creating a sustainable future through education and action.</p>
+                                            <p>Leading climate education and sustainability initiatives, Join us in creating a sustainable future through education and action.</p>
+                                        </div>
+                                    </div>
+                                    <div class="footer-social">
+                                        <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                        <a href="https://www.instagram.com/rearthcommunity" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                        <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                                     </div>
                                 </div>
-                                <div class="footer-social">
-                                    <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                    <a href="https://www.instagram.com/rearthcommunity" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                    <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                                </div>
                             </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
-                            <div class="single-footer-caption">
-                                <div class="footer-tittle">
-                                    <h4>Our Programs</h4>
-                                    <ul>
-                                        <li><a href="#education">Education Programs</a></li>
-                                        <li><a href="#workshops">Awareness Workshops</a></li>
-                                        <li><a href="#community-engagement">Community Engagement</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-                            <div class="single-footer-caption">
-                                <div class="footer-tittle">
-                                    <h4>Quick Links</h4>
-                                    <ul>
-                                        <li><a href="about.html">About Us</a></li>
-                                        <li><a href="projects.html">Our Projects</a></li>
-                                        <li><a href="events.html">Events</a></li>
-                                        <li><a href="resources.html">Resources</a></li>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
-                            <div class="single-footer-caption">
-                                <div class="footer-tittle">
-                                    <h4>Contact Information</h4>
-                                    <ul>
-                                        <li><a href="mailto:contact.rearth@gmail.com">contact.rearth@gmail.com</a></li>
-                                        <li><a href="https://maps.google.com/?q=Midori-ku,Yokohama,Tokyo,Japan" target="_blank">Midori-ku, Yokohama, Tokyo, Japan</a></li>
-                                    </ul>
-                            </div>
-                        </div>
-                                </div>
-                            </div>
-                        </div>
-            <div class="footer-bottom-area">
-                <div class="container">
-                    <div class="footer-border">
-                        <div class="row d-flex align-items-center">
-                            <div class="col-xl-12">
-                                <div class="footer-copy-right text-center">
-                                        <p>
-                                            
-                                        </p>
+                            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
+                                <div class="single-footer-caption">
+                                    <div class="footer-tittle">
+                                        <h4>Our Programs</h4>
+                                        <ul>
+                                            <li><a href="#education">Education Programs</a></li>
+                                            <li><a href="#workshops">Awareness Workshops</a></li>
+                                            <li><a href="#community-engagement">Community Engagement</a></li>
+                                        </ul>
                                     </div>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </footer>
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+                                <div class="single-footer-caption">
+                                    <div class="footer-tittle">
+                                        <h4>Quick Links</h4>
+                                        <ul>
+                                            <li><a href="about.html">About Us</a></li>
+                                            <li><a href="projects.html">Our Projects</a></li>
+                                            <li><a href="events.html">Events</a></li>
+                                            <li><a href="resources.html">Resources</a></li>
+                                            <li><a href="contact.html">Contact Us</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
+                                <div class="single-footer-caption">
+                                    <div class="footer-tittle">
+                                        <h4>Contact Information</h4>
+                                        <ul>
+                                            <li><a href="mailto:contact.rearth@gmail.com">contact.rearth@gmail.com</a></li>
+                                            <li><a href="https://maps.google.com/?q=Midori-ku,Yokohama,Tokyo,Japan" target="_blank">Midori-ku, Yokohama, Tokyo, Japan</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom-area">
+                    <div class="container">
+                        <div class="footer-border">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-xl-12">
+                                    <div class="footer-copy-right text-center">
+                                        <p>&copy; 2025 Rearth Community. All rights reserved.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
 
-    <!-- JS here -->
-    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
-    <!-- Jquery, Popper, Bootstrap -->
-    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="./assets/js/popper.min.js"></script>
-    <script src="./assets/js/bootstrap.min.js"></script>
-    <!-- Jquery Mobile Menu -->
-    <script src="./assets/js/jquery.slicknav.min.js"></script>
+        <!-- JS here -->
+        <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+        <!-- jQuery, Popper, Bootstrap -->
+        <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+        <script src="./assets/js/popper.min.js"></script>
+        <script src="./assets/js/bootstrap.min.js"></script>
+        <!-- jQuery Mobile Menu -->
+        <script src="./assets/js/jquery.slicknav.min.js"></script>
 
-    <!-- Jquery Slick , Owl-Carousel Plugins -->
-    <script src="./assets/js/owl.carousel.min.js"></script>
-    <script src="./assets/js/slick.min.js"></script>
-    <!-- One Page, Animated-HeadLin -->
-    <script src="./assets/js/wow.min.js"></script>
-    <script src="./assets/js/animated.headline.js"></script>
-    <script src="./assets/js/jquery.magnific-popup.js"></script>
+        <!-- jQuery Slick, Owl-Carousel Plugins -->
+        <script src="./assets/js/owl.carousel.min.js"></script>
+        <script src="./assets/js/slick.min.js"></script>
+        <!-- One Page, Animated-HeadLin -->
+        <script src="./assets/js/wow.min.js"></script>
+        <script src="./assets/js/animated.headline.js"></script>
+        <script src="./assets/js/jquery.magnific-popup.js"></script>
 
-    <!-- Date Picker -->
-    <script src="./assets/js/gijgo.min.js"></script>
-    <!-- Nice-select, sticky -->
-    <script src="./assets/js/jquery.nice-select.min.js"></script>
-    <script src="./assets/js/jquery.sticky.js"></script>
-    <!-- Progress -->
-    <script src="./assets/js/jquery.barfiller.js"></script>
+        <!-- Date Picker -->
+        <script src="./assets/js/gijgo.min.js"></script>
+        <!-- Nice-select, sticky -->
+        <script src="./assets/js/jquery.nice-select.min.js"></script>
+        <script src="./assets/js/jquery.sticky.js"></script>
+        <!-- Progress -->
+        <script src="./assets/js/jquery.barfiller.js"></script>
 
-    <!-- counter , waypoint,Hover Direction -->
-    <script src="./assets/js/jquery.counterup.min.js"></script>
-    <script src="./assets/js/waypoints.min.js"></script>
-    <script src="./assets/js/jquery.countdown.min.js"></script>
-    <script src="./assets/js/hover-direction-snake.min.js"></script>
+        <!-- counter, waypoint, Hover Direction -->
+        <script src="./assets/js/jquery.counterup.min.js"></script>
+        <script src="./assets/js/waypoints.min.js"></script>
+        <script src="./assets/js/jquery.countdown.min.js"></script>
+        <script src="./assets/js/hover-direction-snake.min.js"></script>
 
-    <!-- contact js -->
-    <script src="./assets/js/contact.js"></script>
-    <script src="./assets/js/jquery.form.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/mail-script.js"></script>
-    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+        <!-- contact js -->
+        <script src="./assets/js/contact.js"></script>
+        <script src="./assets/js/jquery.form.js"></script>
+        <script src="./assets/js/jquery.validate.min.js"></script>
+        <script src="./assets/js/mail-script.js"></script>
+        <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
 
-    <!-- Jquery Plugins, main Jquery -->	
-    <script src="./assets/js/plugins.js"></script>
-    <script src="./assets/js/main.js"></script>
+        <!-- jQuery Plugins, main jQuery -->
+        <script src="./assets/js/plugins.js"></script>
+        <script src="./assets/js/main.js"></script>
 
-    <!-- Main JS -->
-    <script src="assets/js/main.js"></script>
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
 
-    <!-- Chatbot Script -->
-    <script src="assets/js/chatbot.js"></script>
+        <!-- Chatbot Script -->
+        <script src="assets/js/chatbot.js"></script>
 
-    <script>
-        document.getElementById('form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const form = this;
-            const submitButton = form.querySelector('button[type="submit"]');
-            const resultDiv = document.getElementById('result');
-            const originalButtonText = submitButton.innerHTML;
-            
-            // Validate all fields
-            const inputs = form.querySelectorAll('input, textarea');
-            let isValid = true;
-            
+        <script>
+            document.getElementById('form').addEventListener('submit', function(e) {
+                e.preventDefault();
+
+                const form = this;
+                const submitButton = form.querySelector('button[type="submit"]');
+                const resultDiv = document.getElementById('result');
+                const originalButtonText = submitButton.innerHTML;
+
+                // Validate all fields
+                const inputs = form.querySelectorAll('input, textarea');
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    if (!input.checkValidity()) {
+                        isValid = false;
+                        input.classList.add('invalid');
+                    }
+                });
+
+                if (!isValid) {
+                    resultDiv.className = 'form-result error';
+                    resultDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fill in all fields correctly.';
+                    return;
+                }
+
+                // Show loading state
+                submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitButton.disabled = true;
+                resultDiv.className = 'form-result';
+                resultDiv.innerHTML = '';
+
+                fetch(form.action, {
+                    method: 'POST',
+                    body: new FormData(form),
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.ok) {
+                        return json;
+                    } else {
+                        throw new Error(json.message || 'Form submission failed');
+                    }
+                })
+                .then(data => {
+                    if (data.success) {
+                        resultDiv.className = 'form-result success';
+                        resultDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you for your message! We will get back to you soon.';
+                        form.reset();
+                    } else {
+                        throw new Error(data.message || 'Form submission failed');
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    resultDiv.className = 'form-result error';
+                    resultDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> There was an error sending your message. Please try again.';
+                })
+                .finally(() => {
+                    submitButton.innerHTML = originalButtonText;
+                    submitButton.disabled = false;
+                });
+            });
+
+            // Add real-time validation
+            const inputs = document.querySelectorAll('.form-input');
             inputs.forEach(input => {
-                if (!input.checkValidity()) {
-                    isValid = false;
-                    input.classList.add('invalid');
-                }
+                input.addEventListener('input', function() {
+                    if (this.checkValidity()) {
+                        this.classList.remove('invalid');
+                        this.classList.add('valid');
+                    } else {
+                        this.classList.remove('valid');
+                        this.classList.add('invalid');
+                    }
+                });
             });
-            
-            if (!isValid) {
-                resultDiv.className = 'form-result error';
-                resultDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> Please fill in all fields correctly.';
-                return;
-            }
-            
-            // Show loading state
-            submitButton.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            submitButton.disabled = true;
-            resultDiv.className = 'form-result';
-            resultDiv.innerHTML = '';
-            
-            fetch(form.action, {
-                method: 'POST',
-                body: new FormData(form),
-                headers: {
-                    'Accept': 'application/json'
-                }
-            })
-            .then(async (response) => {
-                let json = await response.json();
-                if (response.ok) {
-                    return json;
-                } else {
-                    throw new Error(json.message || 'Form submission failed');
-                }
-            })
-            .then(data => {
-                if (data.success) {
-                    resultDiv.className = 'form-result success';
-                    resultDiv.innerHTML = '<i class="fas fa-check-circle"></i> Thank you for your message! We will get back to you soon.';
-                    form.reset();
-                } else {
-                    throw new Error(data.message || 'Form submission failed');
-                }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                resultDiv.className = 'form-result error';
-                resultDiv.innerHTML = '<i class="fas fa-exclamation-circle"></i> There was an error sending your message. Please try again.';
-            })
-            .finally(() => {
-                submitButton.innerHTML = originalButtonText;
-                submitButton.disabled = false;
-            });
-        });
-
-        // Add real-time validation
-        const inputs = document.querySelectorAll('.form-input');
-        inputs.forEach(input => {
-            input.addEventListener('input', function() {
-                if (this.checkValidity()) {
-                    this.classList.remove('invalid');
-                    this.classList.add('valid');
-                } else {
-                    this.classList.remove('valid');
-                    this.classList.add('invalid');
-                }
-            });
-        });
-    </script>
-</main>
+        </script>
+    </main>
 </body>
 </html>
