@@ -671,32 +671,294 @@
     });
 </script>
 <!-- Additional Section -->
-<section class="additional-section">
+
+
+<section class="focus-section">
+    <h1>Our Projects</h1>
     <div class="container">
-        <h2>More About Rearth</h2>
-        <p>Rearth is dedicated to creating a sustainable future through education and action. Our programs are designed to educate and empower individuals to take action against climate change and promote sustainability.</p>
-        <p>Join us in our mission to create a better future for all.</p>
+        <!-- Education Section -->
+        <div class="project-category">
+            <h3 class="category-title">Education</h3>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="SDG Star School">
+                    <div class="overlay">SDG Star School</div>
+                    <div class="details">
+                        <a href="#education" class="btn btn-outline-light btn-sm mt-4 know-more-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/aa.jpg" alt="After School Program">
+                    <div class="overlay"> After School Program</div>
+                    <div class="details">
+                        <a href="#community-engagement" class="btn header-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/commity.jpg" alt="Climate Warrior Club">
+                    <div class="overlay"> Climate Warrior Club</div>
+                    <div class="details">
+                        <a href="#climate-warrior-club" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awareness Workshops Section -->
+        <div class="project-category">
+            <h3 class="category-title">Awareness Workshops</h3>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="ENROADS">
+                    <div class="overlay"> ENROADS</div>
+                    <div class="details">
+                        <a href="#enroads" class="btn btn-outline-light btn-sm mt-4 know-more-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/aa.jpg" alt="Climate Fresk">
+                    <div class="overlay"> Climate Fresk</div>
+                    <div class="details">
+                        <a href="#climate-fresk" class="btn header-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/commity.jpg" alt="Biodiversity">
+                    <div class="overlay">Biodiversity</div>
+                    <div class="details">
+                        <a href="#biodiversity" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="2 Tonnes">
+                    <div class="overlay">2 Tonnes</div>
+                    <div class="details">
+                        <a href="#2-tonnes" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Engagement Section -->
+        <div class="project-category">
+            <h3 class="category-title"> Community Engagement</h3>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="Women in Climate Leadership">
+                    <div class="overlay"> Women in Climate Leadership</div>
+                    <div class="details">
+                        <a href="#women-in-climate-leadership" class="btn btn-outline-light btn-sm mt-4 know-more-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/aa.jpg" alt="REady Japan - DRRPF">
+                    <div class="overlay">REady Japan - DRRPF</div>
+                    <div class="details">
+                        <a href="#ready-japan-drrpf" class="btn header-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
 <style>
-    .additional-section {
-        margin: 40px auto;
-        padding: 20px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    }
-    .additional-section h2 {
-        font-size: 2rem;
-        margin-bottom: 20px;
+    .focus-section {
         text-align: center;
+        background-color: #f4f4f4;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-    .additional-section p {
-        font-size: 1rem;
-        margin-bottom: 10px;
+
+    .project-category {
+        margin-bottom: 40px;
+        padding: 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-category:hover {
+        transform: translateY(-5px);
+    }
+
+    .category-title {
+        color: #2E7D32;
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .category-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover .overlay {
+        background: linear-gradient(90deg, rgba(70, 192, 190, 0.9), rgba(109, 213, 111, 0.9));
+    }
+
+    .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover .details {
+        opacity: 1;
+    }
+
+    .btn {
+        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        color: white;
+    }
+
+    /* Specific styling for Awareness Workshops section */
+    .project-category:nth-child(2) .project-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .project-category:nth-child(2) .card {
+        min-width: 200px;
+    }
+
+    .project-category:nth-child(2) .card img {
+        height: 180px;
+    }
+
+    .project-category:nth-child(2) .overlay {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    @media (max-width: 1200px) {
+        .project-category:nth-child(2) .project-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .category-title {
+            font-size: 24px;
+        }
+
+        .project-category {
+            padding: 20px;
+        }
+
+        .project-category:nth-child(2) .project-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .project-category:nth-child(2) .card {
+            min-width: 100%;
+        }
     }
 </style>
+
+ 
+<br>
 
 
         <footer>
@@ -767,7 +1029,7 @@
                             <div class="row d-flex align-items-center">
                                 <div class="col-xl-12">
                                     <div class="footer-copy-right text-center">
-                                        <p>&copy; 2025 Rearth Community. All rights reserved.</p>
+                                        <p>&copy; .</p>
                                     </div>
                                 </div>
                             </div>
