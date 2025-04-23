@@ -242,8 +242,169 @@
                 <div class="center-block custom-center-block">
                     <h3 class="vision-title custom-title">What is REadyJapan?</h3>
                     <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan equips foreign residents with the knowledge and resources needed to effectively respond to disasters such as earthquakes, typhoons, and heatwaves. The program ensures a comprehensive approach that includes preparedness, response, recovery, mitigation, and adaptation.
+                    REadyJapan equips foreign residents with the knowledge and resources needed to effectively respond to disasters such as earthquakes, typhoons, and heatwaves. The program ensures a comprehensive approach that includes preparedness, response, recovery, mitigation, and adaptation.
                     </p>
+
+                    <section id="values" class="values section light-background" style="background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);">
+                        <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                          <h2 style="color: white; font-size: 2.75rem; font-weight: bold; font-family: 'Montserrat', sans-serif;">How We Are Structuring the Program</h2>
+                        </div>
+                      
+                        <div class="container">
+                          <div class="row g-3">
+                            <!-- Multilingual Disaster Preparedness Workshops -->
+                            <div class="col-md-6 col-lg-3">
+                              <div class="program-item">
+                                <div class="icon-container">
+                                  <i class="fa fa-comments"></i>
+                                </div>
+                                <div class="content">
+                                  <h3>Disaster Preparedness Workshops</h3>
+                                  <p class="description">Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</p>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <!-- Community Evacuation Drills -->
+                            <div class="col-md-6 col-lg-3">
+                              <div class="program-item">
+                                <div class="icon-container">
+                                  <i class="fa fa-female"></i>
+                                </div>
+                                <div class="content">
+                                  <h3>Community Evacuation Drills</h3>
+                                  <p class="description">Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</p>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <!-- Development of English Resources -->
+                            <div class="col-md-6 col-lg-3">
+                              <div class="program-item">
+                                <div class="icon-container">
+                                  <i class="fa fa-lightbulb-o"></i>
+                                </div>
+                                <div class="content">
+                                  <h3>English Resources</h3>
+                                  <p class="description">Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</p>
+                                </div>
+                              </div>
+                            </div>
+                      
+                            <!-- Heatwave and Extreme Weather Preparedness -->
+                            <div class="col-md-6 col-lg-3">
+                              <div class="program-item">
+                                <div class="icon-container">
+                                  <i class="fa fa-globe"></i>
+                                </div>
+                                <div class="content">
+                                  <h3>Extreme Weather Preparedness</h3>
+                                  <p class="description">Providing guidance on heatstroke prevention and typhoon safety.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </section>
+                      
+                      <!-- Additional Styling -->
+                      <style>
+                        /* Values Section Styling */
+                        .values {
+                          padding: 40px 0;
+                          background-color: #E8F5E9;
+                          border-radius: 10px;
+                          font-family: 'Montserrat', sans-serif;
+                        }
+                      
+                        .program-item {
+                          background: white;
+                          border-radius: 10px;
+                          border: 3px solid transparent;
+                          border-image: linear-gradient(45deg, #46C0BE, #6DD56F, #46C0BE) 1;
+                          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+                          height: 100%;
+                          overflow: hidden;
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: space-between;
+                          transition: transform 0.3s ease, box-shadow 0.3s ease;
+                        }
+                      
+                        .program-item:hover {
+                          transform: translateY(-5px);
+                          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+                        }
+                      
+                        /* Icon Container: circular with border */
+                        .icon-container {
+                          display: flex;
+                          align-items: center;
+                          justify-content: center;
+                          width: 60px;
+                          height: 60px;
+                          border-radius: 50%;
+                          background: #f1f8e9;
+                          font-size: 1.75rem;
+                          margin: 0 auto 10px auto;
+                          transition: transform 0.3s ease;
+                          border: 2px solid #46C0BE; /* Added border */
+                        }
+                      
+                        .icon-container i {
+                          background: linear-gradient(45deg, #46C0BE, #6DD56F);
+                          -webkit-background-clip: text;
+                          -webkit-text-fill-color: transparent;
+                        }
+                      
+                        .content {
+                          padding: 20px;
+                          flex-grow: 1;
+                        }
+                      
+                        h3 {
+                          color: #2E7D32;
+                          margin-bottom: 15px;
+                          font-size: 1.5rem;
+                          font-weight: bold;
+                          text-align: center;
+                          font-family: 'Montserrat', sans-serif;
+                        }
+                      
+                        .description {
+                          color: #555;
+                          margin-bottom: 15px;
+                          min-height: 80px;
+                          text-align: center;
+                          font-size: 1.50rem; /* Increased font size */
+                          font-family: 'Montserrat', sans-serif;
+                        }
+                      
+                        .row {
+                          margin-bottom: 20px;
+                        }
+                      
+                        @media (max-width: 992px) {
+                          .col-md-6 {
+                            width: 100% !important;
+                            margin-bottom: 15px;
+                          }
+                          .description {
+                            min-height: auto;
+                          }
+                        }
+                      
+                        @media (max-width: 768px) {
+                          .program-item {
+                            margin-bottom: 20px;
+                          }
+                        }
+                      </style>
+                      
+
+
+
+                    
         
                     <h3 class="mission-title custom-title">How We Are Structuring the Program</h3>
                     <p class="text-black custom-paragraph mt-5 fw-bold text-center">
@@ -435,6 +596,291 @@
             }
         </style>
         <br>
+        
+<section class="focus-section">
+    <h1>Our Projects</h1>
+    <div class="container">
+        <!-- Education Section -->
+        <div class="project-category">
+            <h3 class="category-title">Education</h3>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="SDG Star School">
+                    <div class="overlay">SDG Star School</div>
+                    <div class="details">
+                        <a href="sdgstarschool.html" class="btn btn-outline-light btn-sm mt-4 know-more-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/aa.jpg" alt="After School Program">
+                    <div class="overlay"> After School Program</div>
+                    <div class="details">
+                        <a href="Afterschool.html" class="btn header-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/commity.jpg" alt="Climate Warrior Club">
+                    <div class="overlay"> Climate Warrior Club</div>
+                    <div class="details">
+                        <a href="Climate_Warrior_club.html" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Awareness Workshops Section -->
+        <div class="project-category">
+            <h3 class="category-title">Awareness Workshops</h3>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="ENROADS">
+                    <div class="overlay"> ENROADS</div>
+                    <div class="details">
+                        <a href="Enroads.html" class="btn btn-outline-light btn-sm mt-4 know-more-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/aa.jpg" alt="Climate Fresk">
+                    <div class="overlay"> Climate Fresk</div>
+                    <div class="details">
+                        <a href="Climate_Fresk.html" class="btn header-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/commity.jpg" alt="Biodiversity">
+                    <div class="overlay">Biodiversity</div>
+                    <div class="details">
+                        <a href="biodiversity_college.html" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="2 Tonnes">
+                    <div class="overlay">2 Tonnes</div>
+                    <div class="details">
+                        <a href="2tonnes.html" class="btn header-btn">Know More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Community Engagement Section -->
+        <div class="project-category">
+            <h3 class="category-title"> Community Engagement</h3>
+            <div class="project-grid">
+                <div class="card">
+                    <img src="assets/img/images/main.jpg" alt="Women in Climate Leadership">
+                    <div class="overlay"> Women in Climate Leadership</div>
+                    <div class="details">
+                        <a href="wicl.html" class="btn btn-outline-light btn-sm mt-4 know-more-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="assets/img/images/aa.jpg" alt="REady Japan - DRRPF">
+                    <div class="overlay">REady Japan - DRRPF</div>
+                    <div class="details">
+                        <a href="ReadyJapan.html" class="btn header-btn">
+                            Know More
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    .focus-section {
+        text-align: center;
+        background-color: #f4f4f4;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .project-category {
+        margin-bottom: 40px;
+        padding: 30px;
+        background: white;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+    }
+
+    .project-category:hover {
+        transform: translateY(-5px);
+    }
+
+    .category-title {
+        color: #2E7D32;
+        font-size: 28px;
+        margin-bottom: 30px;
+        text-align: center;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .category-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 3px;
+        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+    }
+
+    .project-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 25px;
+        padding: 20px;
+    }
+
+    .card {
+        position: relative;
+        width: 100%;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    }
+
+    .card img {
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    .card:hover img {
+        transform: scale(1.05);
+    }
+
+    .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0,0,0,0.8);
+        color: white;
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover .overlay {
+        background: linear-gradient(90deg, rgba(70, 192, 190, 0.9), rgba(109, 213, 111, 0.9));
+    }
+
+    .details {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+
+    .card:hover .details {
+        opacity: 1;
+    }
+
+    .btn {
+        background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
+        color: white;
+        padding: 12px 25px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    }
+
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+        color: white;
+    }
+
+    /* Specific styling for Awareness Workshops section */
+    .project-category:nth-child(2) .project-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+    }
+
+    .project-category:nth-child(2) .card {
+        min-width: 200px;
+    }
+
+    .project-category:nth-child(2) .card img {
+        height: 180px;
+    }
+
+    .project-category:nth-child(2) .overlay {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    @media (max-width: 1200px) {
+        .project-category:nth-child(2) .project-grid {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .project-grid {
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .category-title {
+            font-size: 24px;
+        }
+
+        .project-category {
+            padding: 20px;
+        }
+
+        .project-category:nth-child(2) .project-grid {
+            grid-template-columns: 1fr;
+        }
+
+        .project-category:nth-child(2) .card {
+            min-width: 100%;
+        }
+    }
+</style>
+
         <br>
         <br>
          
