@@ -55,40 +55,40 @@
     </div>
     <!-- Preloader Start -->
    
-    <header>
+    <header class="rearth-header">
         <!-- Header Start -->
         <div class="header-area">
             <div class="main-header">
                 <div class="header-bottom header-sticky">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <!-- Logo -->
-                            <div class="col-xl-2 col-lg-2">
+                            <!-- Logo for desktop -->
+                            <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                                 <div class="logo">
                                     <a href="index.html">
-                                        <img src="assets/img/logo/Rearth.Big.png" alt="" style="width:120px; height: auto;">
+                                        <img src="assets/img/logo/Rearth.Big.png" alt="Rearth Logo" style="width:120px;">
                                     </a>
                                 </div>
                             </div>
     
-                            <div class="col-xl-10 col-lg-10">
+                            <!-- Desktop Menu -->
+                            <div class="col-xl-10 col-lg-10 d-none d-lg-block">
                                 <div class="menu-wrapper d-flex align-items-center justify-content-end">
-                                    <!-- Main-menu -->
-                                    <div class="main-menu d-none d-lg-block">
+                                    <div class="main-menu">
                                         <nav>
                                             <ul id="navigation">
                                                 <li><a href="index.html"><strong>Home</strong></a></li>
                                                 <li><a href="about.html"><strong>About Us</strong></a></li>
-                                                <li class="has-submenu"><a href=""><strong>Projects</strong></a>
+                                                <li class="has-submenu"><a href="#"><strong>Projects</strong></a>
                                                     <ul class="submenu">
-                                                        <li class="has-submenu"><a href=""><strong>Education</strong></a>
+                                                        <li class="has-submenu"><a href="#"><strong>Education</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
                                                                 <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
                                                                 <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="has-submenu"><a href=""><strong>Awareness Workshops</strong></a>
+                                                        <li class="has-submenu"><a href="#"><strong>Awareness Workshops</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
                                                                 <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
@@ -96,7 +96,7 @@
                                                                 <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
                                                             </ul>
                                                         </li>
-                                                        <li class="has-submenu"><a href=""><strong>Community Engagement</strong></a>
+                                                        <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
                                                                 <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
@@ -112,18 +112,67 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- Mobile Menu -->
-                            <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+    
+                            <!-- Logo and toggle for mobile -->
+                            <div class="col-6 d-lg-none">
+                                <div class="logo">
+                                    <a href="index.html">
+                                        <img src="assets/img/logo/Rearth.Big.png" alt="" style="width:120px;">
+                                    </a>
+                                </div>
+                            </div>
+    
+                            <div class="col-6 d-lg-none pe-3">
+                                <div class="d-flex justify-content-end">
+                                    <button id="menu-toggle" class="rearth-hamburger">&#9776;</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Header End -->
     
+        <!-- Mobile Navigation -->
+        <div id="mobile-nav" class="rearth-mobile-menu d-lg-none">
+            <ul>
+                <li><a href="index.html"><strong>Home</strong></a></li>
+                <li><a href="about.html"><strong>About Us</strong></a></li>
+                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                <li><a href="eventdetials.html"><strong>Events</strong></a></li>
+                <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+                <li class="has-submenu">
+                    <a href="#"><strong>Projects</strong></a>
+                    <ul class="submenu">
+                        <li class="has-submenu"><a href="#"><strong>Education</strong></a>
+                            <ul class="submenu">
+                                <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
+                                <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
+                                <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#"><strong>Awareness Workshops</strong></a>
+                            <ul class="submenu">
+                                <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
+                                <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
+                                <li><a href="biodiversity_college.html"><strong>Biodiversity</strong></a></li>
+                                <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
+                            </ul>
+                        </li>
+                        <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
+                            <ul class="submenu">
+                                <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
+                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    
+        <!-- CSS -->
         <style>
+
             /* Ensure submenus are positioned correctly */
             .submenu {
                 position: absolute;
@@ -189,64 +238,172 @@
                 left: 100%;
                 top: 0;
             }
-        </style>
-    </header>
+
+            .rearth-header .main-menu ul,
+            .rearth-header .submenu {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+            }
     
-    <main>
-        
-        <section class="hero">
-            <div class="overlay">
-                <div class="text-block">
-                    <h2>Community Disaster Risk Reduction (DRR) </h2>
-                </div>
-            </div>
-        </section>
-        
-        <style>
-          .hero {
-    position: relative;
-    width: 100%;
-    height: 30rem; /* Maintain height */
-    background-image: url('assets/img/guy-bowden-lVDnLUACI18-unsplash.jpg');
-
-
-
-    background-size: cover;
-    background-position: top; /* Crops from the top */
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-
-        
-            .overlay {
-                position: absolute;
-                inset: 0;
-                display: flex;
-                justify-content: center; /* Centers the content horizontally */
-                align-items: center; /* Centers the content vertically */
-            }
-        
-            .text-block {
-                background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
-                padding: 20px;
-                border-radius: 8px; /* Rounded corners for the block */
+            .rearth-header .main-menu ul li {
                 position: relative;
-                left: 15%; /* Shift the block to the right */
+                display: inline-block;
             }
-        
-            .text-block h2 {
-                font-family: "Montserrat", sans-serif;
-                font-style: normal;
-                font-weight: 700;
-                color: white; /* Title color */
-                font-size: 30px; /* Font size set to 30px */
-                line-height: 36px; /* Line height updated */
-                margin-bottom: 20px; /* Spacing below the title */
-                text-align: right; /* Right-aligned text */
+    
+            .rearth-header .main-menu ul li a {
+                display: block;
+                padding: 15px 20px;
+                color: #333;
+                text-decoration: none;
+            }
+    
+            .rearth-header .main-menu ul li a:hover {
+                background-color: #f0f0f0;
+            }
+    
+            .rearth-header .submenu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                display: none;
+                background: #fff;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                min-width: 200px;
+                z-index: 999;
+            }
+    
+            .rearth-header .has-submenu:hover > .submenu {
+                display: block;
+            }
+    
+            .rearth-header .submenu li {
+                position: relative;
+            }
+    
+            .rearth-header .submenu li .submenu {
+                position: absolute; /* Ensure positioning context */
+                left: 100%; /* Position to the right of the parent li */
+                top: 0; /* Align top with the parent li */
+                display: none; /* Keep hidden initially */
+                background: #fff; /* Match parent submenu background */
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match parent submenu shadow */
+                min-width: 200px; /* Match parent submenu width */
+                z-index: 1000; /* Ensure higher z-index to appear above other elements */
+                transition: all 0.3s ease; /* Smooth transition */
+                margin-left: 1px; /* Small offset to prevent flickering */
+            }
+
+            /* Show nested submenu on parent hover */
+            .rearth-header .submenu li:hover > .submenu {
+                display: block;
+                visibility: visible;
+                opacity: 1;
+            }
+    
+            .rearth-header .submenu li a {
+                padding: 10px;
+            }
+            
+            /* Add indicator for items with submenus */
+            .rearth-header .submenu li.has-submenu > a::after {
+                content: '\25B6'; /* Right-pointing triangle */
+                position: absolute;
+                right: 10px;
+                top: 50%;
+                transform: translateY(-50%);
+                font-size: 10px;
+            }
+    
+            .rearth-hamburger {
+                font-size: 28px;
+                background: none;
+                border: none;
+                cursor: pointer;
+                padding: 10px 15px;
+                color: green;
+            }
+    
+            .rearth-mobile-menu {
+                display: none;
+                background: #fff;
+                position: absolute;
+                width: 100%;
+                top: 60px;
+                left: 0;
+                z-index: 999;
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            }
+    
+            .rearth-mobile-menu ul li {
+                border-bottom: 1px solid #eee;
+            }
+    
+            .rearth-mobile-menu ul li a {
+                display: block;
+                padding: 15px 20px;
+                color: #333;
+                text-decoration: none;
+            }
+    
+            .rearth-mobile-menu ul li a:hover {
+                background-color: #f9f9f9;
+            }
+    
+            .rearth-mobile-menu .submenu {
+                display: none;
+                background: #fafafa;
+                padding-left: 15px;
+            }
+    
+            .rearth-mobile-menu .has-submenu > a::after {
+                content: ' ▼';
+                font-size: 12px;
+            }
+    
+            .rearth-mobile-menu .has-submenu.open > .submenu {
+                display: block;
+            }
+    
+            .rearth-mobile-menu .submenu .submenu {
+                padding-left: 0;
+                margin-left: auto;
+                width: 90%;
+                text-align: right;
             }
         </style>
-        
-        
+    
+        <!-- JS -->
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const toggleBtn = document.getElementById("menu-toggle");
+                const mobileNav = document.getElementById("mobile-nav");
+    
+                toggleBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    mobileNav.style.display = (mobileNav.style.display === "block") ? "none" : "block";
+                });
+    
+                document.querySelectorAll('.rearth-mobile-menu .has-submenu > a').forEach(link => {
+                    link.addEventListener('click', function (e) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+                        parent.classList.toggle('open');
+                    });
+                });
+    
+                document.addEventListener('click', function (event) {
+                    if (!mobileNav.contains(event.target) && event.target !== toggleBtn) {
+                        mobileNav.style.display = "none";
+                        document.querySelectorAll('.rearth-mobile-menu .has-submenu').forEach(item => {
+                            item.classList.remove('open');
+                        });
+                    }
+                });
+            });
+        </script>
+    </header>
+   
 <!-- Video Player Area End -->
 <section class="py-5 bg-white custom-section">
   <div class="container custom-container">
