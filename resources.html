@@ -104,7 +104,13 @@
                             </div>
                             <!-- Mobile Menu -->
                             <div class="col-12">
-                                <div class="mobile_menu d-block d-lg-none"></div>
+                                <div class="mobile_menu d-block d-lg-none">
+                                    <button id="mobile-menu-trigger" aria-label="Toggle menu">
+                                        <span></span>
+                                        <span></span>
+                                        <span></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -178,6 +184,93 @@
             .main-menu ul li .submenu li .submenu {
                 left: 100%;
                 top: 0;
+            }
+
+            /* Mobile Menu Styles */
+            @media (max-width: 991px) {
+                .main-menu {
+                    display: none; /* Hide main menu by default on mobile */
+                    position: absolute;
+                    top: 100%; /* Position below the header */
+                    left: 0;
+                    right: 0;
+                    background-color: #fff;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    z-index: 999;
+                    width: 100%;
+                }
+
+                .main-menu.active {
+                    display: block; /* Show menu when active */
+                }
+
+                .main-menu ul {
+                    display: block; /* Stack items vertically */
+                    padding: 10px 0;
+                }
+
+                .main-menu ul li {
+                    display: block; /* Full width list items */
+                    width: 100%;
+                    text-align: left;
+                }
+
+                .main-menu ul li a {
+                    padding: 10px 20px;
+                    border-bottom: 1px solid #f0f0f0;
+                }
+
+                .main-menu ul li:last-child a {
+                    border-bottom: none;
+                }
+
+                .main-menu ul li .submenu {
+                    position: static; /* Submenus display inline */
+                    box-shadow: none;
+                    border-top: 1px solid #eee;
+                    display: none; /* Hide submenus by default */
+                    min-width: auto;
+                    background-color: #f9f9f9;
+                }
+
+                .main-menu ul li.has-submenu:hover > .submenu {
+                    display: none; /* Prevent hover opening on mobile */
+                }
+                 .main-menu ul li.has-submenu.open > .submenu {
+                    display: block; /* Show submenu when parent is open */
+                }
+
+                .main-menu ul li .submenu li a {
+                    padding-left: 30px;
+                }
+                 .main-menu ul li .submenu li .submenu {
+                    padding-left: 15px; /* Indent nested submenus */
+                }
+                 .main-menu ul li .submenu li .submenu li a {
+                    padding-left: 45px;
+                }
+
+                .mobile_menu button {
+                    background: none;
+                    border: none;
+                    font-size: 24px;
+                    cursor: pointer;
+                    padding: 10px;
+                    position: absolute;
+                    right: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+                .mobile_menu button span {
+                    display: block;
+                    width: 25px;
+                    height: 3px;
+                    background-color: #333;
+                    margin: 5px 0;
+                    transition: all 0.3s ease;
+                }
+
+                /* Add styles for hamburger animation if desired */
             }
         </style>
     </header>
@@ -533,5 +626,106 @@
 
     <!-- Chatbot Script -->
     <script src="assets/js/chatbot.js"></script>
+</body>
+\n<!-- JS here -->
+<script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+<!-- Jquery, Popper, Bootstrap -->
+<script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+<script src="./assets/js/popper.min.js"></script>
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Jquery Mobile Menu -->
+<script src="./assets/js/jquery.slicknav.min.js"></script>
+
+<!-- Jquery Slick , Owl-Carousel Plugins -->
+<script src="./assets/js/owl.carousel.min.js"></script>
+<script src="./assets/js/slick.min.js"></script>
+<!-- One Page, Animated-HeadLin -->
+<script src="./assets/js/wow.min.js"></script>
+<script src="./assets/js/animated.headline.js"></script>
+<script src="./assets/js/jquery.magnific-popup.js"></script>
+
+<!-- Date Picker -->
+<script src="./assets/js/gijgo.min.js"></script>
+<!-- Nice-select, sticky -->
+<script src="./assets/js/jquery.nice-select.min.js"></script>
+<script src="./assets/js/jquery.sticky.js"></script>
+<!-- Progress -->
+<script src="./assets/js/jquery.barfiller.js"></script>
+
+<!-- counter , waypoint,Hover Direction -->
+<script src="./assets/js/jquery.counterup.min.js"></script>
+<script src="./assets/js/waypoints.min.js"></script>
+<script src="./assets/js/jquery.countdown.min.js"></script>
+<script src="./assets/js/hover-direction-snake.min.js"></script>
+
+<!-- contact js -->
+<script src="./assets/js/contact.js"></script>
+<script src="./assets/js/jquery.form.js"></script>
+<script src="./assets/js/jquery.validate.min.js"></script>
+<script src="./assets/js/mail-script.js"></script>
+<script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+
+<!-- Jquery Plugins, main Jquery -->
+<script src="./assets/js/plugins.js"></script>
+<script src="./assets/js/main.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const mobileMenuTrigger = document.getElementById('mobile-menu-trigger');
+        const mainMenu = document.querySelector('.main-menu');
+        const hasSubmenuItems = document.querySelectorAll('.main-menu .has-submenu > a');
+
+        if (mobileMenuTrigger && mainMenu) {
+            mobileMenuTrigger.addEventListener('click', function() {
+                mainMenu.classList.toggle('active');
+                // Optionally toggle ARIA expanded attribute
+                const isExpanded = mainMenu.classList.contains('active');
+                mobileMenuTrigger.setAttribute('aria-expanded', isExpanded);
+            });
+        }
+
+        // Add click listeners for submenu toggles on mobile
+        hasSubmenuItems.forEach(item => {
+            // Prevent default link behavior only if it's just a category header (href="" or href="#")
+            if (item.getAttribute('href') === '' || item.getAttribute('href') === '#') {
+                 item.addEventListener('click', function(event) {
+                    if (window.innerWidth < 992) { // Only apply on mobile
+                        event.preventDefault(); // Prevent navigation
+                        const parentLi = item.parentElement;
+                        parentLi.classList.toggle('open');
+
+                        // Close other open submenus at the same level
+                        const siblings = parentLi.parentElement.children;
+                        for (let sibling of siblings) {
+                            if (sibling !== parentLi && sibling.classList.contains('has-submenu')) {
+                                sibling.classList.remove('open');
+                                // Also close nested submenus within siblings
+                                const nestedOpenSubmenus = sibling.querySelectorAll('.has-submenu.open');
+                                nestedOpenSubmenus.forEach(sub => sub.classList.remove('open'));
+                            }
+                        }
+                    }
+                });
+            }
+        });
+
+        // Close mobile menu if clicked outside
+        document.addEventListener('click', function(event) {
+            if (mainMenu && mainMenu.classList.contains('active')) {
+                const isClickInsideMenu = mainMenu.contains(event.target);
+                const isClickOnTrigger = mobileMenuTrigger.contains(event.target);
+
+                if (!isClickInsideMenu && !isClickOnTrigger) {
+                    mainMenu.classList.remove('active');
+                    mobileMenuTrigger.setAttribute('aria-expanded', 'false');
+                     // Close all open submenus when closing the main menu
+                    const openSubmenus = mainMenu.querySelectorAll('.has-submenu.open');
+                    openSubmenus.forEach(sub => sub.classList.remove('open'));
+                }
+            }
+        });
+    });
+</script>
+
 </body>
 </html>
