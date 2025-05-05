@@ -362,116 +362,59 @@
     <section class="py-5 bg-white">
         <div class="container">
             <!-- Block Section for Title and Content -->
-            <div class="center-block">
-                <h2 class="our-goal-title">REarth</h2>
+            <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                To empower children and communities with the knowledge, tools, resources, and actionable solutions for climate awareness and sustainability. Through education, research, and collaboration, we bridge the gap between academic insights and real-world action, enabling a collective effort towards achieving the Sustainable Development Goals (SDGs), building adaptation and resilience, and combating the climate crisis.
+            </p>
     
-                <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                    Responsible Earthlings for a Sustainable Planet is dedicated to fostering climate education, awareness, action, and driving positive change. We empower individuals, especially youth, with knowledge and tools to promote sustainability and eco-conscious actions. Through education, collaboration, and innovation, we bridge the gap between academic insights and real-world climate solutions. Our programs, such as the SDG Star School, Women in Climate Leadership and other educational workshops, engage communities to take collective action towards a sustainable future.
-                </p>
+            <!-- Image Section -->
+            <div class="text-center my-4">
+                <img src="assets\img\images\3SP_brocure_REarth_2.png" alt="Climate Awareness Image 1" class="img-fluid download-image mb-3" width="300" />
+                <img src="assets\img\images\3SP_brochure_REarth_Back.png" alt="Climate Awareness Image 2" class="img-fluid download-image mb-3" width="300" />
             </div>
     
-            <!-- Founder Message Section -->
-            
-            <!-- Vision Section -->
-            <div class="center-block">
-                <h3 class="vision-title">Vision</h3>
-                <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                    A thriving and sustainable planet where every individual takes responsibility for mindful resource use, respects nature, and works collaboratively for the betterment of society. A world of peace and harmony, where diversity thrives, planetary crises are resolved, and communities and organizations unite to combat climate change, foster resilience, and live in harmony with the environment for generations to come.
-                </p>
-    
-                <h3 class="mission-title">Mission</h3>
-                <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                    To empower children and communities with the knowledge, tools, resources, and actionable solutions for climate awareness and sustainability. Through education, research, and collaboration, we bridge the gap between academic insights and real-world action, enabling a collective effort towards achieving the Sustainable Development Goals (SDGs), building adaptation and resilience, and combating the climate crisis.
-                </p>
+            <!-- Download Button -->
+            <div class="text-center">
+                <button class="btn btn-success" onclick="downloadImages()">Download Brochure</button>
             </div>
         </div>
     
-        <!-- Additional Styling -->
         <style>
-            .bg-white {
-                background-color: #ffffff;
-                padding: 80px 0;
-            }
-    
-            /* Block container for centering the content */
-            .center-block {
-                display: block;
-                text-align: center;
-                max-width: 100%;
-                margin: 0 auto;
-            }
-    
-            .our-goal-title {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 700;
-                color: rgb(46, 125, 50);
-                font-size: 30px;
-                line-height: 36px;
-                margin-bottom: 20px;
-                text-align: center;
-            }
-    
-            .vision-title, .mission-title, .founder-title {
-                font-family: "Montserrat", sans-serif;
-                font-weight: 700;
-                color: rgb(46, 125, 50);
-                font-size: 28px;
-                line-height: 34px;
-                margin-bottom: 15px;
-                text-align: center;
-            }
-    
-            .custom-paragraph {
-                font-family: "Helvetica Neue", sans-serif;
-                font-weight: 400;
-                color: rgb(0, 0, 0);
-                font-size: 16px;
-                line-height: 24px;
-                max-width: 900px;
-                margin: 0 auto 30px auto;
-                text-align: center;
-                letter-spacing: 0.5px;
-            }
-    
-            .container {
-                max-width: 1200px;
-                padding: 0 15px;
-                margin: 0 auto;
-            }
-    
-            /* Founder Section */
-            .founder-image {
-                width: 100%;
-                max-width: 300px;
-                border-radius: 15px;
+            .download-image {
+                border-radius: 12px;
+                margin: 10px;
                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
             }
     
-            .founder-name {
-                font-family: "Montserrat", sans-serif;
+            .btn-success {
+                padding: 10px 20px;
                 font-size: 16px;
-                font-weight: bold;
-                color: #2e7d32;
+                border-radius: 8px;
             }
     
-            /* Responsive design improvements */
             @media (max-width: 768px) {
-                .our-goal-title {
-                    font-size: 26px;
-                }
-    
-                .custom-paragraph {
-                    font-size: 15px;
-                    line-height: 1.5;
-                }
-    
-                .founder-image {
-                    max-width: 250px;
-                    margin-top: 20px;
+                .download-image {
+                    width: 90%;
                 }
             }
         </style>
+    
+        <!-- JavaScript to Trigger Download -->
+        <script>
+            function downloadImages() {
+                const imageUrls = ['image1.jpg', 'image2.jpg'];
+    
+                imageUrls.forEach((url, index) => {
+                    const a = document.createElement('a');
+                    a.href = url;
+                    a.download = `climate-awareness-${index + 1}.jpg`;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                });
+            }
+        </script>
     </section>
+    
     
    
         <section class="py-5 bg-white custom-section">
@@ -853,7 +796,30 @@
         <br>
         
         
-<section id="join-us" class="join-us py-5 bg-light text-center">
+ <div class="card">
+                            <img src="assets/img/images/aa.jpg" alt="Climate Fresk">
+                            <div class="overlay"> Climate Fresk</div>
+                            <div class="details">
+                                <a href="#climate-fresk" class="btn header-btn">
+                                    Know More
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="assets/img/images/commity.jpg" alt="Biodiversity">
+                            <div class="overlay">Biodiversity</div>
+                            <div class="details">
+                                <a href="#biodiversity" class="btn header-btn">Know More</a>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <img src="assets/img/images/main.jpg" alt="2 Tonnes">
+                            <div class="overlay">2 Tonnes</div>
+                            <div class="details">
+                                <a href="#2-tonnes" class="btn header-btn">Know More</a>
+                            </di<section id="join-us" class="join-us py-5 bg-light text-center">
     <div class="call-to-action mt-5">
         <p class="lead">Ready to transform your school into a sustainability leader? </p>
         <p> connect and explore how SDG Star School can bring meaningful change to your institution.</p>
@@ -984,30 +950,7 @@
                             </div>
                         </div>
 
-                        <div class="card">
-                            <img src="assets/img/images/aa.jpg" alt="Climate Fresk">
-                            <div class="overlay"> Climate Fresk</div>
-                            <div class="details">
-                                <a href="#climate-fresk" class="btn header-btn">
-                                    Know More
-                                </a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="assets/img/images/commity.jpg" alt="Biodiversity">
-                            <div class="overlay">Biodiversity</div>
-                            <div class="details">
-                                <a href="#biodiversity" class="btn header-btn">Know More</a>
-                            </div>
-                        </div>
-
-                        <div class="card">
-                            <img src="assets/img/images/main.jpg" alt="2 Tonnes">
-                            <div class="overlay">2 Tonnes</div>
-                            <div class="details">
-                                <a href="#2-tonnes" class="btn header-btn">Know More</a>
-                            </div>
+                       v>
                         </div>
                     </div>
                 </div>
