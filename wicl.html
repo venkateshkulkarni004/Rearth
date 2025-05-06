@@ -733,7 +733,64 @@
       }
     }
   </style>
-  
+   <section class="py-5 bg-white">
+    <div class="container">
+        <!-- Image Section -->
+        <div class="text-center my-4">
+            <img src="assets/img/WICL poster.png" alt="WICL Poster" class="img-fluid download-image mb-3" width="300" />
+        </div>
+
+        <!-- Download Button -->
+        <div class="text-center">
+            <button class="btn btn-success" onclick="downloadImage()">Download Poster</button>
+        </div>
+    </div>
+
+    <style>
+        .download-image {
+            border-radius: 12px;
+            margin: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-success {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .download-image {
+                width: 90%;
+            }
+        }
+    </style>
+
+    <!-- JavaScript to Trigger Download -->
+    <script>
+        function downloadImage() {
+            const imageUrl = 'assets/img/WICL poster.png';
+
+            fetch(imageUrl)
+                .then(response => response.blob())
+                .then(blob => {
+                    const a = document.createElement('a');
+                    const objectUrl = URL.createObjectURL(blob);
+                    a.href = objectUrl;
+                    a.download = 'WICL_poster.png';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(objectUrl);
+                })
+                .catch(error => {
+                    console.error('Error downloading image:', error);
+                    alert('Failed to download image. Please try again later.');
+                });
+        }
+    </script>
+</section>
+
   <section class="team-section">
     <h2>WICL Members</h2>
     <p>Meet some of our powerful members</p>
