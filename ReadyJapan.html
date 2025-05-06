@@ -67,7 +67,7 @@
                                             <ul id="navigation">
                                                 <li><a href="index.html"><strong>Home</strong></a></li>
                                                 <li><a href="about.html"><strong>About Us</strong></a></li>
-                                                <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li>
+                                                <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
                                                 <li class="has-submenu"><a href="#"><strong>Projects</strong></a>
                                                     <ul class="submenu">
                                                         <li class="has-submenu"><a href="#"><strong>Education</strong></a>
@@ -88,12 +88,12 @@
                                                         <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                                                <!-- <li><a href="resources.html"><strong>Resources</strong></a></li> -->
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
                                             </ul>
@@ -129,7 +129,7 @@
                 <li><a href="index.html"><strong>Home</strong></a></li>
                 <li><a href="about.html"><strong>About Us</strong></a></li>
                 <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
-                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                <!-- <li><a href="resources.html"><strong>Resources</strong></a></li> -->
                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
                
@@ -366,75 +366,70 @@
                 <div class="center-block custom-center-block">
                     
                 </div>
-        
+                <section class="py-5 bg-white unique-download-section">
+                    <div class="container">
+                        <!-- Image Section -->
+                        <div class="text-center my-4">
+                            <img src="assets/img/ReadyJapan_Poster_VentureCafe.png" alt="ReadyJapan Poster 1" class="img-fluid download-image mb-3" width="300" />
+                            <img src="assets/img/ReadyJapan_VolcanicEruptionGuidelines.png" alt="ReadyJapan Poster 2" class="img-fluid download-image mb-3" width="300" />
+                        </div>
+            
+                        <!-- Download Buttons -->
+                        <div class="text-center">
+                            <button class="btn btn-success" onclick="downloadImage('assets/img/ReadyJapan_Poster_VentureCafe.png', 'ReadyJapan_Poster_VentureCafe.png')">Download Poster 1</button>
+                            <button class="btn btn-success" onclick="downloadImage('assets/img/ReadyJapan_VolcanicEruptionGuidelines.png', 'ReadyJapan_VolcanicEruptionGuidelines.png')">Download Poster 2</button>
+                        </div>
+                    </div>
+            
+                    <style>
+                        .unique-download-section .download-image {
+                            border-radius: 12px;
+                            margin: 10px;
+                            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                        }
+            
+                        .unique-download-section .btn-success {
+                            padding: 10px 20px;
+                            font-size: 16px;
+                            border-radius: 8px;
+                            margin: 5px;
+                        }
+            
+                        @media (max-width: 768px) {
+                            .unique-download-section .download-image {
+                                width: 90%;
+                            }
+                        }
+                    </style>
+            
+                    <!-- JavaScript to Trigger Download -->
+                    <script>
+                        function downloadImage(imageUrl, downloadName) {
+                            fetch(imageUrl)
+                                .then(response => response.blob())
+                                .then(blob => {
+                                    const a = document.createElement('a');
+                                    const objectUrl = URL.createObjectURL(blob);
+                                    a.href = objectUrl;
+                                    a.download = downloadName;
+                                    document.body.appendChild(a);
+                                    a.click();
+                                    document.body.removeChild(a);
+                                    URL.revokeObjectURL(objectUrl);
+                                })
+                                .catch(error => {
+                                    console.error('Error downloading image:', error);
+                                    alert('Failed to download image. Please try again later.');
+                                });
+                        }
+                    </script>
+                </section>
                 <div class="center-block custom-center-block">
                     <h3 class="vision-title custom-title">What is ReadyJapan?</h3>
                     <p class="text-black custom-paragraph mt-5 fw-bold text-center">
                         Japan is one of the most disaster-prone countries globally, facing frequent earthquakes, typhoons, and other natural hazards. With climate change intensifying these events, it's crucial for all residents, including foreign nationals, to be prepared. However, language barriers and unfamiliarity with local systems can make disaster preparedness challenging for non-Japanese speakers. ReadyJapan is an initiative by REarth aimed at bridging this gap. We provide accessible disaster preparedness information and conduct workshops in English, tailored to the needs of foreign residents in Japan.
                     </p>
-                    <section class="py-5 bg-white">
-                        <div class="container">
-                            <!-- Image Section -->
-                            <div class="text-center my-4">
-                                <img src="assets/img/ReadyJapan_Poster_VentureCafe.png" alt=" ReadyJapan Image 1" class="img-fluid download-image mb-3" width="300" />
-                                <img src="assets/img/ReadyJapan_VolcanicEruptionGuidelines.png" alt="ReadyJapan Image 2" class="img-fluid download-image mb-3" width="300" />
-                            </div>
-                
-                            <!-- Download Button -->
-                            <div class="text-center">
-                                <button class="btn btn-success" onclick="downloadImages()">Download Brochure</button>
-                            </div>
-                        </div>
-                
-                        <style>
-                            .download-image {
-                                border-radius: 12px;
-                                margin: 10px;
-                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-                            }
-                
-                            .btn-success {
-                                padding: 10px 20px;
-                                font-size: 16px;
-                                border-radius: 8px;
-                            }
-                
-                            @media (max-width: 768px) {
-                                .download-image {
-                                    width: 90%;
-                                }
-                            }
-                        </style>
-                
-                        <!-- JavaScript to Trigger Download -->
-                        <script>
-                            function downloadImages() {
-                                const imageUrls = [
-                                    'assets/img/ReadyJapan_Poster_VentureCafe.png',
-                                    'assets/img/ReadyJapan_VolcanicEruptionGuidelines.png'
-                                ];
-                
-                                imageUrls.forEach((url, index) => {
-                                    fetch(url)
-                                        .then(response => response.blob())
-                                        .then(blob => {
-                                            const a = document.createElement('a');
-                                            const objectUrl = URL.createObjectURL(blob);
-                                            a.href = objectUrl;
-                                            a.download = `climate-awareness-${index + 1}.png`;
-                                            document.body.appendChild(a);
-                                            a.click();
-                                            document.body.removeChild(a);
-                                            URL.revokeObjectURL(objectUrl);
-                                        })
-                                        .catch(error => {
-                                            console.error('Error downloading image:', error);
-                                            alert('Failed to download image. Please try again later.');
-                                        });
-                                });
-                            }
-                        </script>
-                    </section>
+                   
                 
                     <section id="values" class="values section light-background" style="background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);">
                         <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -499,116 +494,107 @@
                     </section>
                 </div>
                 
-                      
-                      <!-- Additional Styling -->
-                      <style>
-                        /* Values Section Styling */
-                        .values {
-                          padding: 40px 0;
-                          background-color: #E8F5E9;
-                          border-radius: 10px;
-                          font-family: 'Montserrat', sans-serif;
-                        }
-                      
-                        .program-item {
-                          background: white;
-                          border-radius: 10px;
-                          border: 3px solid transparent;
-                          border-image: linear-gradient(45deg, #46C0BE, #6DD56F, #46C0BE) 1;
-                          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-                          height: 100%;
-                          overflow: hidden;
-                          display: flex;
-                          flex-direction: column;
-                          justify-content: space-between;
-                          transition: transform 0.3s ease, box-shadow 0.3s ease;
-                        }
-                      
-                        .program-item:hover {
-                          transform: translateY(-5px);
-                          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-                        }
-                      
-                        /* Icon Container: circular with border */
-                        .icon-container {
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          width: 60px;
-                          height: 60px;
-                          border-radius: 50%;
-                          background: #f1f8e9;
-                          font-size: 1.75rem;
-                          margin: 0 auto 10px auto;
-                          transition: transform 0.3s ease;
-                          border: 2px solid #46C0BE; /* Added border */
-                        }
-                      
-                        .icon-container i {
-                          background: linear-gradient(45deg, #46C0BE, #6DD56F);
-                          -webkit-background-clip: text;
-                          -webkit-text-fill-color: transparent;
-                        }
-                      
-                        .content {
-                          padding: 20px;
-                          flex-grow: 1;
-                        }
-                      
-                        h3 {
-                          color: #2E7D32;
-                          margin-bottom: 15px;
-                          font-size: 1.5rem;
-                          font-weight: bold;
-                          text-align: center;
-                          font-family: 'Montserrat', sans-serif;
-                        }
-                      
-                        .description {
-                          color: #555;
-                          margin-bottom: 15px;
-                          min-height: 80px;
-                          text-align: center;
-                          font-size: 1.50rem; /* Increased font size */
-                          font-family: 'Montserrat', sans-serif;
-                        }
-                      
-                        .row {
-                          margin-bottom: 20px;
-                        }
-                      
-                        @media (max-width: 992px) {
-                          .col-md-6 {
+                <!-- Additional Styling -->
+                <style>
+                    /* Values Section Styling */
+                    .values {
+                        padding: 40px 0;
+                        background-color: #E8F5E9;
+                        border-radius: 10px;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                
+                    .program-item {
+                        background: white;
+                        border-radius: 10px;
+                        border: 3px solid transparent;
+                        border-image: linear-gradient(45deg, #46C0BE, #6DD56F, #46C0BE) 1;
+                        box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+                        height: 100%;
+                        overflow: hidden;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        transition: transform 0.3s ease, box-shadow 0.3s ease;
+                    }
+                
+                    .program-item:hover {
+                        transform: translateY(-5px);
+                        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+                    }
+                
+                    /* Icon Container: circular with border */
+                    .icon-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        background: #f1f8e9;
+                        font-size: 1.75rem;
+                        margin: 0 auto 10px auto;
+                        transition: transform 0.3s ease;
+                        border: 2px solid #46C0BE; /* Added border */
+                    }
+                
+                    .icon-container i {
+                        background: linear-gradient(45deg, #46C0BE, #6DD56F);
+                        -webkit-background-clip: text;
+                        -webkit-text-fill-color: transparent;
+                    }
+                
+                    .content {
+                        padding: 20px;
+                        flex-grow: 1;
+                    }
+                
+                    h3 {
+                        color: #2E7D32;
+                        margin-bottom: 15px;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        text-align: center;
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                
+                    .description {
+                        color: #555;
+                        margin-bottom: 15px;
+                        min-height: 80px;
+                        text-align: center;
+                        font-size: 1.50rem; /* Increased font size */
+                        font-family: 'Montserrat', sans-serif;
+                    }
+                
+                    .row {
+                        margin-bottom: 20px;
+                    }
+                
+                    @media (max-width: 992px) {
+                        .col-md-6 {
                             width: 100% !important;
                             margin-bottom: 15px;
-                          }
-                          .description {
+                        }
+                        .description {
                             min-height: auto;
-                          }
                         }
-                      
-                        @media (max-width: 768px) {
-                          .program-item {
+                    }
+                
+                    @media (max-width: 768px) {
+                        .program-item {
                             margin-bottom: 20px;
-                          }
                         }
-                      </style>
-                      
+                    }
+                </style>
+                
 
 
 <br>
                     
         
-                      <h3 class="mission-title custom-title">How We Are Structuring the Program</h3>
-                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                          ReadyJapan is being developed in collaboration with local communities, ward officials, and disaster risk reduction (DRR) experts to ensure effective implementation. The key components of the program include:
-                      </p>
-                      <ul class="custom-list">
-                          <li><strong>Multilingual Disaster Preparedness Workshops</strong> – Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</li>
-                          <li><strong>Community Evacuation Drills</strong> – Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</li>
-                          <li><strong>English Resource Development</strong> – Creating disaster information posters and compiling emergency procedure guidelines in English to make critical information more accessible.</li>
-                          <li><strong>Collaboration with Local Authorities</strong> – Strengthening partnerships with ward offices to ensure inclusivity in disaster response plans.</li>
-                      </ul>
+                     
+              
                       
                       <h3 class="mission-title custom-title">How You Can Help</h3>
                       <p class="text-black custom-paragraph mt-5 fw-bold text-center">
@@ -1276,8 +1262,8 @@
                                 <h4>Quick Links</h4>
                                 <ul>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="projects.html">Our Projects</a></li>
-                                    <li><a href="events.html">Events</a></li>
+                              
+                                    <li><a href="eventdetials.html">Events</a></li>
                                     <li><a href="resources.html">Resources</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
