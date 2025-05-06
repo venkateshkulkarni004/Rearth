@@ -368,8 +368,8 @@
     
             <!-- Image Section -->
             <div class="text-center my-4">
-                <img src="assets\img\images\3SP_brocure_REarth_2.png" alt="Climate Awareness Image 1" class="img-fluid download-image mb-3" width="300" />
-                <img src="assets\img\images\3SP_brochure_REarth_Back.png" alt="Climate Awareness Image 2" class="img-fluid download-image mb-3" width="300" />
+                <img src="assets/img/images/3SP_brocure_REarth_2.png" alt="SDG Star School Brochure Front" class="img-fluid download-image mb-3" width="300" />
+                <img src="assets/img/images/3SP_brochure_REarth_Back.png" alt="SDG Star School Brochure Back" class="img-fluid download-image mb-3" width="300" />
             </div>
     
             <!-- Download Button -->
@@ -401,19 +401,33 @@
         <!-- JavaScript to Trigger Download -->
         <script>
             function downloadImages() {
-                const imageUrls = ['image1.jpg', 'image2.jpg'];
+                const imageUrls = [
+                    'assets/img/images/3SP_brocure_REarth_2.png',
+                    'assets/img/images/3SP_brochure_REarth_Back.png'
+                ];
     
                 imageUrls.forEach((url, index) => {
-                    const a = document.createElement('a');
-                    a.href = url;
-                    a.download = `climate-awareness-${index + 1}.jpg`;
-                    document.body.appendChild(a);
-                    a.click();
-                    document.body.removeChild(a);
+                    fetch(url)
+                        .then(response => response.blob())
+                        .then(blob => {
+                            const a = document.createElement('a');
+                            const objectUrl = URL.createObjectURL(blob);
+                            a.href = objectUrl;
+                            a.download = `sdg-star-school-brochure-${index + 1}.png`;
+                            document.body.appendChild(a);
+                            a.click();
+                            document.body.removeChild(a);
+                            URL.revokeObjectURL(objectUrl);
+                        })
+                        .catch(error => {
+                            console.error('Error downloading image:', error);
+                            alert('Failed to download image. Please try again later.');
+                        });
                 });
             }
         </script>
     </section>
+    
     
     
    

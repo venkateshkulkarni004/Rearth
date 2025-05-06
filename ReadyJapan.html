@@ -370,123 +370,135 @@
                 <div class="center-block custom-center-block">
                     <h3 class="vision-title custom-title">What is ReadyJapan?</h3>
                     <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        Japan is one of the most disaster-prone countries globally, facing frequent earthquakes, typhoons, and other natural hazards. With climate change intensifying these events, it's crucial for all residents, including foreign nationals, to be prepared. However, language barriers and unfamiliarity with local systems can make disaster preparedness challenging for non-Japanese speakers. ReadyJapan is an initiative by REarth aimed at bridging this gap. We provide accessible disaster preparedness information and conduct workshops in English, tailored to the needs of foreign residents in Japan 
+                        Japan is one of the most disaster-prone countries globally, facing frequent earthquakes, typhoons, and other natural hazards. With climate change intensifying these events, it's crucial for all residents, including foreign nationals, to be prepared. However, language barriers and unfamiliarity with local systems can make disaster preparedness challenging for non-Japanese speakers. ReadyJapan is an initiative by REarth aimed at bridging this gap. We provide accessible disaster preparedness information and conduct workshops in English, tailored to the needs of foreign residents in Japan.
                     </p>
                     <section class="py-5 bg-white">
                         <div class="container">
-                            <!-- Block Section for Title and Content -->
-                           
-                    
                             <!-- Image Section -->
                             <div class="text-center my-4">
-                                <img src="assets\img\ReadyJapan_Poster_VentureCafe.png" alt="Climate Awareness Image 1" class="img-fluid download-image mb-3" width="300" />
-                                <img src="assets\img\ReadyJapan_VolcanicEruptionGuidelines.png" alt="Climate Awareness Image 2" class="img-fluid download-image mb-3" width="300" />
+                                <img src="assets/img/ReadyJapan_Poster_VentureCafe.png" alt=" ReadyJapan Image 1" class="img-fluid download-image mb-3" width="300" />
+                                <img src="assets/img/ReadyJapan_VolcanicEruptionGuidelines.png" alt="ReadyJapan Image 2" class="img-fluid download-image mb-3" width="300" />
                             </div>
-                    
+                
                             <!-- Download Button -->
                             <div class="text-center">
                                 <button class="btn btn-success" onclick="downloadImages()">Download Brochure</button>
                             </div>
                         </div>
-                    
+                
                         <style>
                             .download-image {
                                 border-radius: 12px;
                                 margin: 10px;
                                 box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
                             }
-                    
+                
                             .btn-success {
                                 padding: 10px 20px;
                                 font-size: 16px;
                                 border-radius: 8px;
                             }
-                    
+                
                             @media (max-width: 768px) {
                                 .download-image {
                                     width: 90%;
                                 }
                             }
                         </style>
-                    
+                
                         <!-- JavaScript to Trigger Download -->
                         <script>
                             function downloadImages() {
-                                const imageUrls = ['image1.jpg', 'image2.jpg'];
-                    
+                                const imageUrls = [
+                                    'assets/img/ReadyJapan_Poster_VentureCafe.png',
+                                    'assets/img/ReadyJapan_VolcanicEruptionGuidelines.png'
+                                ];
+                
                                 imageUrls.forEach((url, index) => {
-                                    const a = document.createElement('a');
-                                    a.href = url;
-                                    a.download = `climate-awareness-${index + 1}.jpg`;
-                                    document.body.appendChild(a);
-                                    a.click();
-                                    document.body.removeChild(a);
+                                    fetch(url)
+                                        .then(response => response.blob())
+                                        .then(blob => {
+                                            const a = document.createElement('a');
+                                            const objectUrl = URL.createObjectURL(blob);
+                                            a.href = objectUrl;
+                                            a.download = `climate-awareness-${index + 1}.png`;
+                                            document.body.appendChild(a);
+                                            a.click();
+                                            document.body.removeChild(a);
+                                            URL.revokeObjectURL(objectUrl);
+                                        })
+                                        .catch(error => {
+                                            console.error('Error downloading image:', error);
+                                            alert('Failed to download image. Please try again later.');
+                                        });
                                 });
                             }
                         </script>
                     </section>
-
+                
                     <section id="values" class="values section light-background" style="background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);">
                         <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                          <h2 style="color: white; font-size: 2.75rem; font-weight: bold; font-family: 'Montserrat', sans-serif;">How We Are Structuring the Program</h2>
+                            <h2 style="color: white; font-size: 2.75rem; font-weight: bold; font-family: 'Montserrat', sans-serif;">How We Are Structuring the Program</h2>
                         </div>
-                      
+                
                         <div class="container">
-                          <div class="row g-3">
-                            <!-- Multilingual Disaster Preparedness Workshops -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-comments"></i>
+                            <div class="row g-3">
+                                <!-- Multilingual Disaster Preparedness Workshops -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="program-item">
+                                        <div class="icon-container">
+                                            <i class="fa fa-comments"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3>Disaster Preparedness Workshops</h3>
+                                            <p class="description">Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="content">
-                                  <h3>Disaster Preparedness Workshops</h3>
-                                  <p class="description">Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</p>
+                
+                                <!-- Community Evacuation Drills -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="program-item">
+                                        <div class="icon-container">
+                                            <i class="fa fa-female"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3>Community Evacuation Drills</h3>
+                                            <p class="description">Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</p>
+                                        </div>
+                                    </div>
                                 </div>
-                              </div>
+                
+                                <!-- Development of English Resources -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="program-item">
+                                        <div class="icon-container">
+                                            <i class="fa fa-rocket"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3>English Resources</h3>
+                                            <p class="description">Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                
+                                <!-- Heatwave and Extreme Weather Preparedness -->
+                                <div class="col-md-6 col-lg-3">
+                                    <div class="program-item">
+                                        <div class="icon-container">
+                                            <i class="fa fa-globe"></i>
+                                        </div>
+                                        <div class="content">
+                                            <h3>Extreme Weather Preparedness</h3>
+                                            <p class="description">Providing guidance on heatstroke prevention and typhoon safety.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                      
-                            <!-- Community Evacuation Drills -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-female"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>Community Evacuation Drills</h3>
-                                  <p class="description">Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</p>
-                                </div>
-                              </div>
-                            </div>
-                      
-                            <!-- Development of English Resources -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-rocket"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>English Resources</h3>
-                                  <p class="description">Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</p>
-                                </div>
-                              </div>
-                            </div>
-                      
-                            <!-- Heatwave and Extreme Weather Preparedness -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-globe"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>Extreme Weather Preparedness</h3>
-                                  <p class="description">Providing guidance on heatstroke prevention and typhoon safety.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
                         </div>
-                      </section>
+                    </section>
+                </div>
+                
                       
                       <!-- Additional Styling -->
                       <style>
@@ -808,7 +820,7 @@
 
                 <div class="card">
                     <img src="assets/img/images/aa.jpg" alt="REady Japan - DRRPF">
-                    <div class="overlay">REady Japan - DRRPF</div>
+                    <div class="overlay">Ready Japan</div>
                     <div class="details">
                         <a href="ReadyJapan.html" class="btn header-btn">
                             Know More
