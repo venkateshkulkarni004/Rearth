@@ -490,7 +490,8 @@
       <div class="col-md-6 col-lg-3">
         <div class="program-item">
           <div class="icon-container">
-            <i class="fa fa-lightbulb-o"></i>
+            <i class="fa fa-rocket"></i>
+
           </div>
           <div class="content">
             <h3>Leadership and Innovation</h3>
@@ -615,350 +616,285 @@
 <section class="gallery-section">
     <h2>Learn, Lead and Act: WICL Series</h2>
     <div class="container">
-        <div class="gallery-item" onmouseenter="showDetails(0)" onmouseleave="hideDetails()">
-            <img src="assets/img/dr.jpg" alt="From Scars to Strength">
-            <div class="gallery-text">
-                <h3>From Scars to Strength: A Story of Resilience & Courage</h3>
-                <p class="subtitle">With Dr. Aarti Ghate</p>
-            </div>
+      <div class="gallery-item">
+        <img src="https://media.licdn.com/dms/image/v2/D5622AQGNcSOCGxO8dA/feedshare-shrink_1280/B56ZXHByljGUAk-/0/1742800891552?e=1749686400&v=beta&t=Xq4NBaL6NgW57NrunxImqADBkhYrMI3cFuls-mR2-XE" alt="Let Us Compost">
+        <div class="gallery-text">
+          <h3>Let Us Compost</h3>
+          <p class="subtitle">With Ms. Oana Marin</p>
         </div>
-
-        <div class="gallery-item" onmouseenter="showDetails(1)" onmouseleave="hideDetails()">
-            <img src="assets/img/yu.jpg" alt="WICL Guest Lecture Series">
-            <div class="gallery-text">
-                <h3>WICL Guest Lecture Series</h3>
-                <p class="subtitle">With Yumiko Horie</p>
-            </div>
+      </div>
+  
+      <div class="gallery-item">
+        <img src="assets/img/dr.jpg" alt="From Scars to Strength">
+        <div class="gallery-text">
+          <h3>From Scars to Strength</h3>
+          <p class="subtitle">With Dr. Aarti Ghate</p>
         </div>
-
-        <div class="gallery-item" onmouseenter="showDetails(2)" onmouseleave="hideDetails()">
-            <img src="assets/img/ma.jpg" alt="Guest Lecture by Ms. Marla Lise">
-            <div class="gallery-text">
-                <h3>Invitation: Guest Lecture by Ms. Marla Lise</h3>
-                <p class="subtitle">With Marla Lise</p>
-            </div>
+      </div>
+  
+      <div class="gallery-item">
+        <img src="assets/img/yu.jpg" alt="Disaster Preparedness for Families">
+        <div class="gallery-text">
+          <h3>Disaster Preparedness for Families</h3>
+          <p class="subtitle">With Ms. Yumiko Horie</p>
         </div>
+      </div>
+  
+      <div class="gallery-item">
+        <img src="assets/img/ma.jpg" alt="Eco Power of Words">
+        <div class="gallery-text">
+          <h3>Eco Power of Words</h3>
+          <p class="subtitle">With Ms. Marla Lise</p>
+        </div>
+      </div>
     </div>
-
-    <div class="details-section" id="details-section">
-        <div class="details-content" id="details-content">
-            <!-- Details will be injected here -->
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Scoped CSS for the gallery section */
+  </section>
+  
+  <style>
     .gallery-section {
-        text-align: center;
-        background-color: #f4f4f4;
-        padding: 40px 20px;
-        max-width: 700px;
-        margin: 0 auto;
-        position: relative;
-        font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 40px 20px;
+      font-family: 'Montserrat', sans-serif;
     }
-
+  
     .gallery-section h2 {
-        color: rgb(46, 125, 50);
-        margin-bottom: 20px;
-        font-size: 32px;
+      color: rgb(46, 125, 50);
+      margin-bottom: 30px;
+      font-size: 32px;
     }
-
+  
     .gallery-section .container {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        flex-wrap: wrap; /* Allow wrapping to the next line */
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
     }
-
+  
     .gallery-section .gallery-item {
-        cursor: pointer;
-        transition: transform 0.3s ease-in-out;
-        flex: 1 1 calc(33.333% - 20px); /* Adjust flex-basis for wrapping */
-        box-sizing: border-box;
-        text-align: center;
+      flex: 1 1 calc(25% - 20px);
+      max-width: calc(25% - 20px);
+      box-sizing: border-box;
+      transition: transform 0.3s ease;
+      cursor: pointer;
     }
-
+  
     .gallery-section .gallery-item img {
-        width: 100%;
-        height: auto; /* Adjust height to maintain aspect ratio */
-        object-fit: cover;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-
+  
     .gallery-section .gallery-item:hover img {
-        transform: scale(1.05);
+      transform: scale(1.05);
     }
-
+  
     .gallery-section .gallery-text {
-        margin-top: 10px;
+      margin-top: 10px;
     }
-
+  
     .gallery-section .gallery-text h3 {
-        font-size: 1.5rem; /* Adjusted font size */
-        font-weight: bold;
+      font-size: 2rem;
+      font-weight: bold;
     }
-
+  
     .gallery-section .subtitle {
-        font-size: 1.2rem; /* Adjusted font size */
-        color: #000000;
-        margin-top: 5px;
+      font-size: 2rem;
+      color: #000000;
     }
-
-    .gallery-section .details-section {
-        margin-top: 20px;
-        padding: 20px;
-        background-color: #fff;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
-        display: none;
-        text-align: left;
+  
+    /* Tablet View */
+    @media (max-width: 1023px) {
+      .gallery-section .gallery-item {
+        flex: 1 1 45%;
+        max-width: 45%;
+      }
     }
-
-    .gallery-section .details-content {
-        font-size: 12px;
-        color: #333;
+  
+    /* Mobile View */
+    @media (max-width: 767px) {
+      .gallery-section .gallery-item {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+  
+      .gallery-section h2 {
+        font-size: 26px;
+      }
+  
+      .gallery-section .gallery-text h3 {
+        font-size: 2rem;
+      }
+  
+      .gallery-section .subtitle {
+        font-size: 2rem;
+      }
     }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-        .gallery-section .container {
-            flex-direction: column; /* Stack items vertically on smaller screens */
-            align-items: center;
-        }
-
-        .gallery-section .gallery-item {
-            flex: 1 1 100%; /* Full width for smaller screens */
-            margin-bottom: 20px;
-        }
-    }
-
-    @media (max-width: 768px) {
-        .gallery-section h2 {
-            font-size: 28px;
-        }
-
-        .gallery-section .gallery-text h3 {
-            font-size: 1.2rem;
-        }
-
-        .gallery-section .subtitle {
-            font-size: 1rem;
-        }
-    }
-
-    @media (max-width: 480px) {
-        .gallery-section h2 {
-            font-size: 24px;
-        }
-
-        .gallery-section .gallery-text h3 {
-            font-size: 1rem;
-        }
-
-        .gallery-section .subtitle {
-            font-size: 0.8rem;
-        }
-    }
-</style>
-
-<script>
-    const details = [
-        `Some stories are meant to be heard, felt, and remembered. This Tuesday, I am beyond grateful to host a special WICL: Learn, Lead, and Act series session with my dear friend, Dr. Aarti Ghate, whose journey is nothing short of inspiring.
-
-        Arti is not just a PhD holder or a climate and sustainability strategist—she is a fighter, a burn survivor, and a beacon of resilience. Growing up in a conservative family, she faced biases, challenges, and an unimaginable incident that left both physical and emotional scars. But her spirit remained unshaken.
-
-        I still remember many heartbreaking incidents she shared. But instead of hiding, Aarti stood strong and chose to embrace her scars, proving that true strength lies in self-acceptance. She turned every obstacle into a lesson, every setback into motivation. And now, she is here to share her incredible journey of perseverance, self-belief, and courage with us.`,
-
-        `Are you prepared to face a natural disaster in Japan? Do you know how to prepare your family, especially if you have children, for emergencies? Have you ever wondered how to read a hazard map or overcome common biases about disasters?
-
-        We are excited to announce our next Women In Climate Leadership Guest Lecture with my wonderful friend Ms. Yumiko Horie, who is the founder of #PosseNippon and Publisher at Small Business Japan, on #DisasterPreparedness for Families.
-
-        Yumiko san is deeply passionate about raising awareness on disaster preparedness for foreigners in Japan, addressing the lack of critical information available in non-Japanese languages. Drawing on her experience as a journalist covering numerous natural disasters, she will guide us through many essential topics crucial for families facing disasters.`,
-
-        `We are excited to invite you to a special session featuring Marla Lise, an inspiring environmental educator and storyteller, on Tuesday, 10th December 2024, from 9:00 PM to 10:00 PM (JST).
-
-        Born in Singapore and raised around the world, Marla brings a unique perspective shaped by her diverse experiences. As a passionate conservationist and advocate for environmental education, she believes in the power of words to transform mindsets, shape perceptions, and inspire action.`
-    ];
-
-    function showDetails(index) {
-        const detailsContent = document.getElementById('details-content');
-        const detailsSection = document.getElementById('details-section');
-        detailsContent.innerHTML = details[index];
-        detailsSection.style.display = 'block';
-    }
-
-    function hideDetails() {
-        const detailsSection = document.getElementById('details-section');
-        detailsSection.style.display = 'none';
-    }
-</script>
-
-
-<br>
-<section class="team-section">
-    <h2>WICL  members
-    </h2>
-    <p></p>
+  </style>
+  
+  <section class="team-section">
+    <h2>WICL Members</h2>
+    <p>Meet some of our powerful members</p>
+  
     <div class="team-container">
-        <div class="team-member">
-            <img src="https://media.licdn.com/dms/image/v2/D5603AQECOylcr4_RSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703063366448?e=1750896000&v=beta&t=x8MPrqsDUrbhg3bV-t1fvKeDG7NvdAUXrwSj8dK_7o8" alt="Member 1">
-            <h3>Manasi</h3>
-        
-            <a href="https://www.linkedin.com/in/manasi-karanjikar-52300048/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="team-member">
-            <img src="https://media.licdn.com/dms/image/v2/C5103AQECXtUkFRlxtQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1554860392408?e=1750896000&v=beta&t=d75g5Z_pShHBYUXG9yVAKFEJqgMlvxHiE9h72PVSDCs" alt="Member 2">
-            <h3>Tejaswini</h3>
-          
-            <a href="https://www.linkedin.com/in/tejaswini-ghanekar-95b097160/ " target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="team-member">
-            <img src="https://media.licdn.com/dms/image/v2/C5603AQEpGiPbebdZ2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1647699295606?e=1750896000&v=beta&t=teardyGnUlr3Gsc6auzn6xXykr6YQ4Lh5c0ToMgGFlk" alt="Member 3">
-            <h3>Rani </h3>  
-            <a href="https://www.linkedin.com/in/%E3%83%9E%E3%83%8F%E3%82%AB%E3%83%AB-%E3%83%A9%E3%83%8B-rani-mahakal-46575833/ 
-
-            " target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a>
-        </div>
-
-        <div class="team-member">
-            <img src="assets\img\swati.jpg" alt="Member 4">
-            <h3>Swati Jadhav</h3>
-            <!-- <a href="https://www.linkedin.com/in/rishabhsawansukha/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a> -->
-        </div>
-
-        <div class="team-member">
-            <img src="assets\img\joshi.jpg" alt="Member 5">
-            <h3>Manjusha Joshi</h3>
-            <!-- <p>Role Five</p> -->
-            <!-- <a href="https://www.linkedin.com/in/memberfive/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a> -->
-        </div>
-
-        <div class="team-member">
-            <img src="assets\img\Tejaswini.jpg" alt="Member 6">
-            <h3>Tejaswini</h3>
-            <!-- <p>Role Six</p> -->
-            <!-- <a href="https://www.linkedin.com/in/membersix/" target="_blank">
-                <i class="fab fa-linkedin"></i>
-            </a> -->
-        </div>
+  
+      <!-- 1. Mansi Karanjikar -->
+      <div class="team-member">
+        <img src="https://media.licdn.com/dms/image/v2/D5603AQECOylcr4_RSg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1703063366448?e=1750896000&v=beta&t=x8MPrqsDUrbhg3bV-t1fvKeDG7NvdAUXrwSj8dK_7o8" alt="Mansi Karanjikar">
+        <h3>Mansi Karanjikar</h3>
+        <a href="https://www.linkedin.com/in/manasi-karanjikar-52300048/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+  
+      <!-- 2. Vaidehi Urhekar -->
+      <div class="team-member">
+        <img src="assets/img/vaidehi.jpg" alt="Vaidehi Urhekar">
+        <h3>Vaidehi Urhekar</h3>
+      </div>
+  
+      <!-- 3. Dhanashree Moghe -->
+      <div class="team-member">
+        <img src="assets\img\Dhanashree.jpg" alt="Dhanashree Moghe">
+        <h3>Dhanashree Moghe</h3>
+      </div>
+  
+      <!-- 4. Rani Awte -->
+      <div class="team-member">
+        <img src="https://media.licdn.com/dms/image/v2/C5603AQEpGiPbebdZ2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1647699295606?e=1750896000&v=beta&t=teardyGnUlr3Gsc6auzn6xXykr6YQ4Lh5c0ToMgGFlk" alt="Rani Awte">
+        <h3>Rani Awte</h3>
+        <a href="https://www.linkedin.com/in/%E3%83%9E%E3%83%8F%E3%82%AB%E3%83%AB-%E3%83%A9%E3%83%8B-rani-mahakal-46575833/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+  
+      <!-- 5. Swati Jadhav -->
+      <div class="team-member">
+        <img src="assets/img/swati.jpg" alt="Swati Jadhav">
+        <h3>Swati Jadhav</h3>
+      </div>
+  
+      <!-- 6. Manjusha Joshi -->
+      <div class="team-member">
+        <img src="assets/img/joshi.jpg" alt="Manjusha Joshi">
+        <h3>Manjusha Joshi</h3>
+      </div>
+  
+      <!-- 7. Tejaswini Ghanekar -->
+      <div class="team-member">
+        <img src="https://media.licdn.com/dms/image/v2/C5103AQECXtUkFRlxtQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1554860392408?e=1750896000&v=beta&t=d75g5Z_pShHBYUXG9yVAKFEJqgMlvxHiE9h72PVSDCs" alt="Tejaswini Ghanekar">
+        <h3>Tejaswini Ghanekar</h3>
+        <a href="https://www.linkedin.com/in/tejaswini-ghanekar-95b097160/" target="_blank"><i class="fab fa-linkedin"></i></a>
+      </div>
+  
     </div>
-    
-</div>
-</section>
-
-<style>
+  </section>
+  
+  <style>
     .team-section {
-        text-align: center;
-        background-color: #f4f4f4;
-        padding: 40px 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        font-family: 'Montserrat', sans-serif;
+      text-align: center;
+      background-color: #f4f4f4;
+      padding: 40px 20px;
+      font-family: 'Montserrat', sans-serif;
     }
-
+  
     .team-section h2 {
-        color: rgb(46, 125, 50);
-        margin-bottom: 10px;
-        font-size: 32px;
+      color: rgb(46, 125, 50);
+      font-size: 2.5rem;
+      margin-bottom: 10px;
     }
-
+  
     .team-section p {
-        color: #555;
-        margin-bottom: 20px;
-        font-size: 18px;
+      color: #555;
+      font-size: 2rem;
+      margin-bottom: 30px;
     }
-
+  
     .team-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 25px;
     }
-
+  
     .team-member {
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        text-align: center;
-        padding: 20px;
-        transition: transform 0.3s ease;
+      background: #fff;
+      border-radius: 10px;
+      padding: 25px 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
     }
-
+  
     .team-member:hover {
-        transform: translateY(-10px);
+      transform: translateY(-5px);
     }
-
+  
     .team-member img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 18px;
+    }
+  
+    .team-member h3 {
+      font-size: 2rem;
+      margin: 10px 0;
+      color: #333;
+    }
+  
+    .team-member a {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: 1.6rem;
+      color: #0A66C2;
+    }
+  
+    @media (max-width: 768px) {
+      .team-section h2 {
+        font-size: 2rem;
+      }
+  
+      .team-section p {
+        font-size: 1rem;
+      }
+  
+      .team-member h3 {
+        font-size: 1rem;
+      }
+  
+      .team-member img {
         width: 100px;
         height: 100px;
-        border-radius: 50%;
-        object-fit: cover;
-        margin-bottom: 15px;
+      }
+  
+      .team-member a {
+        font-size: 2rem;
+      }
     }
-
-    .team-member h3 {
-        font-size: 25px;
-        margin: 10px 0;
-        color: #333;
-    }
-
-    .team-member p {
-        font-size: 20px;
-        color: #666;
-        margin-bottom: 10px;
-    }
-
-    .team-member a {
-        color: #0A66C2;
-        font-size: 24px;
-        display: inline-block;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 992px) {
-        .team-container {
-            grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
-        }
-    }
-
-    @media (max-width: 768px) {
-        .team-container {
-            grid-template-columns: 1fr; /* Single column for small screens */
-        }
-
-        .team-member h3 {
-            font-size: 22px;
-        }
-
-        .team-member p {
-            font-size: 18px;
-        }
-    }
-
+  
     @media (max-width: 480px) {
-        .team-member h3 {
-            font-size: 20px;
-        }
-
-        .team-member p {
-            font-size: 16px;
-        }
+      .team-section h2 {
+        font-size: 1.8rem;
+      }
+  
+      .team-section p {
+        font-size: 1rem;
+      }
+  
+      .team-member h3 {
+        font-size: 1.2rem;
+      }
+  
+      .team-member img {
+        width: 90px;
+        height: 90px;
+      }
+  
+      .team-member a {
+        font-size: 1.3rem;
+      }
     }
-</style>
+  </style>
+  
+  
 
 
 <!-- Add this in your head section to include Font Awesome for LinkedIn icons -->

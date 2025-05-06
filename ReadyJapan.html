@@ -128,7 +128,7 @@
             <ul>
                 <li><a href="index.html"><strong>Home</strong></a></li>
                 <li><a href="about.html"><strong>About Us</strong></a></li>
-                <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li>
+                <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
                 <li><a href="resources.html"><strong>Resources</strong></a></li>
                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
@@ -158,7 +158,7 @@
                             <a href="#"><strong>Community Engagement</strong></a>
                             <ul class="submenu">
                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -364,16 +364,67 @@
         <section class="py-5 bg-white custom-section">
             <div class="container custom-container">
                 <div class="center-block custom-center-block">
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan is an initiative dedicated to enhancing disaster preparedness and resilience among foreign residents in Japan. Recognizing that language barriers, lack of access to emergency information, and unfamiliarity with local disaster response systems put foreign communities at a greater risk during crises, this program aims to bridge the gap.
-                    </p>
+                    
                 </div>
         
                 <div class="center-block custom-center-block">
-                    <h3 class="vision-title custom-title">What is REadyJapan?</h3>
+                    <h3 class="vision-title custom-title">What is ReadyJapan?</h3>
                     <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                    REadyJapan equips foreign residents with the knowledge and resources needed to effectively respond to disasters such as earthquakes, typhoons, and heatwaves. The program ensures a comprehensive approach that includes preparedness, response, recovery, mitigation, and adaptation.
+                        Japan is one of the most disaster-prone countries globally, facing frequent earthquakes, typhoons, and other natural hazards. With climate change intensifying these events, it's crucial for all residents, including foreign nationals, to be prepared. However, language barriers and unfamiliarity with local systems can make disaster preparedness challenging for non-Japanese speakers. ReadyJapan is an initiative by REarth aimed at bridging this gap. We provide accessible disaster preparedness information and conduct workshops in English, tailored to the needs of foreign residents in Japan 
                     </p>
+                    <section class="py-5 bg-white">
+                        <div class="container">
+                            <!-- Block Section for Title and Content -->
+                           
+                    
+                            <!-- Image Section -->
+                            <div class="text-center my-4">
+                                <img src="assets\img\ReadyJapan_Poster_VentureCafe.png" alt="Climate Awareness Image 1" class="img-fluid download-image mb-3" width="300" />
+                                <img src="assets\img\ReadyJapan_VolcanicEruptionGuidelines.png" alt="Climate Awareness Image 2" class="img-fluid download-image mb-3" width="300" />
+                            </div>
+                    
+                            <!-- Download Button -->
+                            <div class="text-center">
+                                <button class="btn btn-success" onclick="downloadImages()">Download Brochure</button>
+                            </div>
+                        </div>
+                    
+                        <style>
+                            .download-image {
+                                border-radius: 12px;
+                                margin: 10px;
+                                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+                            }
+                    
+                            .btn-success {
+                                padding: 10px 20px;
+                                font-size: 16px;
+                                border-radius: 8px;
+                            }
+                    
+                            @media (max-width: 768px) {
+                                .download-image {
+                                    width: 90%;
+                                }
+                            }
+                        </style>
+                    
+                        <!-- JavaScript to Trigger Download -->
+                        <script>
+                            function downloadImages() {
+                                const imageUrls = ['image1.jpg', 'image2.jpg'];
+                    
+                                imageUrls.forEach((url, index) => {
+                                    const a = document.createElement('a');
+                                    a.href = url;
+                                    a.download = `climate-awareness-${index + 1}.jpg`;
+                                    document.body.appendChild(a);
+                                    a.click();
+                                    document.body.removeChild(a);
+                                });
+                            }
+                        </script>
+                    </section>
 
                     <section id="values" class="values section light-background" style="background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);">
                         <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
@@ -412,7 +463,7 @@
                             <div class="col-md-6 col-lg-3">
                               <div class="program-item">
                                 <div class="icon-container">
-                                  <i class="fa fa-lightbulb-o"></i>
+                                  <i class="fa fa-rocket"></i>
                                 </div>
                                 <div class="content">
                                   <h3>English Resources</h3>
@@ -533,200 +584,135 @@
                       
 
 
-
+<br>
                     
         
-                    <h3 class="mission-title custom-title">How We Are Structuring the Program</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan is being developed in collaboration with local communities, ward officials, and disaster risk reduction (DRR) experts to ensure effective implementation. The key components of the program include:
-                    </p>
-                    <ul class="custom-list">
-                        <li><strong>Multilingual Disaster Preparedness Workshops</strong> – Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</li>
-                        <li><strong>Community Evacuation Drills</strong> – Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</li>
-                        <li><strong>Development of English Resources</strong> – Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</li>
-                        <li><strong>Heatwave and Extreme Weather Preparedness</strong> – Providing guidance on heatstroke prevention and typhoon safety.</li>
-                        <li><strong>Collaboration with Local Authorities</strong> – Strengthening partnerships with ward offices to ensure inclusivity in disaster response plans.</li>
-                    </ul>
-        
-                    <h3 class="mission-title custom-title">How You Can Help</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan thrives on community engagement and collaboration. Currently, we are operating in Midori-ku, Yokohama, Japan. Here's how you can help:
-                    </p>
-                    <ul class="custom-list">
-                        <li><strong>Volunteer & Community Engagement</strong> – Assist in organizing workshops, evacuation drills, and awareness campaigns. Help translate and adapt emergency materials into multiple languages for better accessibility. Support outreach efforts to connect with foreign communities who may lack disaster preparedness resources.</li>
-                        <li><strong>Research & Knowledge Sharing</strong> – Collaborate on research projects related to disaster resilience, foreign community risk perception, or inclusive DRR strategies. Contribute insights on best practices for disaster preparedness from other countries and how they can be adapted in Japan. Help develop data-driven solutions to improve emergency response mechanisms for non-Japanese speakers.</li>
-                        <li><strong>Educational & Capacity-Building Initiatives</strong> – Conduct training sessions on earthquake preparedness, climate-induced disasters, and emergency response. Provide expertise in heatwave resilience, mental health during disasters, or digital tools for emergency communication. Develop educational materials tailored for schools, workplaces, and community centers.</li>
-                        <li><strong>Institutional & Organizational Partnerships</strong> – If you represent a university, NGO, or research institution, partner with us to integrate disaster preparedness education into existing programs. Local businesses & embassies can collaborate by providing funding, venues for training, or logistical support for community drills.</li>
-                    </ul>
-        
-                    <h3 class="mission-title custom-title">Sponsor and Support</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        While REadyJapan is driven by passionate individuals, we need financial support for the execution of our impact and to ensure that every foreign resident has access to life-saving information and preparedness training.
-                    </p>
-        
-                    <h3 class="mission-title custom-title">Got Another Idea?</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        If you have expertise, insights, or resources that could contribute to disaster preparedness and resilience, we'd love to hear from you! Your support, big or small, can help save lives by empowering foreign communities with the knowledge and tools to stay safe during disasters.
-                    </p>
-                </div>
-            </div>
-        
-            <style>
-                .custom-section {
-                    background-color: #ffffff;
-                    padding: 80px 0;
-                }
-        
-                .custom-container {
-                    max-width: 1200px;
-                    padding: 0 15px;
-                    margin: 0 auto;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
-        
-                .custom-center-block {
-                    display: block;
-                    text-align: center;
-                    max-width: 100%;
-                    margin: 0 auto;
-                }
-        
-                .custom-title {
-                    font-family: "Montserrat", sans-serif;
-                    font-weight: 700;
-                    color: rgb(46, 125, 50);
-                    font-size: 30px;
-                    line-height: 36px;
-                    margin-bottom: 20px;
-                    text-align: center;
-                }
-        
-                .custom-paragraph {
-                    font-family: "Helvetica Neue", sans-serif;
-                    font-weight: 400;
-                    color: rgb(0, 0, 0);
-                    font-size: 16px;
-                    line-height: 24px;
-                    max-width: 900px;
-                    margin: 0 auto 30px auto;
-                    text-align: center;
-                    letter-spacing: 0.5px;
-                }
-        
-                .custom-list {
-                    list-style-type: none;
-                    padding: 0;
-                    text-align: left;
-                    margin: 20px auto;
-                }
-        
-                .custom-list li {
-                    margin-bottom: 10px;
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-        
-                @media (max-width: 768px) {
-                    .custom-title {
-                        font-size: 26px;
-                    }
-        
-                    .custom-paragraph {
-                        font-size: 15px;
-                        line-height: 1.5;
-                    }
-                }
-            </style>
-        </section>
-
-    
-        
-        
-        <div class="call-to-action mt-5">
-            <h2>Join REadyJapan!</h2>
-            <p class="lead">Ready to be part of this initiative? Let's connect and explore how you can contribute to building a safer and more resilient community.</p>
-            <a href="mailto:contact@example.com" class="btn btn-primary btn-lg">Contact Us Today!</a>
-        </div>
-        
-        <style>
-            .join-us {
-                padding: 60px 0;
-                background-color: #f9f9f9;
-            }
-        
-            .section-title {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 3rem;
-                font-weight: bold;
-                color: #388e3c;
-            }
-        
-            .join-card {
-                border: 2px solid #46C0BE;
-                border-radius: 10px;
-                padding: 20px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                background-color: white;
-            }
-        
-            .join-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            }
-        
-            .join-card i {
-                color: #46C0BE;
-            }
-        
-            .join-card h3 {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
-                font-weight: bold;
-                color: #2E7D32;
-                margin-bottom: 10px;
-            }
-        
-            .join-card p {
-                font-size: 1.7rem;
-                color: #388e3c;
-            }
-        
-            .call-to-action {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-        
-            .call-to-action h2 {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
-                font-weight: bold;
-                color: #388e3c;
-            }
-        
-            .call-to-action .lead {
-                font-size: 1.7rem;
-                color: #000;
-                margin-bottom: 20px;
-            }
-        
-            .call-to-action .btn {
-                background-color: #46C0BE;
-                border-color: #46C0BE;
-                font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
-            }
-        
-            .call-to-action .btn:hover {
-                background-color: #388e3c;
-                border-color: #388e3c;
-            }
-        </style>
+                      <h3 class="mission-title custom-title">How We Are Structuring the Program</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          ReadyJapan is being developed in collaboration with local communities, ward officials, and disaster risk reduction (DRR) experts to ensure effective implementation. The key components of the program include:
+                      </p>
+                      <ul class="custom-list">
+                          <li><strong>Multilingual Disaster Preparedness Workshops</strong> – Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</li>
+                          <li><strong>Community Evacuation Drills</strong> – Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</li>
+                          <li><strong>English Resource Development</strong> – Creating disaster information posters and compiling emergency procedure guidelines in English to make critical information more accessible.</li>
+                          <li><strong>Collaboration with Local Authorities</strong> – Strengthening partnerships with ward offices to ensure inclusivity in disaster response plans.</li>
+                      </ul>
+                      
+                      <h3 class="mission-title custom-title">How You Can Help</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          ReadyJapan thrives through community support and collaboration. Based in Midori-ku, Yokohama, here’s how you can contribute:
+                      </p>
+                      <ul class="custom-list">
+                          <li><strong>Volunteer & Outreach</strong> – Help organize workshops, evacuation drills, and awareness activities. Support translations and share disaster info with communities.</li>
+                          <li><strong>Research & Insights</strong> – Share your knowledge on disaster preparedness, inclusive risk strategies, or global best practices. Help us develop data-driven solutions for foreign residents.</li>
+                          <li><strong>Education & Training</strong> – Lead sessions on earthquake readiness, climate-related disasters, or emergency mental health. Create simple learning materials for schools and communities.</li>
+                          <li><strong>Partnerships & Support</strong> – Collaborate as a university, NGO, business, or embassy. Offer expertise, venues, or funding to strengthen disaster resilience together.</li>
+                      </ul>
+                      
+                      <h3 class="mission-title custom-title">Sponsorship</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          Support our mission through sponsorships to fund community programs, print multilingual materials, and expand our reach.
+                      </p>
+                      
+                      <h3 class="mission-title custom-title">Got Another Idea?</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          If you have expertise, insights, or resources that could contribute to disaster preparedness and resilience, we'd love to hear from you! Your support, big or small, can help us by empowering foreign communities with the knowledge and tools to stay safe during disasters.
+                      </p>
+                      
+                      <!-- Contact Us Call to Action -->
+                      <div class="call-to-action mt-5 text-center">
+                        <h2>Contact Us Today!</h2>
+                        <p class="lead">Let’s connect and explore how you can contribute to building a safer and more resilient community.</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">Reach Out</a>
+                    </div>
+                    
+                      
+                      <style>
+                          .custom-title {
+                              font-family: "Montserrat", sans-serif;
+                              font-weight: 700;
+                              color: #2e7d32;
+                              font-size: 32px;
+                              line-height: 40px;
+                              margin-bottom: 20px;
+                              text-align: center;
+                          }
+                      
+                          .custom-paragraph {
+                              font-family: "Helvetica Neue", sans-serif;
+                              font-weight: 400;
+                              color: #000;
+                              font-size: 18px;
+                              line-height: 28px;
+                              max-width: 900px;
+                              margin: 0 auto 30px auto;
+                              text-align: center;
+                              letter-spacing: 0.4px;
+                          }
+                      
+                          .custom-list {
+                              list-style-type: none;
+                              padding: 0;
+                              text-align: left;
+                              margin: 20px auto;
+                              max-width: 900px;
+                          }
+                      
+                          .custom-list li {
+                              margin-bottom: 12px;
+                              font-size: 17px;
+                              font-weight: 500;
+                          }
+                      
+                          .call-to-action h2 {
+                              font-size: 28px;
+                              color: #388e3c;
+                              font-weight: 700;
+                          }
+                      
+                          .call-to-action .lead {
+                              font-size: 18px;
+                              color: #000;
+                              margin-bottom: 20px;
+                          }
+                      
+                          .call-to-action .btn {
+                              background-color: #46C0BE;
+                              border-color: #46C0BE;
+                              font-size: 18px;
+                          }
+                      
+                          .call-to-action .btn:hover {
+                              background-color: #388e3c;
+                              border-color: #388e3c;
+                          }
+                      
+                          @media (max-width: 768px) {
+                              .custom-title {
+                                  font-size: 24px;
+                              }
+                      
+                              .custom-paragraph, .custom-list li {
+                                  font-size: 16px;
+                                  line-height: 24px;
+                              }
+                      
+                              .call-to-action h2 {
+                                  font-size: 22px;
+                              }
+                      
+                              .call-to-action .lead {
+                                  font-size: 16px;
+                              }
+                      
+                              .call-to-action .btn {
+                                  font-size: 16px;
+                              }
+                          }
+                      </style>
+                      
         <br>
-        
+        <br>
 <section class="focus-section">
     <h1>Our Projects</h1>
     <div class="container">
