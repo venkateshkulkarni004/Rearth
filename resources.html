@@ -39,6 +39,9 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+
 </head>
 
 <body>
@@ -313,100 +316,106 @@
         </script>
     </header>
    
-    <main>
-        <section class="py-5 bg-white" id="readyjapan-resources">
-          <div class="container">
-            <!-- Heading -->
-            <div class="text-center mb-5">
-              <h2 class="fw-bold">ReadyJapan Resources</h2>
-              <p class="text-muted">Posters, guides, and videos to help you stay informed and prepared.</p>
-            </div>
+    <section class="py-5 bg-white" id="readyjapan-resources">
+        <div class="container">
+          <!-- Heading -->
+          <div class="text-center mb-5">
+            <h2 class="fw-bold">ReadyJapan Resources</h2>
+            <p class="text-muted">Posters, guides, and videos to help you stay informed and prepared.</p>
+          </div>
       
-            <!-- Posters Section -->
-            <div class="mb-5">
-              <h3 class="text-center mb-4">Posters</h3>
-              <div class="row justify-content-center">
-                <div class="col-md-4 text-center mb-4">
-                  <img src="assets/img/ReadyJapan_Poster_VentureCafe.png" alt="Poster 1"
-                    class="img-fluid rounded shadow mb-3"
-                    style="max-width: 100%; width: 100%; max-height: 400px; object-fit: contain;">
-                  <button class="btn btn-success"
-                    onclick="downloadFile('assets/img/ReadyJapan_Poster_VentureCafe.png', 'ReadyJapan_Poster_VentureCafe.png')">Download
-                    ReadyJapan</button>
-                </div>
-      
-                <div class="col-md-4 text-center mb-4">
-                  <img src="assets/img/ReadyJapan_VolcanicEruptionGuidelines.png" alt="Poster 2"
-                    class="img-fluid rounded shadow mb-3"
-                    style="max-width: 100%; width: 100%; max-height: 400px; object-fit: contain;">
-                  <button class="btn btn-success"
-                    onclick="downloadFile('assets/img/ReadyJapan_VolcanicEruptionGuidelines.png', 'ReadyJapan_VolcanicEruptionGuidelines.png')">Download
-                    VOLCANIC ERUPTION & ASHFALL </button>
-                </div>
-              </div>
-            </div>
-      
-            <!-- PDF Guides Section -->
-            <div class="mb-5">
-              <h3 class="text-center mb-4">PDF Guides</h3>
-              <div class="d-flex flex-column flex-md-row gap-4 justify-content-center overflow-auto">
-                <div class="text-center" style="min-width: 300px; flex: 1;">
-                  <iframe src="assets\img\Vegetarian Emergency food list ReadyJapan.pdf" width="100%" height="300px"
-                    class="rounded shadow mb-3" style="border: 1px solid #ccc;"></iframe>
-                  <button class="btn btn-success"
-                    onclick="downloadFile('assets/pdf/Disaster_Preparedness_Guide.pdf', 'Disaster_Preparedness_Guide.pdf')"> EMERGENCY FOOD
-                    VEGETARIAN OPTIONS DOWNLOAD</button>
-                </div>
-      
-                <div class="text-center" style="min-width: 300px; flex: 1;">
-                  <iframe src="assets\img\Disaster Vocabulary ReadyJapan.pdf" width="100%" height="300px"
-                    class="rounded shadow mb-3" style="border: 1px solid #ccc;"></iframe>
-                  <button class="btn btn-success"
-                    onclick="downloadFile('assets/pdf/Sustainability_Checklist.pdf', 'Sustainability_Checklist.pdf')"> BASIC DISASTER VOCABULARY DOWNLOAD
-                </button>
-                </div>
-              </div>
-            </div>
-      
-            <!-- Emergency Link Section -->
-            <div class="text-center mb-5">
-              <h3 class="mb-3">Important Emergency Link</h3>
-              <p class="text-muted">Stay informed with emergency numbers and resources in Japan.</p>
-              <a href="https://www.japan-mobility.com/guide/emergency-numbers/japan" target="_blank"
-                class="btn btn-outline-primary">View Emergency Numbers</a>
-            </div>
-      
-            <!-- Videos Section -->
-            <div class="text-center mb-4">
-              <h3 class="mb-3">Educational Videos</h3>
-              <p class="text-muted">Understand climate change and sustainability through engaging videos.</p>
-            </div>
-      
-            <div class="row">
-              <div class="col-md-6 mb-4">
-                <div class="bg-white shadow rounded p-3 text-center h-100">
-                  <div class="ratio ratio-16x9 mb-3">
-                    <iframe src="https://www.youtube.com/embed/zN5YfeTu18U" title="Sustainability Action"
-                      allowfullscreen></iframe>
-                  </div>
-                  <h4 class="fw-bold">How to Take Action for Sustainability</h4>
-                  <p class="text-muted">Learn how to contribute to sustainability through practical steps.</p>
-                </div>
+          <!-- Posters Section -->
+          <div class="mb-5">
+            <h3 class="text-center mb-4">Posters</h3>
+            <div class="row justify-content-center">
+              <div class="col-md-4 text-center mb-4">
+                <img src="assets/img/ReadyJapan_Poster_VentureCafe.png" alt="Poster 1"
+                  class="img-fluid rounded shadow mb-3"
+                  style="max-height: 400px; object-fit: contain;">
+                <a href="assets/img/ReadyJapan_Poster_VentureCafe.png" download class="btn btn-success">
+                  Download ReadyJapan Poster
+                </a>
               </div>
       
-              <div class="col-md-6 mb-4">
-                <div class="bg-white shadow rounded p-3 text-center h-100">
-                  <div class="ratio ratio-16x9 mb-3">
-                    <iframe src="https://www.youtube.com/embed/lWXyJBwjhpQ" title="Climate Change Impact"
-                      allowfullscreen></iframe>
-                  </div>
-                  <h4 class="fw-bold">The Impact of Climate Change</h4>
-                  <p class="text-muted">Explore the real effects of climate change on ecosystems and people.</p>
-                </div>
+              <div class="col-md-4 text-center mb-4">
+                <img src="assets/img/ReadyJapan_VolcanicEruptionGuidelines.png" alt="Poster 2"
+                  class="img-fluid rounded shadow mb-3"
+                  style="max-height: 400px; object-fit: contain;">
+                <a href="assets/img/ReadyJapan_VolcanicEruptionGuidelines.png" download class="btn btn-success">
+                  Download Volcanic Eruption Poster
+                </a>
               </div>
             </div>
           </div>
-        </section>
+      
+        <!-- PDF Guides Section -->
+        <div class="mb-5">
+            <h3 class="text-center mb-4"> ReadyJapan PDF Guides</h3>
+
+            <div class="row justify-content-center g-4">
+              <div class="col-md-5 text-center">
+                <p class="fw-bold mb-2">Emergency Food - Vegetarian Options</p>
+                <div class="d-flex justify-content-center mb-2">
+                  <i class="bi bi-file-pdf" style="font-size: 48px; color: #d9534f;"></i>
+                </div>
+                <a href="assets/pdf/Vegetarian_Emergency_food_list_ReadyJapan.pdf" download class="btn btn-success">
+                    EMERGENCY FOOD
+                    VEGETARIAN OPTIONS Download PDF
+                </a>
+              </div>
+          
+              <div class="col-md-5 text-center">
+                <p class="fw-bold mb-2">Basic Disaster Vocabulary</p>
+                <div class="d-flex justify-content-center mb-2">
+                  <i class="bi bi-file-pdf" style="font-size: 48px; color: #d9534f;"></i>
+                </div>
+                <a href="assets/pdf/Disaster_Vocabulary_ReadyJapan.pdf" download class="btn btn-success">
+                    Basic Disaster Vocabulary  Download PDF
+                </a>
+              </div>
+            </div>
+          </div>
+          <br>
+          <br>
+  
+          <!-- Emergency Link Section -->
+          <div class="text-center mb-5">
+            <h3 class="mb-3">Important Emergency Link</h3>
+            <p class="text-muted">Stay informed with emergency numbers and resources in Japan.</p>
+            <a href="https://www.japan-mobility.com/guide/emergency-numbers/japan" target="_blank"
+              class="btn btn-outline-primary">View Emergency Numbers</a>
+          </div>
+      
+          <!-- Videos Section -->
+          <div class="text-center mb-4">
+            <h3 class="mb-3">Educational Videos</h3>
+            <p class="text-muted">Understand climate change and sustainability through engaging videos.</p>
+          </div>
+      
+          <div class="row">
+            <div class="col-md-6 mb-4">
+              <div class="bg-white shadow rounded p-3 text-center h-100">
+                <div class="ratio ratio-16x9 mb-3">
+                  <iframe src="https://www.youtube.com/embed/zN5YfeTu18U" title="Sustainability Action" allowfullscreen></iframe>
+                </div>
+                <h4 class="fw-bold">How to Take Action for Sustainability</h4>
+                <p class="text-muted">Learn how to contribute to sustainability through practical steps.</p>
+              </div>
+            </div>
+      
+            <div class="col-md-6 mb-4">
+              <div class="bg-white shadow rounded p-3 text-center h-100">
+                <div class="ratio ratio-16x9 mb-3">
+                  <iframe src="https://www.youtube.com/embed/lWXyJBwjhpQ" title="Climate Change Impact" allowfullscreen></iframe>
+                </div>
+                <h4 class="fw-bold">The Impact of Climate Change</h4>
+                <p class="text-muted">Explore the real effects of climate change on ecosystems and people.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       
         <!-- Instagram Section -->
         <section class="hero">
