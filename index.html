@@ -503,9 +503,9 @@
                     <div class="slide"><img src="assets\img\WhatsApp Image 2025-05-31 at 4.49.14 PM.jpeg" alt="Image 1"></div>
                     <div class="slide"><img src="assets\img\Screenshot 2025-06-03 115815.png" alt="Image 2"></div>
                     <div class="slide"><img src="Doc\img\kohana training.jpg" alt="Image 3"></div>
-                    <!-- <div class="slide"><img src="assets\img\gallery\g8.jpg" alt="Image 4"></div> -->
-                    <div class="slide"><img src="assets\img\1736608070956.jpeg" alt="Image 5"></div>
-                    <!-- <div class="slide"><img src="assets/img/gallery/h6.jpg" alt="Image 6"></div>
+                    <div class="slide"><img src="Doc\img\WhatsApp Image 2025-05-07 at 4.50.12 PM.jpeg" alt="Image 4"></div> 
+                    <div class="slide"><img src="Doc\img\20231213_100102249_iOS.jpg" alt="Image 5"></div>
+                    <div class="slide"><img src="Doc\img\Polar workshop.jpg" alt="Image 6"></div>
                     <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div> -->
                     <!-- <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div> -->
                 </div>
@@ -516,10 +516,10 @@
                     <div class="slide"><img src="assets\img\WhatsApp Image 2025-05-31 at 4.49.14 PM.jpeg" alt="Image 1"></div>
                     <div class="slide"><img src="assets\img\Screenshot 2025-06-03 115815.png" alt="Image 2"></div>
                     <div class="slide"><img src="Doc\img\kohana training.jpg" alt="Image 3"></div>
-                    <!-- <div class="slide"><img src="assets\img\gallery\g8.jpg" alt="Image 4"></div> -->
+                    <div class="slide"><img src="Doc\img\WhatsApp Image 2025-05-07 at 4.50.12 PM.jpeg" alt="Image 4"></div> 
                     <div class="slide"><img src="assets\img\1736608070956.jpeg" alt="Image 5"></div>
-                    <!-- <div class="slide"><img src="assets/img/gallery/h6.jpg" alt="Image 6"></div>
-                    <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div> -->
+                    <div class="slide"><img src="Doc\img\20231213_100102249_iOS.jpg" alt="Image 6"></div>
+                    <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div> 
                     <!-- <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div> -->
                 </div>
             </section>
@@ -2064,76 +2064,32 @@ h3 {
                     </section>
                     
                     <style>
-                        .gallery-section {
-                            background-color: #f4f4f4;
-                            padding: 20px;
-                            font-family: 'Montserrat', sans-serif;
-                        }
-                    
-                        .gallery-container {
-                            display: grid;
-                            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                            gap: 20px;
-                        }
-                    
-                        .gallery-item {
-                            background: #fff;
-                            border-radius: 10px;
-                            overflow: hidden;
-                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                            text-decoration: none;
-                            color: inherit;
-                            display: block;
-                        }
-                    
-                        .gallery-image {
-                            width: 100%;
-                            height: auto;
-                            display: block;
-                        }
-                    
-                        .gallery-text {
-                            padding: 15px;
-                            text-align: center;
-                        }
-                    
-                        .gallery-text h3 {
-                            font-size: 1.5rem;
-                            margin: 10px 0;
-                            color: #333;
-                            line-height: 1.4;
-                        }
-                    
-                        .gallery-text p {
-                            font-size: 1rem;
-                            color: #666;
-                            margin: 0;
-                            line-height: 1.4;
-                        }
-                    
-                        @media (max-width: 768px) {
-                            .gallery-container {
-                                grid-template-columns: 1fr; /* Single column layout */
-                            }
-                    
-                            .gallery-text h3 {
-                                font-size: 1.2rem;
-                            }
-                    
-                            .gallery-text p {
-                                font-size: 0.9rem;
-                            }
-                        }
-                    
-                        @media (max-width: 480px) {
-                            .gallery-text h3 {
-                                font-size: 1rem;
-                            }
-                    
-                            .gallery-text p {
-                                font-size: 0.8rem;
-                            }
-                        }
+                      .gallery-image {
+    width: 100%;
+    height: 300px;  /* Increased from auto */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .gallery-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-image {
+        height: 200px;
+    }
+}
                     </style>
                     
                             <!-- <a href="https://example.com/event4" class="gallery-item">
