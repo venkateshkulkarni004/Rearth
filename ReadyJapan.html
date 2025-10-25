@@ -45,13 +45,12 @@
 
     <!-- Preloader Start -->
     <header class="rearth-header">
-        <!-- Header Start -->
         <div class="header-area">
             <div class="main-header">
-                <div class="header-bottom header-sticky">
+                <div class="header-bottom sticky-header">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <!-- Logo for desktop -->
+                            <!-- Desktop Logo -->
                             <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                                 <div class="logo">
                                     <a href="index.html">
@@ -68,6 +67,7 @@
                                             <ul id="navigation">
                                                 <li><a href="index.html"><strong>Home</strong></a></li>
                                                 <li><a href="about.html"><strong>About Us</strong></a></li>
+                                                <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
                                                 <li class="has-submenu"><a href="#"><strong>Projects</strong></a>
                                                     <ul class="submenu">
                                                         <li class="has-submenu"><a href="#"><strong>Education</strong></a>
@@ -88,12 +88,12 @@
                                                         <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                                                <!-- <li><a href="resources.html"><strong>Resources</strong></a></li> -->
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
                                             </ul>
@@ -102,7 +102,7 @@
                                 </div>
                             </div>
     
-                            <!-- Logo and toggle for mobile -->
+                            <!-- Mobile Logo -->
                             <div class="col-6 d-lg-none">
                                 <div class="logo">
                                     <a href="index.html">
@@ -111,6 +111,7 @@
                                 </div>
                             </div>
     
+                            <!-- Mobile Toggle -->
                             <div class="col-6 d-lg-none pe-3">
                                 <div class="d-flex justify-content-end">
                                     <button id="menu-toggle" class="rearth-hamburger">&#9776;</button>
@@ -127,20 +128,25 @@
             <ul>
                 <li><a href="index.html"><strong>Home</strong></a></li>
                 <li><a href="about.html"><strong>About Us</strong></a></li>
-                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
+                <!-- <li><a href="resources.html"><strong>Resources</strong></a></li> -->
                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+               
+         
                 <li class="has-submenu">
                     <a href="#"><strong>Projects</strong></a>
                     <ul class="submenu">
-                        <li class="has-submenu"><a href="#"><strong>Education</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Education</strong></a>
                             <ul class="submenu">
                                 <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
                                 <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
                                 <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><strong>Awareness Workshops</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Awareness Workshops</strong></a>
                             <ul class="submenu">
                                 <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
                                 <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
@@ -148,10 +154,11 @@
                                 <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Community Engagement</strong></a>
                             <ul class="submenu">
                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -159,149 +166,21 @@
             </ul>
         </div>
     
-        <!-- CSS -->
+        <!-- CSS for Desktop + Mobile Behavior -->
         <style>
-
-            /* Ensure submenus are positioned correctly */
-            .submenu {
-                position: absolute;
+            body {
+                padding-top: 90px;
+            }
+    
+            .sticky-header {
+                position: fixed;
                 top: 0;
-                left: 100%; /* Position to the right */
-                display: none;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                background-color: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                min-width: 200px; /* Ensure enough width for clickable area */
-            }
-    
-            /* Show submenu on hover */
-            .has-submenu:hover > .submenu {
-                display: block;
-            }
-    
-            /* Adjust submenu items */
-            .submenu li {
-                position: relative;
-                width: 100%;
-            }
-    
-            .submenu li a {
-                display: block;
-                padding: 10px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .submenu li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            /* Additional styling for main menu */
-            .main-menu ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-    
-            .main-menu ul li {
-                position: relative;
-                display: inline-block;
-            }
-    
-            .main-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .main-menu ul li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            /* Ensure submenus are easily accessible */
-            .main-menu ul li .submenu li .submenu {
-                left: 100%;
-                top: 0;
-            }
-
-            .rearth-header .main-menu ul,
-            .rearth-header .submenu {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-    
-            .rearth-header .main-menu ul li {
-                position: relative;
-                display: inline-block;
-            }
-    
-            .rearth-header .main-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .rearth-header .main-menu ul li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            .rearth-header .submenu {
-                position: absolute;
-                top: 100%;
                 left: 0;
-                display: none;
-                background: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                min-width: 200px;
-                z-index: 999;
-            }
-    
-            .rearth-header .has-submenu:hover > .submenu {
-                display: block;
-            }
-    
-            .rearth-header .submenu li {
-                position: relative;
-            }
-    
-            .rearth-header .submenu li .submenu {
-                position: absolute; /* Ensure positioning context */
-                left: 100%; /* Position to the right of the parent li */
-                top: 0; /* Align top with the parent li */
-                display: none; /* Keep hidden initially */
-                background: #fff; /* Match parent submenu background */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match parent submenu shadow */
-                min-width: 200px; /* Match parent submenu width */
-                z-index: 1000; /* Ensure higher z-index to appear above other elements */
-                transition: all 0.3s ease; /* Smooth transition */
-                margin-left: 1px; /* Small offset to prevent flickering */
-            }
-
-            /* Show nested submenu on parent hover */
-            .rearth-header .submenu li:hover > .submenu {
-                display: block;
-                visibility: visible;
-                opacity: 1;
-            }
-    
-            .rearth-header .submenu li a {
-                padding: 10px;
-            }
-            
-            /* Add indicator for items with submenus */
-            .rearth-header .submenu li.has-submenu > a::after {
-                content: '\25B6'; /* Right-pointing triangle */
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 10px;
+                width: 100%;
+                background: white;
+                z-index: 1000;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
             }
     
             .rearth-hamburger {
@@ -313,66 +192,106 @@
                 color: green;
             }
     
-            .rearth-mobile-menu {
-                display: none;
-                background: #fff;
-                position: absolute;
-                width: 100%;
-                top: 60px;
-                left: 0;
-                z-index: 999;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* === DESKTOP MENU === */
+            @media (min-width: 992px) {
+                .main-menu ul li {
+                    position: relative;
+                }
+    
+                .main-menu ul li .submenu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 220px;
+                    background: white;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    z-index: 1001;
+                }
+    
+                .main-menu ul li:hover > .submenu {
+                    display: block;
+                }
+    
+                .main-menu ul li .submenu li .submenu {
+                    top: 0;
+                    left: 100%;
+                }
+    
+                .main-menu ul li .submenu li:hover > .submenu {
+                    display: block;
+                }
             }
     
-            .rearth-mobile-menu ul li {
-                border-bottom: 1px solid #eee;
-            }
+            /* === MOBILE MENU === */
+            @media (max-width: 991px) {
+                .rearth-mobile-menu {
+                    position: fixed;
+                    top: 90px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 90px);
+                    overflow-y: auto;
+                    background-color: white;
+                    display: none; /* Initially hidden */
+                    z-index: 999;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                }
     
-            .rearth-mobile-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
+                .rearth-mobile-menu ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
     
-            .rearth-mobile-menu ul li a:hover {
-                background-color: #f9f9f9;
-            }
+                .rearth-mobile-menu ul li {
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                }
     
-            .rearth-mobile-menu .submenu {
-                display: none;
-                background: #fafafa;
-                padding-left: 15px;
-            }
+                .rearth-mobile-menu ul li a {
+                    display: block;
+                    padding: 15px 20px;
+                    color: #333;
+                    text-decoration: none;
+                }
     
-            .rearth-mobile-menu .has-submenu > a::after {
-                content: ' ▼';
-                font-size: 12px;
-            }
+                .rearth-mobile-menu ul li a:hover {
+                    background-color: #f9f9f9;
+                }
     
-            .rearth-mobile-menu .has-submenu.open > .submenu {
-                display: block;
-            }
+                .rearth-mobile-menu .submenu {
+                    display: none;
+                    background: #f8f8f8;
+                    padding-left: 20px;
+                }
     
-            .rearth-mobile-menu .submenu .submenu {
-                padding-left: 0;
-                margin-left: auto;
-                width: 90%;
-                text-align: right;
+                .rearth-mobile-menu .has-submenu.open > .submenu {
+                    display: block;
+                }
+    
+                .rearth-mobile-menu .has-submenu > a::after,
+                .rearth-mobile-menu .submenu .has-submenu > a::after {
+                    content: ' ▼';
+                    float: right;
+                    font-size: 12px;
+                }
             }
         </style>
     
-        <!-- JS -->
+        <!-- JS for Mobile Toggle -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const toggleBtn = document.getElementById("menu-toggle");
                 const mobileNav = document.getElementById("mobile-nav");
     
-                toggleBtn.addEventListener("click", (e) => {
+                // Toggle mobile menu on button click
+                toggleBtn.addEventListener("click", function (e) {
                     e.stopPropagation();
                     mobileNav.style.display = (mobileNav.style.display === "block") ? "none" : "block";
                 });
     
+                // Open submenu on mobile
                 document.querySelectorAll('.rearth-mobile-menu .has-submenu > a').forEach(link => {
                     link.addEventListener('click', function (e) {
                         e.preventDefault();
@@ -381,6 +300,7 @@
                     });
                 });
     
+                // Close mobile menu when clicking outside
                 document.addEventListener('click', function (event) {
                     if (!mobileNav.contains(event.target) && event.target !== toggleBtn) {
                         mobileNav.style.display = "none";
@@ -392,12 +312,11 @@
             });
         </script>
     </header>
-   
     <main>
         <section class="hero">
             <div class="overlay">
                 <div class="text-block">
-                    <h2>REadyJapan: Disaster Risk Reduction Program for Foreigners in Japan (DRRPF)</h2>
+                    <h2>ReadyJapan</h2>
                 </div>
             </div>
         </section>
@@ -443,371 +362,305 @@
         
         
         <section class="py-5 bg-white custom-section">
-            <div class="container custom-container">
-                <div class="center-block custom-center-block">
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan is an initiative dedicated to enhancing disaster preparedness and resilience among foreign residents in Japan. Recognizing that language barriers, lack of access to emergency information, and unfamiliarity with local disaster response systems put foreign communities at a greater risk during crises, this program aims to bridge the gap.
-                    </p>
-                </div>
+        </section>
         
-                <div class="center-block custom-center-block">
-                    <h3 class="vision-title custom-title">What is REadyJapan?</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                    REadyJapan equips foreign residents with the knowledge and resources needed to effectively respond to disasters such as earthquakes, typhoons, and heatwaves. The program ensures a comprehensive approach that includes preparedness, response, recovery, mitigation, and adaptation.
-                    </p>
-
-                    <section id="values" class="values section light-background" style="background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);">
-                        <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-                          <h2 style="color: white; font-size: 2.75rem; font-weight: bold; font-family: 'Montserrat', sans-serif;">How We Are Structuring the Program</h2>
-                        </div>
-                      
-                        <div class="container">
-                          <div class="row g-3">
-                            <!-- Multilingual Disaster Preparedness Workshops -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-comments"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>Disaster Preparedness Workshops</h3>
-                                  <p class="description">Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</p>
-                                </div>
-                              </div>
-                            </div>
-                      
-                            <!-- Community Evacuation Drills -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-female"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>Community Evacuation Drills</h3>
-                                  <p class="description">Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</p>
-                                </div>
-                              </div>
-                            </div>
-                      
-                            <!-- Development of English Resources -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-lightbulb-o"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>English Resources</h3>
-                                  <p class="description">Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</p>
-                                </div>
-                              </div>
-                            </div>
-                      
-                            <!-- Heatwave and Extreme Weather Preparedness -->
-                            <div class="col-md-6 col-lg-3">
-                              <div class="program-item">
-                                <div class="icon-container">
-                                  <i class="fa fa-globe"></i>
-                                </div>
-                                <div class="content">
-                                  <h3>Extreme Weather Preparedness</h3>
-                                  <p class="description">Providing guidance on heatstroke prevention and typhoon safety.</p>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </section>
-                      
-                      <!-- Additional Styling -->
-                      <style>
-                        /* Values Section Styling */
-                        .values {
-                          padding: 40px 0;
-                          background-color: #E8F5E9;
-                          border-radius: 10px;
-                          font-family: 'Montserrat', sans-serif;
-                        }
-                      
-                        .program-item {
-                          background: white;
-                          border-radius: 10px;
-                          border: 3px solid transparent;
-                          border-image: linear-gradient(45deg, #46C0BE, #6DD56F, #46C0BE) 1;
-                          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
-                          height: 100%;
-                          overflow: hidden;
-                          display: flex;
-                          flex-direction: column;
-                          justify-content: space-between;
-                          transition: transform 0.3s ease, box-shadow 0.3s ease;
-                        }
-                      
-                        .program-item:hover {
-                          transform: translateY(-5px);
-                          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-                        }
-                      
-                        /* Icon Container: circular with border */
-                        .icon-container {
-                          display: flex;
-                          align-items: center;
-                          justify-content: center;
-                          width: 60px;
-                          height: 60px;
-                          border-radius: 50%;
-                          background: #f1f8e9;
-                          font-size: 1.75rem;
-                          margin: 0 auto 10px auto;
-                          transition: transform 0.3s ease;
-                          border: 2px solid #46C0BE; /* Added border */
-                        }
-                      
-                        .icon-container i {
-                          background: linear-gradient(45deg, #46C0BE, #6DD56F);
-                          -webkit-background-clip: text;
-                          -webkit-text-fill-color: transparent;
-                        }
-                      
-                        .content {
-                          padding: 20px;
-                          flex-grow: 1;
-                        }
-                      
-                        h3 {
-                          color: #2E7D32;
-                          margin-bottom: 15px;
-                          font-size: 1.5rem;
-                          font-weight: bold;
-                          text-align: center;
-                          font-family: 'Montserrat', sans-serif;
-                        }
-                      
-                        .description {
-                          color: #555;
-                          margin-bottom: 15px;
-                          min-height: 80px;
-                          text-align: center;
-                          font-size: 1.50rem; /* Increased font size */
-                          font-family: 'Montserrat', sans-serif;
-                        }
-                      
-                        .row {
-                          margin-bottom: 20px;
-                        }
-                      
-                        @media (max-width: 992px) {
-                          .col-md-6 {
-                            width: 100% !important;
-                            margin-bottom: 15px;
-                          }
-                          .description {
-                            min-height: auto;
-                          }
-                        }
-                      
-                        @media (max-width: 768px) {
-                          .program-item {
-                            margin-bottom: 20px;
-                          }
-                        }
-                      </style>
-                      
-
-
-
-                    
+        <div class="center-block custom-center-block">
+          <h3 class="vision-title custom-title">What is ReadyJapan?</h3>
+          <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+            Japan is one of the most disaster-prone countries globally, facing frequent earthquakes, typhoons, and other natural hazards. With climate change intensifying these events, it's crucial for all residents, including foreign nationals, to be prepared. However, language barriers and unfamiliarity with local systems can make disaster preparedness challenging for non-Japanese speakers. ReadyJapan is an initiative by REarth aimed at bridging this gap. We provide accessible disaster preparedness information and conduct workshops in English, tailored to the needs of foreign residents in Japan.
+          </p>
         
-                    <h3 class="mission-title custom-title">How We Are Structuring the Program</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan is being developed in collaboration with local communities, ward officials, and disaster risk reduction (DRR) experts to ensure effective implementation. The key components of the program include:
-                    </p>
-                    <ul class="custom-list">
-                        <li><strong>Multilingual Disaster Preparedness Workshops</strong> – Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</li>
-                        <li><strong>Community Evacuation Drills</strong> – Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</li>
-                        <li><strong>Development of English Resources</strong> – Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</li>
-                        <li><strong>Heatwave and Extreme Weather Preparedness</strong> – Providing guidance on heatstroke prevention and typhoon safety.</li>
-                        <li><strong>Collaboration with Local Authorities</strong> – Strengthening partnerships with ward offices to ensure inclusivity in disaster response plans.</li>
-                    </ul>
-        
-                    <h3 class="mission-title custom-title">How You Can Help</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        REadyJapan thrives on community engagement and collaboration. Currently, we are operating in Midori-ku, Yokohama, Japan. Here's how you can help:
-                    </p>
-                    <ul class="custom-list">
-                        <li><strong>Volunteer & Community Engagement</strong> – Assist in organizing workshops, evacuation drills, and awareness campaigns. Help translate and adapt emergency materials into multiple languages for better accessibility. Support outreach efforts to connect with foreign communities who may lack disaster preparedness resources.</li>
-                        <li><strong>Research & Knowledge Sharing</strong> – Collaborate on research projects related to disaster resilience, foreign community risk perception, or inclusive DRR strategies. Contribute insights on best practices for disaster preparedness from other countries and how they can be adapted in Japan. Help develop data-driven solutions to improve emergency response mechanisms for non-Japanese speakers.</li>
-                        <li><strong>Educational & Capacity-Building Initiatives</strong> – Conduct training sessions on earthquake preparedness, climate-induced disasters, and emergency response. Provide expertise in heatwave resilience, mental health during disasters, or digital tools for emergency communication. Develop educational materials tailored for schools, workplaces, and community centers.</li>
-                        <li><strong>Institutional & Organizational Partnerships</strong> – If you represent a university, NGO, or research institution, partner with us to integrate disaster preparedness education into existing programs. Local businesses & embassies can collaborate by providing funding, venues for training, or logistical support for community drills.</li>
-                    </ul>
-        
-                    <h3 class="mission-title custom-title">Sponsor and Support</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        While REadyJapan is driven by passionate individuals, we need financial support for the execution of our impact and to ensure that every foreign resident has access to life-saving information and preparedness training.
-                    </p>
-        
-                    <h3 class="mission-title custom-title">Got Another Idea?</h3>
-                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                        If you have expertise, insights, or resources that could contribute to disaster preparedness and resilience, we'd love to hear from you! Your support, big or small, can help save lives by empowering foreign communities with the knowledge and tools to stay safe during disasters.
-                    </p>
-                </div>
+          <!-- Button added below the paragraph -->
+          <div class="text-center mt-4">
+            <a href="resources.html" class="btn btn-primary btn-lg">
+              Go to ReadyJapan Resources page
+            </a>
+          </div>
+        <br>
+        <br>
+        <br>
+          <section id="values" class="values section light-background" style="background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);">
+            <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+              <h2 style="color: white; font-size: 2.75rem; font-weight: bold; font-family: 'Montserrat', sans-serif;">How We Are Structuring the Program</h2>
             </div>
         
-            <style>
-                .custom-section {
-                    background-color: #ffffff;
-                    padding: 80px 0;
-                }
+            <div class="container">
+              <div class="row g-3">
+                <!-- Multilingual Disaster Preparedness Workshops -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="program-item">
+                    <div class="icon-container">
+                      <i class="fa fa-comments"></i>
+                    </div>
+                    <div class="content">
+                      <h3>Disaster Preparedness Workshops</h3>
+                      <p class="description">Educating foreign residents on emergency response, evacuation procedures, and risk reduction strategies.</p>
+                    </div>
+                  </div>
+                </div>
         
-                .custom-container {
-                    max-width: 1200px;
-                    padding: 0 15px;
-                    margin: 0 auto;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                }
+                <!-- Community Evacuation Drills -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="program-item">
+                    <div class="icon-container">
+                      <i class="fa fa-female"></i>
+                    </div>
+                    <div class="content">
+                      <h3>Community Evacuation Drills</h3>
+                      <p class="description">Conducting hands-on drills to familiarize residents with emergency shelters and protocols.</p>
+                    </div>
+                  </div>
+                </div>
         
-                .custom-center-block {
-                    display: block;
-                    text-align: center;
-                    max-width: 100%;
-                    margin: 0 auto;
-                }
+                <!-- Development of English Resources -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="program-item">
+                    <div class="icon-container">
+                      <i class="fa fa-rocket"></i>
+                    </div>
+                    <div class="content">
+                      <h3>English Resources</h3>
+                      <p class="description">Translating hazard maps, evacuation guides, and emergency procedures into multiple languages for wider accessibility.</p>
+                    </div>
+                  </div>
+                </div>
         
-                .custom-title {
-                    font-family: "Montserrat", sans-serif;
-                    font-weight: 700;
-                    color: rgb(46, 125, 50);
-                    font-size: 30px;
-                    line-height: 36px;
-                    margin-bottom: 20px;
-                    text-align: center;
-                }
-        
-                .custom-paragraph {
-                    font-family: "Helvetica Neue", sans-serif;
-                    font-weight: 400;
-                    color: rgb(0, 0, 0);
-                    font-size: 16px;
-                    line-height: 24px;
-                    max-width: 900px;
-                    margin: 0 auto 30px auto;
-                    text-align: center;
-                    letter-spacing: 0.5px;
-                }
-        
-                .custom-list {
-                    list-style-type: none;
-                    padding: 0;
-                    text-align: left;
-                    margin: 20px auto;
-                }
-        
-                .custom-list li {
-                    margin-bottom: 10px;
-                    font-size: 16px;
-                    font-weight: 500;
-                }
-        
-                @media (max-width: 768px) {
-                    .custom-title {
-                        font-size: 26px;
-                    }
-        
-                    .custom-paragraph {
-                        font-size: 15px;
-                        line-height: 1.5;
-                    }
-                }
-            </style>
-        </section>
-
-    
-        
-        
-        <div class="call-to-action mt-5">
-            <h2>Join REadyJapan!</h2>
-            <p class="lead">Ready to be part of this initiative? Let's connect and explore how you can contribute to building a safer and more resilient community.</p>
-            <a href="mailto:contact@example.com" class="btn btn-primary btn-lg">Contact Us Today!</a>
+                <!-- Heatwave and Extreme Weather Preparedness -->
+                <div class="col-md-6 col-lg-3">
+                  <div class="program-item">
+                    <div class="icon-container">
+                      <i class="fa fa-globe"></i>
+                    </div>
+                    <div class="content">
+                      <h3>Extreme Weather Preparedness</h3>
+                      <p class="description">Providing guidance on heatstroke prevention and typhoon safety.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
         </div>
         
+        <!-- Additional Styling -->
         <style>
-            .join-us {
-                padding: 60px 0;
-                background-color: #f9f9f9;
-            }
+          /* Values Section Styling */
+          .values {
+            padding: 40px 0;
+            background-color: #E8F5E9;
+            border-radius: 10px;
+            font-family: 'Montserrat', sans-serif;
+          }
         
-            .section-title {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 3rem;
-                font-weight: bold;
-                color: #388e3c;
-            }
+          .program-item {
+            background: white;
+            border-radius: 10px;
+            border: 3px solid transparent;
+            border-image: linear-gradient(45deg, #46C0BE, #6DD56F, #46C0BE) 1;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+          }
         
-            .join-card {
-                border: 2px solid #46C0BE;
-                border-radius: 10px;
-                padding: 20px;
-                transition: transform 0.3s ease, box-shadow 0.3s ease;
-                background-color: white;
-            }
+          .program-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+          }
         
-            .join-card:hover {
-                transform: translateY(-5px);
-                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-            }
+          /* Icon Container: circular with border */
+          .icon-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #f1f8e9;
+            font-size: 1.75rem;
+            margin: 0 auto 10px auto;
+            transition: transform 0.3s ease;
+            border: 2px solid #46C0BE; /* Added border */
+          }
         
-            .join-card i {
-                color: #46C0BE;
-            }
+          .icon-container i {
+            background: linear-gradient(45deg, #46C0BE, #6DD56F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
         
-            .join-card h3 {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
-                font-weight: bold;
-                color: #2E7D32;
-                margin-bottom: 10px;
-            }
+          .content {
+            padding: 20px;
+            flex-grow: 1;
+          }
         
-            .join-card p {
-                font-size: 1.7rem;
-                color: #388e3c;
-            }
+          h3 {
+            color: #2E7D32;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+          }
         
-            .call-to-action {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
+          .description {
+            color: #555;
+            margin-bottom: 15px;
+            min-height: 80px;
+            text-align: center;
+            font-size: 1.50rem; /* Increased font size */
+            font-family: 'Montserrat', sans-serif;
+          }
         
-            .call-to-action h2 {
-                font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
-                font-weight: bold;
-                color: #388e3c;
-            }
+          .row {
+            margin-bottom: 20px;
+          }
         
-            .call-to-action .lead {
-                font-size: 1.7rem;
-                color: #000;
-                margin-bottom: 20px;
+          @media (max-width: 992px) {
+            .col-md-6 {
+              width: 100% !important;
+              margin-bottom: 15px;
             }
+            .description {
+              min-height: auto;
+            }
+          }
         
-            .call-to-action .btn {
-                background-color: #46C0BE;
-                border-color: #46C0BE;
-                font-family: 'Montserrat', sans-serif;
-                font-size: 2rem;
+          @media (max-width: 768px) {
+            .program-item {
+              margin-bottom: 20px;
             }
-        
-            .call-to-action .btn:hover {
-                background-color: #388e3c;
-                border-color: #388e3c;
-            }
+          }
         </style>
         <br>
+        <br>
+
+
+
+<br>
+                    
         
+                     
+              
+                      
+                      <h3 class="mission-title custom-title">How You Can Help</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          ReadyJapan thrives through community support and collaboration. Based in Midori-ku, Yokohama, here’s how you can contribute:
+                      </p>
+                      <ul class="custom-list">
+                          <li><strong>Volunteer & Outreach</strong> – Help organize workshops, evacuation drills, and awareness activities. Support translations and share disaster info with communities.</li>
+                          <li><strong>Research & Insights</strong> – Share your knowledge on disaster preparedness, inclusive risk strategies, or global best practices. Help us develop data-driven solutions for foreign residents.</li>
+                          <li><strong>Education & Training</strong> – Lead sessions on earthquake readiness, climate-related disasters, or emergency mental health. Create simple learning materials for schools and communities.</li>
+                          <li><strong>Partnerships & Support</strong> – Collaborate as a university, NGO, business, or embassy. Offer expertise, venues, or funding to strengthen disaster resilience together.</li>
+                      </ul>
+                      
+                      <h3 class="mission-title custom-title">Sponsorship</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          Support our mission through sponsorships to fund community programs, print multilingual materials, and expand our reach.
+                      </p>
+                      
+                      <h3 class="mission-title custom-title">Got Another Idea?</h3>
+                      <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                          If you have expertise, insights, or resources that could contribute to disaster preparedness and resilience, we'd love to hear from you! Your support, big or small, can help us by empowering foreign communities with the knowledge and tools to stay safe during disasters.
+                      </p>
+                      
+                      <!-- Contact Us Call to Action -->
+                      <div class="call-to-action mt-5 text-center">
+                        <h2>Contact Us Today!</h2>
+                        <p class="lead">Let’s connect and explore how you can contribute to building a safer and more resilient community.</p>
+                        <a href="contact.html" class="btn btn-primary btn-lg">Reach Out</a>
+                    </div>
+                    
+                      
+                      <style>
+                          .custom-title {
+                              font-family: "Montserrat", sans-serif;
+                              font-weight: 700;
+                              color: #2e7d32;
+                              font-size: 32px;
+                              line-height: 40px;
+                              margin-bottom: 20px;
+                              text-align: center;
+                          }
+                      
+                          .custom-paragraph {
+                              font-family: "Helvetica Neue", sans-serif;
+                              font-weight: 400;
+                              color: #000;
+                              font-size: 18px;
+                              line-height: 28px;
+                              max-width: 900px;
+                              margin: 0 auto 30px auto;
+                              text-align: center;
+                              letter-spacing: 0.4px;
+                          }
+                      
+                          .custom-list {
+                              list-style-type: none;
+                              padding: 0;
+                              text-align: left;
+                              margin: 20px auto;
+                              max-width: 900px;
+                          }
+                      
+                          .custom-list li {
+                              margin-bottom: 12px;
+                              font-size: 17px;
+                              font-weight: 500;
+                          }
+                      
+                          .call-to-action h2 {
+                              font-size: 28px;
+                              color: #388e3c;
+                              font-weight: 700;
+                          }
+                      
+                          .call-to-action .lead {
+                              font-size: 18px;
+                              color: #000;
+                              margin-bottom: 20px;
+                          }
+                      
+                          .call-to-action .btn {
+                              background-color: #46C0BE;
+                              border-color: #46C0BE;
+                              font-size: 18px;
+                          }
+                      
+                          .call-to-action .btn:hover {
+                              background-color: #388e3c;
+                              border-color: #388e3c;
+                          }
+                      
+                          @media (max-width: 768px) {
+                              .custom-title {
+                                  font-size: 24px;
+                              }
+                      
+                              .custom-paragraph, .custom-list li {
+                                  font-size: 16px;
+                                  line-height: 24px;
+                              }
+                      
+                              .call-to-action h2 {
+                                  font-size: 22px;
+                              }
+                      
+                              .call-to-action .lead {
+                                  font-size: 16px;
+                              }
+                      
+                              .call-to-action .btn {
+                                  font-size: 16px;
+                              }
+                          }
+                      </style>
+                      
+        <br>
+        <br>
 <section class="focus-section">
     <h1>Our Projects</h1>
     <div class="container">
@@ -903,7 +756,7 @@
 
                 <div class="card">
                     <img src="assets/img/images/aa.jpg" alt="REady Japan - DRRPF">
-                    <div class="overlay">REady Japan - DRRPF</div>
+                    <div class="overlay">Ready Japan</div>
                     <div class="details">
                         <a href="ReadyJapan.html" class="btn header-btn">
                             Know More
@@ -1104,83 +957,6 @@
 <!-- Add this in your head section -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<footer>
-    <div class="footer-wrapper">
-        <div class="footer-area">
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-xl-4 col-lg-3 col-md-8 col-sm-8">
-                        <div class="single-footer-caption">
-                            <div class="footer-logo">
-                                <a href="index.html"><img src="assets/img/logo/Rearth.Big.png" alt="Rearth Community Logo - Climate Education Yokohama" style="max-width: 120px; height: auto;"></a>
-                            </div>
-                            <div class="footer-tittle">
-                                <div class="footer-pera">
-                                    <p>Leading climate education and sustainability initiatives, Join us in creating a sustainable future through education and action.</p>
-                                </div>
-                            </div>
-                            <div class="footer-social">
-                                <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                                <a href="https://www.instagram.com/rearthcommunity" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
-                        <div class="single-footer-caption">
-                            <div class="footer-tittle">
-                                <h4>Our Programs</h4>
-                                <ul>
-                                    <li><a href="#education">Education Programs</a></li>
-                                    <li><a href="#workshops">Awareness Workshops</a></li>
-                                    <li><a href="#community-engagement">Community Engagement</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
-                        <div class="single-footer-caption">
-                            <div class="footer-tittle">
-                                <h4>Quick Links</h4>
-                                <ul>
-                                    <li><a href="about.html">About Us</a></li>
-                                    <li><a href="projects.html">Our Projects</a></li>
-                                    <li><a href="events.html">Events</a></li>
-                                    <li><a href="resources.html">Resources</a></li>
-                                    <li><a href="contact.html">Contact Us</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
-                        <div class="single-footer-caption">
-                            <div class="footer-tittle">
-                                <h4>Contact Information</h4>
-                                <ul>
-                                    <li><a href="mailto:contact.rearth@gmail.com">contact.rearth@gmail.com</a></li>
-                                    <li><a href="https://maps.google.com/?q=Midori-ku,Yokohama,Tokyo,Japan" target="_blank">Midori-ku, Yokohama, Tokyo, Japan</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom-area">
-            <div class="container">
-                <div class="footer-border">
-                    <div class="row d-flex align-items-center">
-                        <div class="col-xl-12">
-                            <div class="footer-copy-right text-center">
-                                <p>&copy; .</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</footer>
 
 <!-- JS here -->
 <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
@@ -1312,5 +1088,425 @@
     });
 </script>
 </main>
+<style>
+    /* Dark Green Border Above Footer */
+    .footer-wrapper {
+        border-top: 25px solid #2e7d32; /* Dark Green Border */
+    }
+</style>
+<br>
+<br>
+<section class="hero">
+    <div class="overlay">
+        <div class="text-block">
+            <h2>Follow Us on Instagram</h2>
+            <p>Stay up-to-date</p>
+            <h4>@rearthcommunity</h4>
+            <a href="https://www.instagram.com/rearthcommunity" target="_blank" class="instagram-link">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<style>
+    .hero {
+        position: relative;
+        width: 100%;
+        height: 30rem; /* Maintain height */
+        background-image: url('https://images.unsplash.com/photo-1493246507139-91e8fad9978e?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+        background-size: cover;
+        background-position: top; /* Crops from the top */
+        background-repeat: no-repeat;
+        overflow: hidden;
+    }
+
+    .overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        justify-content: center; /* Centers the content horizontally */
+        align-items: center; /* Centers the content vertically */
+    }
+
+    .text-block {
+        background-color: rgba(0, 0, 0, 0.5); /* Transparent black background */
+        padding: 20px;
+        border-radius: 8px; /* Rounded corners for the block */
+        text-align: center;
+    }
+
+    .text-block h2 {
+        font-family: "Montserrat", sans-serif;
+        font-style: normal;
+        font-weight: 700;
+        color: white; /* Title color */
+        font-size: 30px; /* Font size set to 30px */
+        line-height: 36px; /* Line height updated */
+        margin-bottom: 10px; /* Spacing below the title */
+    }
+
+    .text-block p {
+        color: white;
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    .text-block h4 {
+        color: white;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .instagram-link {
+        color: white;
+        font-size: 36px;
+        text-decoration: none;
+    }
+</style>
+
+<!-- Add this in your head section to include Font Awesome for Instagram icon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<footer>
+    <div class="footer-wrapper">
+        <div class="footer-area">
+            <div class="container">
+                <div class="row justify-content-between">
+                    <div class="col-xl-4 col-lg-3 col-md-8 col-sm-8">
+                        <div class="single-footer-caption">
+                            <div class="footer-logo">
+                                <a href="index.html"><img src="assets/img/logo/Rearth.Big.png" alt="Rearth Community Logo - Climate Education Yokohama" style="max-width: 120px; height: auto;"></a>
+                            </div>
+                            <div class="footer-tittle">
+                                <div class="footer-pera">
+                                    <p>Leading climate education and sustainability initiatives Join us in creating a sustainable future through education and action.</p>
+                                     
+                                    
+                                </div>
+                            </div>
+                            <div class="footer-social">
+                                <!-- <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                                <a href="https://www.instagram.com/rearthcommunity" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                <!-- <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
+                        <div class="single-footer-caption">
+                            <div class="footer-tittle">
+                                <h4>Our Programs</h4>
+                                <ul>
+                                    <li><a href="#education">Education Programs</a></li>
+                                    <li><a href="#workshops">Awareness Workshops</a></li>
+                                    <li><a href="#community-engagement">Community Engagement</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+                        <div class="single-footer-caption">
+                            <div class="footer-tittle">
+                                <h4>Quick Links</h4>
+                                <ul>
+                                    <li><a href="about.html">About Us</a></li>
+                              
+                                    <li><a href="eventdetials.html">Events</a></li>
+                                    <li><a href="resources.html">Resources</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
+                        <div class="single-footer-caption">
+                            <div class="footer-tittle">
+                                <h4>Contact Information</h4>
+                                <ul>
+                                    <li><a href="mailto:contact.us@rearthforfuture.org">contact.us@rearthforfuture.org</a></li>
+                                    <li><a href="https://maps.google.com/?q=Midori-ku,Yokohama,Tokyo,Japan" target="_blank">Midori-ku, Yokohama, Tokyo, Japan</a></li>
+                                   
+                             
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom-area">
+                <div class="container">
+                    <div class="footer-border">
+                        <div class="row d-flex align-items-center">
+                            <div class="col-xl-12">
+                                <div class="footer-copy-right text-center">
+                                    <!-- <p>
+                                        Copyright &copy;<script>document.write(new Date().getFullYear());</script> Rearth Community - Climate Education Center in Yokohama, Tokyo, Japan. All rights reserved.
+                                    </p>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+    .footer-wrapper {
+        background: linear-gradient(135deg, #46C0BE, #6DD56F);
+        padding: 20px 0 5px 0;
+        border-top: 10px solid #2e7d32;
+    }
+
+    .footer-area {
+        padding: 0;
+    }
+
+    .single-footer-caption {
+        margin-bottom: 15px;
+    }
+
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+
+    .footer-logo img {
+        max-width: 120px !important;
+        height: auto !important;
+        transition: transform 0.3s ease;
+    }
+
+    .footer-logo img:hover {
+        transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+        .footer-logo img {
+            max-width: 100px !important;
+        }
+    }
+
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+        margin-right: 5px;
+    }
+
+    .footer-bottom-area {
+        padding: 5px 0;
+    }
+
+    .footer-tittle ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-tittle ul li {
+        margin-bottom: 15px;
+    }
+
+    .footer-tittle ul li a {
+        color: #ffffff !important;
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        display: block;
+        padding: 5px 0;
+    }
+
+    .footer-tittle ul li a:hover {
+        color: #2E7D32 !important;
+        padding-left: 5px;
+    }
+
+    .footer-tittle h4 {
+        color: #ffffff;
+        font-size: 24px;
+        margin-bottom: 25px;
+        position: relative;
+        padding-bottom: 15px;
+    }
+
+    .footer-tittle h4::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 50px;
+        height: 2px;
+        background: #2E7D32;
+    }
+
+    .footer-pera p {
+        color: #ffffff;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 20px;
+    }
+
+    .footer-copy-right p {
+        color: #ffffff;
+        font-size: 18px;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+        .footer-tittle ul li a {
+            font-size: 16px;
+        }
+        
+        .footer-tittle h4 {
+            font-size: 20px;
+        }
+
+        .footer-pera p {
+            font-size: 16px;
+        }
+
+        .footer-copy-right p {
+            font-size: 16px;
+        }
+    }
+</style>
+  <!-- Scroll Up -->
+ 
+    
+      <!-- Scroll Up -->
+      <div id="back-top" >
+        <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+    </div>
+
+    <!-- JS here -->
+    
+    <script src="./assets/js/vendor/modernizr-3.5.0.min.js"></script>
+    <!-- Jquery, Popper, Bootstrap -->
+    <script src="./assets/js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="./assets/js/popper.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+    <!-- Jquery Mobile Menu -->
+    <script src="./assets/js/jquery.slicknav.min.js"></script>
+
+    <!-- Jquery Slick , Owl-Carousel Plugins -->
+    <script src="./assets/js/owl.carousel.min.js"></script>
+    <script src="./assets/js/slick.min.js"></script>
+    <!-- One Page, Animated-HeadLin -->
+    <script src="./assets/js/wow.min.js"></script>
+    <script src="./assets/js/animated.headline.js"></script>
+    <script src="./assets/js/jquery.magnific-popup.js"></script>
+
+    <!-- Date Picker -->
+    <script src="./assets/js/gijgo.min.js"></script>
+    <!-- Nice-select, sticky -->
+    <script src="./assets/js/jquery.nice-select.min.js"></script>
+    <script src="./assets/js/jquery.sticky.js"></script>
+    <!-- Progress -->
+    <script src="./assets/js/jquery.barfiller.js"></script>
+    
+    <!-- counter , waypoint,Hover Direction -->
+    <script src="./assets/js/jquery.counterup.min.js"></script>
+    <script src="./assets/js/waypoints.min.js"></script>
+    <script src="./assets/js/jquery.countdown.min.js"></script>
+    <script src="./assets/js/hover-direction-snake.min.js"></script>
+
+    <!-- contact js -->
+    <script src="./assets/js/contact.js"></script>
+    <script src="./assets/js/jquery.form.js"></script>
+    <script src="./assets/js/jquery.validate.min.js"></script>
+    <script src="./assets/js/mail-script.js"></script>
+    <script src="./assets/js/jquery.ajaxchimp.min.js"></script>
+    
+    <!-- Jquery Plugins, main Jquery -->	
+    <script src="./assets/js/plugins.js"></script>
+    <script src="./assets/js/main.js"></script>
+    
+    <!-- Remove Google Translate element and scripts -->
+    <script>
+        // Remove translation related JavaScript
+        document.addEventListener('DOMContentLoaded', function() {
+            const translateElements = document.querySelectorAll('#google_translate_element, .translate-btn, .translation-widget');
+            translateElements.forEach(el => {
+                if (el) el.remove();
+            });
+        });
+    </script>
+
+    <!-- Main JS -->
+    <script src="assets/js/main.js"></script>
+    
+    <!-- Chatbot Script -->
+    <script src="assets/js/chatbot.js"></script>
+
+    <!-- Google Cloud Translation API -->
+    <script>
+        // Add translation button to navigation
+        document.addEventListener('DOMContentLoaded', function() {
+            const nav = document.querySelector('.main-menu');
+            if (nav) {
+                // Remove translation button code
+            }
+        });
+
+        // Translation function
+        async function translatePage() {
+            try {
+                const response = await fetch('https://translation.googleapis.com/language/translate/v2', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer YOUR_API_KEY' // Replace with your API key
+                    },
+                    body: JSON.stringify({
+                        q: document.body.innerText,
+                        target: 'ja',
+                        source: 'en'
+                    })
+                });
+
+                const data = await response.json();
+                if (data.data && data.data.translations) {
+                    const translation = data.data.translations[0].translatedText;
+                    document.body.innerHTML = translation;
+                }
+            } catch (error) {
+                console.error('Translation error:', error);
+                alert('Translation failed. Please try again later.');
+            }
+        }
+    </script>
+
+    <script>
+        function translatePage() {
+            const select = document.querySelector('.goog-te-combo');
+            if (select) {
+                select.value = 'ja';
+                select.dispatchEvent(new Event('change'));
+            }
+        }
+
+        // Add translation button to mobile menu
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenu = document.querySelector('.mobile-menu-content ul');
+            if (mobileMenu) {
+                const mobileTranslationBtn = document.createElement('li');
+                mobileTranslationBtn.innerHTML = `
+                    <a href="#" class="translation-btn" onclick="translatePage()">
+                        <i class="fas fa-flag"></i>
+                        <span>日本語</span>
+                    </a>
+                `;
+                mobileMenu.appendChild(mobileTranslationBtn);
+            }
+        });
+    </script>
+
+    
 </body>
 </html>
+

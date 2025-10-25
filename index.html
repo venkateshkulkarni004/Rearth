@@ -218,16 +218,17 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
-    <!-- Google Translate API -->
+  <!-- Google Translate API -->
+    <!-- HEADER START -->
     <header class="rearth-header">
-        <!-- Header Start -->
         <div class="header-area">
             <div class="main-header">
-                <div class="header-bottom header-sticky">
+                <div class="header-bottom sticky-header">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <!-- Logo for desktop -->
+                            <!-- Desktop Logo -->
                             <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                                 <div class="logo">
                                     <a href="index.html">
@@ -244,6 +245,7 @@
                                             <ul id="navigation">
                                                 <li><a href="index.html"><strong>Home</strong></a></li>
                                                 <li><a href="about.html"><strong>About Us</strong></a></li>
+                                                <li><a href="resources.html"><strong>Resources</strong></a></li>
                                                 <li class="has-submenu"><a href="#"><strong>Projects</strong></a>
                                                     <ul class="submenu">
                                                         <li class="has-submenu"><a href="#"><strong>Education</strong></a>
@@ -264,13 +266,11 @@
                                                         <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
-                                                <li><a href="resources.html"><strong>Resources</strong></a></li>
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
                                             </ul>
@@ -279,7 +279,7 @@
                                 </div>
                             </div>
     
-                            <!-- Logo and toggle for mobile -->
+                            <!-- Mobile Logo -->
                             <div class="col-6 d-lg-none">
                                 <div class="logo">
                                     <a href="index.html">
@@ -288,6 +288,7 @@
                                 </div>
                             </div>
     
+                            <!-- Mobile Toggle -->
                             <div class="col-6 d-lg-none pe-3">
                                 <div class="d-flex justify-content-end">
                                     <button id="menu-toggle" class="rearth-hamburger">&#9776;</button>
@@ -304,21 +305,23 @@
             <ul>
                 <li><a href="index.html"><strong>Home</strong></a></li>
                 <li><a href="about.html"><strong>About Us</strong></a></li>
-                <li><a href="resources.html"><strong>Resources</strong></a></li>
                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
-                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                <li><a href="resources.html"><strong>Resources</strong></a></li>
+    
                 <li class="has-submenu">
                     <a href="#"><strong>Projects</strong></a>
                     <ul class="submenu">
-                        <li class="has-submenu"><a href="#"><strong>Education</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Education</strong></a>
                             <ul class="submenu">
                                 <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
                                 <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
                                 <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><strong>Awareness Workshops</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Awareness Workshops</strong></a>
                             <ul class="submenu">
                                 <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
                                 <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
@@ -326,161 +329,33 @@
                                 <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Community Engagement</strong></a>
                             <ul class="submenu">
                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
             </ul>
-           
         </div>
     
-        <!-- CSS -->
+        <!-- CSS for Desktop + Mobile Behavior -->
         <style>
-
-            /* Ensure submenus are positioned correctly */
-            .submenu {
-                position: absolute;
+            body {
+                padding-top: 90px;
+            }
+    
+            .sticky-header {
+                position: fixed;
                 top: 0;
-                left: 100%; /* Position to the right */
-                display: none;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                background-color: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                min-width: 200px; /* Ensure enough width for clickable area */
-            }
-    
-            /* Show submenu on hover */
-            .has-submenu:hover > .submenu {
-                display: block;
-            }
-    
-            /* Adjust submenu items */
-            .submenu li {
-                position: relative;
-                width: 100%;
-            }
-    
-            .submenu li a {
-                display: block;
-                padding: 10px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .submenu li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            /* Additional styling for main menu */
-            .main-menu ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-    
-            .main-menu ul li {
-                position: relative;
-                display: inline-block;
-            }
-    
-            .main-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .main-menu ul li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            /* Ensure submenus are easily accessible */
-            .main-menu ul li .submenu li .submenu {
-                left: 100%;
-                top: 0;
-            }
-
-            .rearth-header .main-menu ul,
-            .rearth-header .submenu {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-    
-            .rearth-header .main-menu ul li {
-                position: relative;
-                display: inline-block;
-            }
-    
-            .rearth-header .main-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .rearth-header .main-menu ul li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            .rearth-header .submenu {
-                position: absolute;
-                top: 100%;
                 left: 0;
-                display: none;
-                background: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                min-width: 200px;
-                z-index: 999;
-            }
-    
-            .rearth-header .has-submenu:hover > .submenu {
-                display: block;
-            }
-    
-            .rearth-header .submenu li {
-                position: relative;
-            }
-    
-            .rearth-header .submenu li .submenu {
-                position: absolute; /* Ensure positioning context */
-                left: 100%; /* Position to the right of the parent li */
-                top: 0; /* Align top with the parent li */
-                display: none; /* Keep hidden initially */
-                background: #fff; /* Match parent submenu background */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match parent submenu shadow */
-                min-width: 200px; /* Match parent submenu width */
-                z-index: 1000; /* Ensure higher z-index to appear above other elements */
-                transition: all 0.3s ease; /* Smooth transition */
-                margin-left: 1px; /* Small offset to prevent flickering */
-            }
-
-            /* Show nested submenu on parent hover */
-            .rearth-header .submenu li:hover > .submenu {
-                display: block;
-                visibility: visible;
-                opacity: 1;
-            }
-    
-            .rearth-header .submenu li a {
-                padding: 10px;
-            }
-            
-            /* Add indicator for items with submenus */
-            .rearth-header .submenu li.has-submenu > a::after {
-                content: '\25B6'; /* Right-pointing triangle */
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 10px;
+                width: 100%;
+                background: white;
+                z-index: 1000;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
             }
     
             .rearth-hamburger {
@@ -492,62 +367,99 @@
                 color: green;
             }
     
-            .rearth-mobile-menu {
-                display: none;
-                background: #fff;
-                position: absolute;
-                width: 100%;
-                top: 60px;
-                left: 0;
-                z-index: 999;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* === DESKTOP MENU === */
+            @media (min-width: 992px) {
+                .main-menu ul li {
+                    position: relative;
+                }
+    
+                .main-menu ul li .submenu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 220px;
+                    background: white;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    z-index: 1001;
+                }
+    
+                .main-menu ul li:hover > .submenu {
+                    display: block;
+                }
+    
+                .main-menu ul li .submenu li .submenu {
+                    top: 0;
+                    left: 100%;
+                }
+    
+                .main-menu ul li .submenu li:hover > .submenu {
+                    display: block;
+                }
             }
     
-            .rearth-mobile-menu ul li {
-                border-bottom: 1px solid #eee;
-            }
+            /* === MOBILE MENU === */
+            @media (max-width: 991px) {
+                .rearth-mobile-menu {
+                    position: fixed;
+                    top: 90px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 90px);
+                    overflow-y: auto;
+                    background-color: white;
+                    display: none;
+                    z-index: 999;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                }
     
-            .rearth-mobile-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
+                .rearth-mobile-menu ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
     
-            .rearth-mobile-menu ul li a:hover {
-                background-color: #f9f9f9;
-            }
+                .rearth-mobile-menu ul li {
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                }
     
-            .rearth-mobile-menu .submenu {
-                display: none;
-                background: #fafafa;
-                padding-left: 15px;
-            }
+                .rearth-mobile-menu ul li a {
+                    display: block;
+                    padding: 15px 20px;
+                    color: #333;
+                    text-decoration: none;
+                }
     
-            .rearth-mobile-menu .has-submenu > a::after {
-                content: ' ▼';
-                font-size: 12px;
-            }
+                .rearth-mobile-menu ul li a:hover {
+                    background-color: #f9f9f9;
+                }
     
-            .rearth-mobile-menu .has-submenu.open > .submenu {
-                display: block;
-            }
+                .rearth-mobile-menu .submenu {
+                    display: none;
+                    background: #f8f8f8;
+                    padding-left: 20px;
+                }
     
-            .rearth-mobile-menu .submenu .submenu {
-                padding-left: 0;
-                margin-left: auto;
-                width: 90%;
-                text-align: right;
+                .rearth-mobile-menu .has-submenu.open > .submenu {
+                    display: block;
+                }
+    
+                /* Removed dropdown icon */
+                .rearth-mobile-menu .has-submenu > a::after,
+                .rearth-mobile-menu .submenu .has-submenu > a::after {
+                    content: none;
+                }
             }
         </style>
     
-        <!-- JS -->
+        <!-- JS for Mobile Toggle -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const toggleBtn = document.getElementById("menu-toggle");
                 const mobileNav = document.getElementById("mobile-nav");
     
-                toggleBtn.addEventListener("click", (e) => {
+                toggleBtn.addEventListener("click", function (e) {
                     e.stopPropagation();
                     mobileNav.style.display = (mobileNav.style.display === "block") ? "none" : "block";
                 });
@@ -571,7 +483,9 @@
             });
         </script>
     </header>
-   
+    
+<!-- HEADER END -->
+
     
 <body>
 
@@ -584,71 +498,167 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
         <div class="gradient-container">
-            <section class="slider-section">
-                <div class="slider-container" id="slider">
-                    <div class="slide"><img src="assets/img/gallery/h1.jpg" alt="Image 1"></div>
-                    <div class="slide"><img src="assets/img/gallery/h2.jpg" alt="Image 2"></div>
-                    <div class="slide"><img src="assets/img/gallery/h3.jpg" alt="Image 3"></div>
-                    <div class="slide"><img src="assets/img/gallery/h4.jpg" alt="Image 4"></div>
-                    <div class="slide"><img src="assets/img/gallery/h5.jpg" alt="Image 5"></div>
-                    <div class="slide"><img src="assets/img/gallery/h6.jpg" alt="Image 6"></div>
-                    <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div>
-                    <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div>
+            <section class="slider-section pc-slider">
+                <div class="slider-container" id="pc-slider">
+                    <div class="slide"><img src="assets\img\WhatsApp Image 2025-05-31 at 4.49.14 PM.jpeg" alt="Image 1"></div>
+                    <!-- <div class="slide"><img src="assets\img\Screenshot 2025-06-03 115815.png" alt="Image 2"></div> -->
+                    <!-- <div class="slide"><img src="Doc\img\kohana training.jpg" alt="Image 3"></div> -->
+                    <div class="slide"><img src="Doc\img\WhatsApp Image 2025-05-07 at 4.50.12 PM.jpeg" alt="Image 4"></div> 
+                   
+                    <!-- <div class="slide"><img src="Doc\img\Polar workshop.jpg" alt="Image 6"></div> -->
+                    <!-- <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div>  -->
+                    <!-- <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div> -->
+                </div>
+            </section>
+        
+            <section class="slider-section mobile-slider">
+                <div class="slider-container" id="mobile-slider">
+                    <div class="slide"><img src="assets\img\WhatsApp Image 2025-05-31 at 4.49.14 PM.jpeg" alt="Image 1"></div>
+                    <div class="slide"><img src="assets\img\Screenshot 2025-06-03 115815.png" alt="Image 2"></div>
+                    <div class="slide"><img src="Doc\img\kohana training.jpg" alt="Image 3"></div>
+                    <div class="slide"><img src="Doc\img\WhatsApp Image 2025-05-07 at 4.50.12 PM.jpeg" alt="Image 4"></div> 
+                  
+                    <div class="slide"><img src="Doc\img\20231213_100102249_iOS.jpg" alt="Image 6"></div>
+                    <div class="slide"><img src="assets/img/gallery/h7.jpg" alt="Image 7"></div> 
+                    <!-- <div class="slide"><img src="assets/img/gallery/h8.jpg" alt="Image 8"></div> -->
                 </div>
             </section>
         </div>
-
+        
         <style>
             .gradient-container {
                 background: linear-gradient(90deg, #46C0BE, #6DD56F, #46C0BE);
-                padding: 30px;
+                padding: 0; /* Remove padding from the container */
             }
-
+        
             .slider-section {
-                width: 80%;
+                width: 100%;
                 margin: 0 auto;
                 overflow: hidden;
-                border-radius: 15px;
-                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
                 position: relative;
                 background: transparent;
             }
-
+        
             .slider-container {
                 display: flex;
                 transition: transform 0.5s ease-in-out;
-                width: 900%; /* 100% for each of the 8 slides */
             }
-
+        
             .slide {
-                width: 12.5%; /* Each slide takes 12.5% width */
                 flex-shrink: 0;
                 position: relative;
+                margin: 0; /* Remove margin from the slide */
+                padding: 0; /* Remove padding from the slide */
             }
-
+        
             .slide img {
                 width: 100%;
-                height: 400px;
+                height: auto;
                 object-fit: cover;
-                border-radius: 15px;
+                display: block; /* Ensure no extra space below the image */
+                border: none; /* Remove any border from the image */
+            }
+        
+            /* PC Slider */
+            .pc-slider .slider-container {
+                width: 800%; /* 100% for each of the 8 slides */
+            }
+        
+            .pc-slider .slide {
+                width: 12.5%; /* Each slide takes 12.5% width */
+            }
+        
+            .pc-slider .slide img {
+                height: 500px; /* Increase height for PC */
+            }
+        
+            /* Mobile Slider */
+            .mobile-slider .slider-container {
+                width: 800%; /* 100% for each of the 8 slides */
+            }
+        
+            .mobile-slider .slide {
+                width: 12.5%; /* Each slide takes 12.5% width */
+            }
+        
+            .mobile-slider .slide img {
+                height: 300px; /* Increase height for mobile */
+            }
+        
+            /* Media Queries */
+            @media (max-width: 768px) {
+                .pc-slider {
+                    display: none;
+                }
+                .mobile-slider {
+                    display: block;
+                }
+            }
+        
+            @media (min-width: 769px) {
+                .pc-slider {
+                    display: block;
+                }
+                .mobile-slider {
+                    display: none;
+                }
             }
         </style>
-
+        
         <script>
-            let slideIndex = 0;
-            function moveSlide(step) {
-                const slider = document.getElementById("slider");
-                const totalSlides = document.querySelectorAll(".slide").length;
-                slideIndex += step;
-                if (slideIndex >= totalSlides) slideIndex = 0;
-                if (slideIndex < 0) slideIndex = totalSlides - 1;
-                slider.style.transform = `translateX(-${slideIndex * 12.5}%)`; // Adjust for 8 slides
+            let pcSlideIndex = 0;
+            let mobileSlideIndex = 0;
+        
+            function moveSlide(sliderId, step, indexVar) {
+                const slider = document.getElementById(sliderId);
+                const totalSlides = document.querySelectorAll(`#${sliderId} .slide`).length;
+                indexVar += step;
+                if (indexVar >= totalSlides) indexVar = 0;
+                if (indexVar < 0) indexVar = totalSlides - 1;
+                slider.style.transform = `translateX(-${indexVar * 12.5}%)`; // Adjust for 8 slides
+                return indexVar;
             }
-            setInterval(() => moveSlide(1), 5000);
+        
+            setInterval(() => {
+                pcSlideIndex = moveSlide("pc-slider", 1, pcSlideIndex);
+                mobileSlideIndex = moveSlide("mobile-slider", 1, mobileSlideIndex);
+            }, 5000);
         </script>
         
         
-<!-- Video Player Area End -->
+        
+        
+        
+<!-- Video Player Area End --><header class="rearth-header">
+    <!-- Header Start -->
+    <!-- ... all header/menu code ... -->
+</header>
+<!-- Mobile Navigation -->
+<div id="mobile-nav" class="rearth-mobile-menu d-lg-none">
+    <!-- ... mobile menu code ... -->
+</div>
+<!-- CSS and JS for menu functionality -->
+<style>
+    /* ... menu and mobile menu styles ... */
+</style>
+<script>
+    // ... mobile menu toggle JS ...
+</script><header class="rearth-header">
+    <!-- Header Start -->
+    <!-- ... all header/menu code ... -->
+</header>
+<!-- Mobile Navigation -->
+<div id="mobile-nav" class="rearth-mobile-menu d-lg-none">
+    <!-- ... mobile menu code ... -->
+</div>
+<!-- CSS and JS for menu functionality -->
+<style>
+    /* ... menu and mobile menu styles ... */
+</style>
+<script>
+    // ... mobile menu toggle JS ...
+</script>
+    
 
 <section class="py-5 bg-white">
     <div class="container">
@@ -658,7 +668,7 @@
             <h2 class="our-goal-title">Our Goal</h2>
             <!-- Updated paragraph -->
             <p class="text-black custom-paragraph mt-5 fw-bold text-center">
-                At REarth, our goal is to inspire and mobilize individuals, communities, and organizations worldwide to take immediate and impactful action on climate change, fostering a collective movement towards a sustainable, resilient, and equitable planet for future generations. Through education, awareness, innovative solutions, and collaborative partnerships, we aim to contribute significantly to achieving the United Nations Sustainable Development Goals (SDGs) and resolving global environmental challenges.
+                 Our goal is to inspire and mobilize individuals, communities, and organizations worldwide to take immediate and impactful action on climate change, fostering a collective movement towards a sustainable, resilient, and equitable planet for future generations. Through education, awareness, innovative solutions, and collaborative partnerships, we aim to contribute significantly to achieving the United Nations Sustainable Development Goals (SDGs) and resolving global environmental challenges.
             </p>
             <!-- Read More Button -->
             <a href="about.html" class="btn btn-outline-light btn-sm mt-4 know-more-btn">Know More</a>
@@ -751,6 +761,28 @@
 
   
 <br>
+<!-- <section class="reuniform-section" style="background: linear-gradient(90deg, #e0f7fa 0%, #f1f8e9 100%); padding: 40px 0;">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-7">
+        <h2 class="mb-3" style="color:#2e7d32; font-weight:700;">RE:UNIFORM - Circular School Uniform Program</h2>
+        <p style="font-size:1.1em;">RE:UNIFORM is a flagship initiative under REarth’s SDG Star School Program, empowering schools to become hubs of climate action, education, and sustainability. The program builds a circular economy for school uniforms, reducing textile waste, supporting families, and nurturing sustainable values in children.</p>
+        <ul style="font-size:1em; margin-bottom:1em;">
+          <li>Reduce clothing waste and carbon footprint</li>
+          <li>Affordable, dignified access to quality uniforms</li>
+          <li>Empower families and foster community sharing</li>
+          <li>SDG Badges and Eco-Points for student participation</li>
+          <li>Impact assessment, orientation sessions, and transparent reporting</li>
+        </ul>
+        <p style="font-size:1em;">The program is free for schools, with an optional "Pay As You Wish" model to support scaling and added services. REarth handles setup, collection, promotion, and reporting—schools simply provide space and share with families.</p>
+        <a href="https://trusted-dolphin-8eb.notion.site/RE-Uniform-Circular-School-Uniform-Program-by-REarth-2082f30b602980cfad54fdbb59fcf4a8" target="_blank" class="btn btn-success btn-lg mt-3" style="background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%); border:none;">Learn More &amp; Join the Program</a>
+      </div>
+      <div class="col-md-5 text-center">
+        <img src="" alt="RE:UNIFORM Circular School Uniform Program" style="max-width:100%; border-radius:12px; box-shadow:0 4px 16px rgba(44,62,80,0.12);">
+      </div>
+    </div>
+  </div>
+</section> -->
 <section class="did-you-know-squares">
     <h2 class="section-title">DID YOU KNOW?</h2>
     <div class="square-container">
@@ -760,7 +792,7 @@
                     <i class="fa fa-thermometer-full" aria-hidden="true"></i>
                     <h3>2024: The Hottest Year</h3>
                 </div>
-                <p>Global temperatures in 2024 exceeded the critical 1.5°C threshold, marking it as the hottest year ever recorded. </p>
+                <p>Global temperatures in 2024 exceeded the critical 1.5 degree threshold, marking it as the hottest year ever recorded. </p>
             </div>
         </div>
 
@@ -904,7 +936,7 @@
          <section class="focus-section">
             <h2>Our Focus Areas</h2>
             <p style="text-align: center; margin: 0 auto; max-width: 800px;">
-                At REarth, we empower communities with science-based climate education and actionable solutions, inspiring collective responsibility, and turning awareness into meaningful climate actions, building a sustainable planet for future generations
+                We empower communities with science-based climate education and actionable solutions, inspiring collective responsibility, and turning awareness into meaningful climate actions, building a sustainable planet for future generations
             </p>
             <br>
             <div class="container">
@@ -921,7 +953,7 @@
                 </div>
         
                 <div class="card">
-                    <img src="assets\img\images\aa.jpg" alt="Climate Awareness">
+                    <img src="assets\img\WhatsApp Image 2025-05-31 at 4.49.14 PM.jpeg" alt="Climate Awareness">
                     <div class="overlay">Climate Awareness</div>
                     <div class="details">
                         Bridging the gap between academic research and public understanding through campaigns, discussions, and interactive simulations.
@@ -1051,13 +1083,13 @@
 <section class="rearth-intro">
     <h1 class="title"></h1>
     <p class="description">
-        At REarth, we believe education must go beyond textbooks—it must inspire curiosity, build climate literacy, and equip generations with the tools to design real-world solutions. By integrating SDGs, experiential learning, and climate science into our educational initiatives, we are nurturing future climate leaders who can shape resilient communities
+        We believe education must go beyond textbooks it must inspire curiosity, build climate literacy, and equip generations with the tools to design real-world solutions. By integrating SDGs, experiential learning, and climate science into our educational initiatives, we are nurturing future climate leaders who can shape resilient communities.
     </p>
 </section>
 
 <style>
 /* Import Montserrat Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Section Styling */
 .rearth-intro {
@@ -1070,17 +1102,19 @@
 
 /* Title Styling */
 .rearth-intro .title {
-    font-size: 2rem;
-    font-weight: bold;
+    font-size: 2.5rem;
+    font-weight: 700;
     margin-bottom: 20px;
     color: #fff; /* White Title */
 }
 
 /* Paragraph Styling */
 .rearth-intro .description {
-    font-size: 2rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.6;
     color: #fff; /* White Text */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Responsive Design */
@@ -1094,7 +1128,8 @@
     }
 
     .rearth-intro .description {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }
 </style>
@@ -1110,8 +1145,8 @@
 
 <section id="education" class="education section light-background">
     <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h2 style="color: #2E7D32; font-size: 3rem; font-weight: bold;">REarth Education Programs</h2>
-        <p class="subtitle" style="color: #666; font-size: 1.5rem; margin-top: 15px; font-weight: bold;">At REarth, we empower communities with science-based climate education and actionable solutions, inspiring collective responsibility, and turning awareness into meaningful climate actions, building a sustainable planet for future generations</p>
+        <h2 style="color: #2E7D32; font-size: 3rem; font-weight: bold;">Education Programs</h2>
+        <p class="subtitle" style="color: #666; font-size: 1.5rem; margin-top: 15px; font-weight: bold;"> We empower communities with science-based climate education and actionable solutions, inspiring collective responsibility, and turning awareness into meaningful climate actions, building a sustainable planet for future generations</p>
     </div>
 
     <div class="container">
@@ -1123,9 +1158,10 @@
                         <img src="assets\img\SG.jpg" alt="SDG Star School" class="workshop-image">
                     </div>
                     <div class="content">
-                    >
                         <h3>SDG Star School</h3>
                         <p class="description">Integrating sustainable development goals into the curriculum to foster global citizenship.</p>
+                        <br>
+                    
                         <a href="sdgstarschool.html" class="btn header-btn">Know More</a>
                     </div>
                 </div>
@@ -1139,8 +1175,9 @@
                     </div>
                     <div class="content">
                       
-                        <h3>After School Program</h3>
+                        <h3> After School Program</h3>
                         <p class="description">Engaging students in extracurricular activities focused on environmental conservation and sustainability.</p>
+                 
                         <a href="Afterschool.html" class="btn header-btn">Know More</a>
                     </div>
                 </div>
@@ -1156,6 +1193,7 @@
                        
                         <h3>Climate Warrior Club</h3>
                         <p class="description">Empowering students to become climate leaders through interactive projects and campaigns.</p>
+                        <br>
                         <a href="Climate_Warrior_club.html" class="btn header-btn">Know More</a>
                     </div>
                 </div>
@@ -1254,15 +1292,16 @@ h3 {
 }
 </style>
 <section class="rearth-intro">
-    <h1 class="title"></h1>
+    <h1 class="title">Our Mission</h1>
     <p class="description">
-        Awareness is the first step toward meaningful change. In a world overwhelmed by misinformation and inaction, REarth focuses on simplifying complex climate issues and making them accessible to everyone—from school children to professionals. Our goal is to bridge the gap between academic science and public understanding and transform awareness into informed choices that ripple outward through society.
+        Awareness is the first step toward meaningful change. In a world overwhelmed by misinformation and inaction, REarth focuses on simplifying complex climate issues and making them accessible to everyone from school children to professionals. Our goal is to bridge the gap between academic science and public understanding and transform awareness into informed choices that ripple outward through society.
+    </p>
     </p>
 </section>
 
 <style>
 /* Import Montserrat Font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 /* Section Styling */
 .rearth-intro {
@@ -1276,16 +1315,18 @@ h3 {
 /* Title Styling */
 .rearth-intro .title {
     font-size: 3rem;
-    font-weight: bold;
+    font-weight: 700;
     margin-bottom: 20px;
     color: #fff; /* White Title */
 }
 
 /* Paragraph Styling */
 .rearth-intro .description {
-    font-size: 2rem;
-    line-height: 1.8;
+    font-size: 1.2rem;
+    line-height: 1.6;
     color: #fff; /* White Text */
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* Responsive Design */
@@ -1299,7 +1340,8 @@ h3 {
     }
 
     .rearth-intro .description {
-        font-size: 1.3rem;
+        font-size: 1rem;
+        line-height: 1.5;
     }
 }
 </style>
@@ -1313,7 +1355,7 @@ h3 {
 <br>
 <section id="workshops" class="workshops section light-background">
     <div class="container section-title" style="text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center;">
-        <h2 style="color: #2E7D32; font-size: 3rem; font-weight: bold;">REarth Climate Workshops</h2>
+        <h2 style="color: #2E7D32; font-size: 3rem; font-weight: bold;"> Climate Workshops</h2>
         <p class="subtitle" style="color: #666; font-size: 1.5rem; margin-top: 15px; font-weight: bold;">Empowering individuals and organizations to take action towards a sustainable planet</p>
     </div>
 
@@ -1323,7 +1365,7 @@ h3 {
             <div class="col-lg-3 col-md-6" data-aos="fade-up">
                 <div class="program-item">
                     <div class="image-container">
-                        <img src="assets/img/images/workshop.jpg" alt="EnROADS Workshop" class="workshop-image">
+                        <img src="assets\img\enrrods.png" alt="EnROADS Workshop" class="workshop-image">
                     </div>
                     <div class="content">
                        
@@ -1338,7 +1380,7 @@ h3 {
             <div class="col-lg-3 col-md-6" data-aos="fade-up">
                 <div class="program-item">
                     <div class="image-container">
-                        <img src="assets/img/images/4.jpg" alt="Climate Fresk" class="workshop-image">
+                        <img src="assets\img\climate.png" alt="Climate Fresk" class="workshop-image">
                     </div>
                     <div class="content">
                       
@@ -1353,7 +1395,7 @@ h3 {
             <div class="col-lg-3 col-md-6" data-aos="fade-up">
                 <div class="program-item">
                     <div class="image-container">
-                        <img src="assets/img/images/8.jpg" alt="Biodiversity Workshop" class="workshop-image">
+                        <img src="assets\img\bio.png" alt="Biodiversity Workshop" class="workshop-image">
                     </div>
                     <div class="content">
                       
@@ -1369,13 +1411,13 @@ h3 {
             <div class="col-lg-3 col-md-6" data-aos="fade-up">
                 <div class="program-item">
                     <div class="image-container">
-                        <img src="assets/img/images/6.jpg" alt="2 Tonnes Challenge" class="workshop-image">
+                        <img src="assets\img\2tones.png" alt="2 Tonnes Challenge" class="workshop-image">
                     </div>
                     <div class="content">
                         
                         <h3>2 Tonnes Challenge</h3>
                         <p class="description">Practical carbon footprint reduction workshop targeting 2 tonnes CO2/year through actionable planning.</p>
-                        <a href="2tonnes.html" class="btn header-btn">Know More</a>
+                        <a href="two_tones.html" class="btn header-btn">Know More</a>
                     </div>
                 </div>
             </div>
@@ -1553,7 +1595,7 @@ h3 {
                     <div class="content">
                         <div class="duration"></div>
                         <h3>Women in Climate Leadership</h3>
-                        <p class="description">Empowering women to lead climate action initiatives and drive sustainable change.</p>
+                        <p class="description">Women to lead climate action initiatives and drive sustainable change.</p>
                         <a href="wicl.html" class="btn header-btn" onclick="document.getElementById('community-engagement').scrollIntoView({behavior: 'smooth'});">Know More</a>
                     </div>
                 </div>
@@ -1567,7 +1609,7 @@ h3 {
                     </div>
                     <div class="content">
                         <div class="duration"></div>
-                        <h3>REady Japan - DRRPF</h3>
+                        <h3>Ready Japan </h3>
                         <p class="description">Preparing communities for disaster risk reduction and promoting resilience through collaborative efforts.</p>
                         <a href="ReadyJapan.html" class="btn header-btn" onclick="document.getElementById('community-engagement').scrollIntoView({behavior: 'smooth'});">Know More</a>
                     </div>
@@ -1683,8 +1725,8 @@ h3 {
             <div class="col-12 text-center mb-5">
                 <h2 class="impact-title">Our Impact</h2>
                 <p class="impact-subtitle">Making a difference in climate education and awareness</p>
-                    </div>
-                    </div>
+            </div>
+        </div>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="impact-card">
@@ -1692,9 +1734,9 @@ h3 {
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
                     <div class="impact-counter-wrapper">
-                        <span class="impact-counter">25</span>
+                        <span class="impact-counter">30</span>
                         <span class="impact-plus">+</span>
-                </div>
+                    </div>
                     <h3 class="impact-card-title">Climate Dialog Sessions</h3>
                 </div>
             </div>
@@ -1704,7 +1746,7 @@ h3 {
                         <i class="fas fa-briefcase"></i>
                     </div>
                     <div class="impact-counter-wrapper">
-                        <span class="impact-counter">100</span>
+                        <span class="impact-counter">120</span>
                         <span class="impact-plus">+</span>
                     </div>
                     <h3 class="impact-card-title">Professionals and Adults</h3>
@@ -1716,7 +1758,7 @@ h3 {
                         <i class="fas fa-users"></i>
                     </div>
                     <div class="impact-counter-wrapper">
-                        <span class="impact-counter">350</span>
+                        <span class="impact-counter">450</span>
                         <span class="impact-plus">+</span>
                     </div>
                     <h3 class="impact-card-title">Students Reached</h3>
@@ -1914,9 +1956,9 @@ h3 {
         // Counter animation
         const counters = document.querySelectorAll('.impact-counter');
         const targetValues = {
-            'Climate Dialog Sessions': 25,
-            'Professionals and Adults': 100,
-            'Students Reached': 350
+            'Climate Dialog Sessions': 30,
+            'Professionals and Adults': 120,
+            'Students Reached': 450
         };
         const speed = 200;
         const updateInterval = 3000;
@@ -1997,26 +2039,59 @@ h3 {
                     <section class="gallery-section">
                         <div class="gallery-container">
                             <a href="eventdetials.html" class="gallery-item">
-                                <img src="https://media.licdn.com/dms/image/v2/D5622AQHP7KwVNva3JQ/feedshare-shrink_2048_1536/B56ZXMCQh9GQAw-/0/1742884899674?e=1746057600&v=beta&t=KDjxqeRAXk7SRrJfI-vF2d5SEdlztYnNE3CCxwtDdN0"  alt="Image 1" class="gallery-image">
+                                <img src="Doc\img\WhatsApp Image 2025-06-09 at 07.55.30_83974103.jpg" alt="Image 1" class="gallery-image">
                                 <div class="gallery-text">
-                                    <h3>A Transformative En-ROADS Experience</h3>
-                                    <p>April 7, 14, 21, 28 – 8:30-10:00 PM JST</p>
+                                    <h3>A Successful Day of Learning, Connecting, and Preparing Together!
+                                    </h3>
+                                    <p> </p> 
                                 </div>
                             </a>
                             <a href="eventdetials.html" class="gallery-item">
-                                <img src="assets\img\index.jpg" alt="Image 2" class="gallery-image">
+                                <img src="assets\img\Venture cafe tokyo.png" alt="Image 2" class="gallery-image">
                                 <div class="gallery-text">
-                                    <h3>LET US COMPOST!</h3>
-                                    <p>25 March 2025</p>
+                                    <h3>Rocket Pitch Night Venture Cafe Tokyo</h3>
+                                    <p>7 May 2025 2025</p>
                                 </div>
                             </a>
-                            <a href="eventdetials.html" class="gallery-item">
-                                <img src="https://media.licdn.com/dms/image/v2/D5622AQHZ8fUEZOU7DQ/feedshare-shrink_2048_1536/B56ZVffsSbHQAo-/0/1741063898932?e=1746057600&v=beta&t=JbZsOhuG4ZhzJ51PeyBpwI9Ijc9xptYs1hzZqfDPb7Y" alt="Image 3" class="gallery-image">
+                            <a href="eventdetails.html" class="gallery-item">
+                                <img src="assets/img/ENROADS workshop in tokyo.jpg" alt="Image 3" class="gallery-image">
                                 <div class="gallery-text">
-                                    <h3>Community-Led Disaster Preparedness Initiative</h3>
-                                    <p>17th February 2025, Tokyo</p>
+                                    <h3>ENROADS Climate Workshop  Tokyo Session</h3>
+                                    <p>23 March 2025, Tokyo</p>
                                 </div>
                             </a>
+                        </div>
+                    </section>
+                    
+                    <style>
+                      .gallery-image {
+    width: 100%;
+    height: 300px;  /* Increased from auto */
+    object-fit: cover;
+    display: block;
+}
+
+.gallery-item {
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.02);
+}
+
+@media (max-width: 768px) {
+    .gallery-image {
+        height: 250px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gallery-image {
+        height: 200px;
+    }
+}
+                    </style>
+                    
                             <!-- <a href="https://example.com/event4" class="gallery-item">
                                 <img src="assets/img/gallery/g2.jpg" alt="Image 4" class="gallery-image">
                                 <div class="gallery-text">
@@ -2188,8 +2263,8 @@ h3 {
                 </div>
     
                 <div class="testimonial-item">
-                    <p>The session deepened our understanding of biodiversity's crucial role in sustaining climate balance. It emphasized the urgency of conservation and inspired us to adopt practical strategies to protect our ecosystems for a resilient future.</p>
-                    <div class="profile"><h4>Biodiversity Workshop Participant</h4></div>
+                    <p>Your session at our school was a game changer. The kids had enlightening session with new information altogether along with some pledges to be made for their better future</p>
+                    <div class="profile"><h4>School Principal</h4></div>
                 </div>
     
                 <!-- Additional testimonials can be added here -->
@@ -2562,15 +2637,14 @@ h3 {
                             </div>
                             <div class="footer-tittle">
                                 <div class="footer-pera">
-                                    <p>Leading climate education and sustainability initiatives, Join us in creating a sustainable future through education and action.</p>
-                                     
+                                    <p>Leading climate education and sustainability initiatives Join us in creating a sustainable future through education and action!</p>                          
                                     
                                 </div>
                             </div>
                             <div class="footer-social">
-                                <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <!-- <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
                                 <a href="https://www.instagram.com/rearthcommunity" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                                <!-- <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
                             </div>
                         </div>
                     </div>
@@ -2592,8 +2666,8 @@ h3 {
                                 <h4>Quick Links</h4>
                                 <ul>
                                     <li><a href="about.html">About Us</a></li>
-                                    <li><a href="projects.html">Our Projects</a></li>
-                                    <li><a href="events.html">Events</a></li>
+                              
+                                    <li><a href="eventdetials.html">Events</a></li>
                                     <li><a href="resources.html">Resources</a></li>
                                     <li><a href="contact.html">Contact Us</a></li>
                                 </ul>
@@ -2605,7 +2679,7 @@ h3 {
                             <div class="footer-tittle">
                                 <h4>Contact Information</h4>
                                 <ul>
-                                    <li><a href="mailto:contact.rearth@gmail.com">contact.rearth@gmail.com</a></li>
+                                    <li><a href="mailto:contact.us@rearthforfuture.org">contact.us@rearthforfuture.org</a></li>
                                     <li><a href="https://maps.google.com/?q=Midori-ku,Yokohama,Tokyo,Japan" target="_blank">Midori-ku, Yokohama, Tokyo, Japan</a></li>
                                    
                              
@@ -2621,10 +2695,10 @@ h3 {
                         <div class="row d-flex align-items-center">
                             <div class="col-xl-12">
                                 <div class="footer-copy-right text-center">
-                                    <p>
+                                    <!-- <p>
                                         Copyright &copy;<script>document.write(new Date().getFullYear());</script> Rearth Community - Climate Education Center in Yokohama, Tokyo, Japan. All rights reserved.
                                     </p>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>

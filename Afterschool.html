@@ -43,26 +43,16 @@
 
 <body>
     <!-- ? Preloader Start -->
-    <div id="preloader-active">
-        <div class="preloader d-flex align-items-center justify-content-center">
-            <div class="preloader-inner position-relative">
-                <div class="preloader-circle"></div>
-                <div class="preloader-img pere-text">
-                    <img src="assets/img/logo/loder.png" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
+
     <!-- Preloader Start -->
    
     <header class="rearth-header">
-        <!-- Header Start -->
         <div class="header-area">
             <div class="main-header">
-                <div class="header-bottom header-sticky">
+                <div class="header-bottom sticky-header">
                     <div class="container-fluid">
                         <div class="row align-items-center">
-                            <!-- Logo for desktop -->
+                            <!-- Desktop Logo -->
                             <div class="col-xl-2 col-lg-2 d-none d-lg-block">
                                 <div class="logo">
                                     <a href="index.html">
@@ -79,6 +69,7 @@
                                             <ul id="navigation">
                                                 <li><a href="index.html"><strong>Home</strong></a></li>
                                                 <li><a href="about.html"><strong>About Us</strong></a></li>
+                                                <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
                                                 <li class="has-submenu"><a href="#"><strong>Projects</strong></a>
                                                     <ul class="submenu">
                                                         <li class="has-submenu"><a href="#"><strong>Education</strong></a>
@@ -99,12 +90,12 @@
                                                         <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
                                                             <ul class="submenu">
                                                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                                                             </ul>
                                                         </li>
                                                     </ul>
                                                 </li>
-                                                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                                                <!-- <li><a href="resources.html"><strong>Resources</strong></a></li> -->
                                                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                                                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
                                             </ul>
@@ -113,7 +104,7 @@
                                 </div>
                             </div>
     
-                            <!-- Logo and toggle for mobile -->
+                            <!-- Mobile Logo -->
                             <div class="col-6 d-lg-none">
                                 <div class="logo">
                                     <a href="index.html">
@@ -122,6 +113,7 @@
                                 </div>
                             </div>
     
+                            <!-- Mobile Toggle -->
                             <div class="col-6 d-lg-none pe-3">
                                 <div class="d-flex justify-content-end">
                                     <button id="menu-toggle" class="rearth-hamburger">&#9776;</button>
@@ -138,20 +130,25 @@
             <ul>
                 <li><a href="index.html"><strong>Home</strong></a></li>
                 <li><a href="about.html"><strong>About Us</strong></a></li>
-                <li><a href="resources.html"><strong>Resources</strong></a></li>
+                <!-- <li><a href="ReadyJapan.html"><strong>ReadyJapan</strong></a></li> -->
+                <!-- <li><a href="resources.html"><strong>Resources</strong></a></li> -->
                 <li><a href="eventdetials.html"><strong>Events</strong></a></li>
                 <li><a href="contact.html"><strong>Contact Us</strong></a></li>
+               
+         
                 <li class="has-submenu">
                     <a href="#"><strong>Projects</strong></a>
                     <ul class="submenu">
-                        <li class="has-submenu"><a href="#"><strong>Education</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Education</strong></a>
                             <ul class="submenu">
                                 <li><a href="sdgstarschool.html"><strong>SDG Star School</strong></a></li>
                                 <li><a href="Afterschool.html"><strong>After School Program</strong></a></li>
                                 <li><a href="Climate_Warrior_club.html"><strong>Climate Warrior Club</strong></a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><strong>Awareness Workshops</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Awareness Workshops</strong></a>
                             <ul class="submenu">
                                 <li><a href="Enroads.html"><strong>ENROADS</strong></a></li>
                                 <li><a href="Climate_Fresk.html"><strong>Climate Fresk</strong></a></li>
@@ -159,10 +156,11 @@
                                 <li><a href="two_tones.html"><strong>2 Tonnes</strong></a></li>
                             </ul>
                         </li>
-                        <li class="has-submenu"><a href="#"><strong>Community Engagement</strong></a>
+                        <li class="has-submenu">
+                            <a href="#"><strong>Community Engagement</strong></a>
                             <ul class="submenu">
                                 <li><a href="wicl.html"><strong>Women in Climate Leadership</strong></a></li>
-                                <li><a href="ReadyJapan.html"><strong>REady Japan - DRRPF</strong></a></li>
+                                <li><a href="ReadyJapan.html"><strong>Ready Japan </strong></a></li>
                             </ul>
                         </li>
                     </ul>
@@ -170,149 +168,21 @@
             </ul>
         </div>
     
-        <!-- CSS -->
+        <!-- CSS for Desktop + Mobile Behavior -->
         <style>
-
-            /* Ensure submenus are positioned correctly */
-            .submenu {
-                position: absolute;
+            body {
+                padding-top: 90px;
+            }
+    
+            .sticky-header {
+                position: fixed;
                 top: 0;
-                left: 100%; /* Position to the right */
-                display: none;
-                list-style: none;
-                padding: 0;
-                margin: 0;
-                background-color: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                z-index: 1000;
-                min-width: 200px; /* Ensure enough width for clickable area */
-            }
-    
-            /* Show submenu on hover */
-            .has-submenu:hover > .submenu {
-                display: block;
-            }
-    
-            /* Adjust submenu items */
-            .submenu li {
-                position: relative;
-                width: 100%;
-            }
-    
-            .submenu li a {
-                display: block;
-                padding: 10px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .submenu li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            /* Additional styling for main menu */
-            .main-menu ul {
-                list-style: none;
-                padding: 0;
-                margin: 0;
-            }
-    
-            .main-menu ul li {
-                position: relative;
-                display: inline-block;
-            }
-    
-            .main-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .main-menu ul li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            /* Ensure submenus are easily accessible */
-            .main-menu ul li .submenu li .submenu {
-                left: 100%;
-                top: 0;
-            }
-
-            .rearth-header .main-menu ul,
-            .rearth-header .submenu {
-                list-style: none;
-                margin: 0;
-                padding: 0;
-            }
-    
-            .rearth-header .main-menu ul li {
-                position: relative;
-                display: inline-block;
-            }
-    
-            .rearth-header .main-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
-    
-            .rearth-header .main-menu ul li a:hover {
-                background-color: #f0f0f0;
-            }
-    
-            .rearth-header .submenu {
-                position: absolute;
-                top: 100%;
                 left: 0;
-                display: none;
-                background: #fff;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                min-width: 200px;
-                z-index: 999;
-            }
-    
-            .rearth-header .has-submenu:hover > .submenu {
-                display: block;
-            }
-    
-            .rearth-header .submenu li {
-                position: relative;
-            }
-    
-            .rearth-header .submenu li .submenu {
-                position: absolute; /* Ensure positioning context */
-                left: 100%; /* Position to the right of the parent li */
-                top: 0; /* Align top with the parent li */
-                display: none; /* Keep hidden initially */
-                background: #fff; /* Match parent submenu background */
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Match parent submenu shadow */
-                min-width: 200px; /* Match parent submenu width */
-                z-index: 1000; /* Ensure higher z-index to appear above other elements */
-                transition: all 0.3s ease; /* Smooth transition */
-                margin-left: 1px; /* Small offset to prevent flickering */
-            }
-
-            /* Show nested submenu on parent hover */
-            .rearth-header .submenu li:hover > .submenu {
-                display: block;
-                visibility: visible;
-                opacity: 1;
-            }
-    
-            .rearth-header .submenu li a {
-                padding: 10px;
-            }
-            
-            /* Add indicator for items with submenus */
-            .rearth-header .submenu li.has-submenu > a::after {
-                content: '\25B6'; /* Right-pointing triangle */
-                position: absolute;
-                right: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                font-size: 10px;
+                width: 100%;
+                background: white;
+                z-index: 1000;
+                box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+                transition: all 0.3s ease;
             }
     
             .rearth-hamburger {
@@ -324,66 +194,106 @@
                 color: green;
             }
     
-            .rearth-mobile-menu {
-                display: none;
-                background: #fff;
-                position: absolute;
-                width: 100%;
-                top: 60px;
-                left: 0;
-                z-index: 999;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            /* === DESKTOP MENU === */
+            @media (min-width: 992px) {
+                .main-menu ul li {
+                    position: relative;
+                }
+    
+                .main-menu ul li .submenu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    min-width: 220px;
+                    background: white;
+                    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+                    z-index: 1001;
+                }
+    
+                .main-menu ul li:hover > .submenu {
+                    display: block;
+                }
+    
+                .main-menu ul li .submenu li .submenu {
+                    top: 0;
+                    left: 100%;
+                }
+    
+                .main-menu ul li .submenu li:hover > .submenu {
+                    display: block;
+                }
             }
     
-            .rearth-mobile-menu ul li {
-                border-bottom: 1px solid #eee;
-            }
+            /* === MOBILE MENU === */
+            @media (max-width: 991px) {
+                .rearth-mobile-menu {
+                    position: fixed;
+                    top: 90px;
+                    left: 0;
+                    width: 100%;
+                    height: calc(100vh - 90px);
+                    overflow-y: auto;
+                    background-color: white;
+                    display: none; /* Initially hidden */
+                    z-index: 999;
+                    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+                }
     
-            .rearth-mobile-menu ul li a {
-                display: block;
-                padding: 15px 20px;
-                color: #333;
-                text-decoration: none;
-            }
+                .rearth-mobile-menu ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                }
     
-            .rearth-mobile-menu ul li a:hover {
-                background-color: #f9f9f9;
-            }
+                .rearth-mobile-menu ul li {
+                    border-bottom: 1px solid #eee;
+                    position: relative;
+                }
     
-            .rearth-mobile-menu .submenu {
-                display: none;
-                background: #fafafa;
-                padding-left: 15px;
-            }
+                .rearth-mobile-menu ul li a {
+                    display: block;
+                    padding: 15px 20px;
+                    color: #333;
+                    text-decoration: none;
+                }
     
-            .rearth-mobile-menu .has-submenu > a::after {
-                content: ' ▼';
-                font-size: 12px;
-            }
+                .rearth-mobile-menu ul li a:hover {
+                    background-color: #f9f9f9;
+                }
     
-            .rearth-mobile-menu .has-submenu.open > .submenu {
-                display: block;
-            }
+                .rearth-mobile-menu .submenu {
+                    display: none;
+                    background: #f8f8f8;
+                    padding-left: 20px;
+                }
     
-            .rearth-mobile-menu .submenu .submenu {
-                padding-left: 0;
-                margin-left: auto;
-                width: 90%;
-                text-align: right;
+                .rearth-mobile-menu .has-submenu.open > .submenu {
+                    display: block;
+                }
+    
+                .rearth-mobile-menu .has-submenu > a::after,
+                .rearth-mobile-menu .submenu .has-submenu > a::after {
+                    content: ' ▼';
+                    float: right;
+                    font-size: 12px;
+                }
             }
         </style>
     
-        <!-- JS -->
+        <!-- JS for Mobile Toggle -->
         <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const toggleBtn = document.getElementById("menu-toggle");
                 const mobileNav = document.getElementById("mobile-nav");
     
-                toggleBtn.addEventListener("click", (e) => {
+                // Toggle mobile menu on button click
+                toggleBtn.addEventListener("click", function (e) {
                     e.stopPropagation();
                     mobileNav.style.display = (mobileNav.style.display === "block") ? "none" : "block";
                 });
     
+                // Open submenu on mobile
                 document.querySelectorAll('.rearth-mobile-menu .has-submenu > a').forEach(link => {
                     link.addEventListener('click', function (e) {
                         e.preventDefault();
@@ -392,6 +302,7 @@
                     });
                 });
     
+                // Close mobile menu when clicking outside
                 document.addEventListener('click', function (event) {
                     if (!mobileNav.contains(event.target) && event.target !== toggleBtn) {
                         mobileNav.style.display = "none";
@@ -403,8 +314,181 @@
             });
         </script>
     </header>
-   
-
+    <main>
+        <section class="hero">
+            <div class="overlay">
+                <div class="text-block">
+                    <h2>After School Program by REarth</h2>
+                </div>
+            </div>
+        </section>
+    
+        <style>
+            .hero {
+                position: relative;
+                width: 100%;
+                height: 30rem;
+                background-image: url('assets/img/guy-bowden-lVDnLUACI18-unsplash.jpg');
+                background-size: cover;
+                background-position: top;
+                background-repeat: no-repeat;
+                overflow: hidden;
+            }
+    
+            .overlay {
+                position: absolute;
+                inset: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+    
+            .text-block {
+                background-color: rgba(0, 0, 0, 0.5);
+                padding: 20px;
+                border-radius: 8px;
+                position: relative;
+                text-align: center;
+            }
+    
+            .text-block h2 {
+                font-family: "Montserrat", sans-serif;
+                font-style: normal;
+                font-weight: 700;
+                color: white;
+                font-size: 30px;
+                line-height: 36px;
+                margin-bottom: 20px;
+            }
+        </style>
+    
+        <section class="py-5 bg-white custom-section">
+            <div class="container custom-container">
+                <div class="center-block custom-center-block">
+                    <h3 class="vision-title custom-title">Where Curiosity Meets Climate Action</h3>
+                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                        At REarth, we believe learning doesn't stop at the end of the school day. Our After-School Programs are designed to nurture curious, creative, and climate-conscious young minds through engaging, hands-on experiences rooted in sustainability and the SDGs.
+                    </p>
+                    <p class="text-black custom-paragraph mt-5 fw-bold text-center">
+                        These sessions provide flexible and fun learning opportunities that allow students to explore real-world challenges like climate change, biodiversity, pollution, and community resilience—in ways that are interactive, meaningful, and age-appropriate.
+                    </p>
+                </div>
+    
+                <div class="center-block custom-center-block">
+                    <h3 class="vision-title custom-title">💡 What Makes Our Programs Unique?</h3>
+                    <ul class="custom-list">
+                        <li><strong>🌍 Focus on Environmental and Social Responsibility</strong> – Students explore issues like climate change, waste, biodiversity, and justice in ways that are age-appropriate and inspiring.</li>
+                        <li><strong>🎨 Creative and Experiential Learning</strong> – From storytelling and role-plays to science-based activities and community projects, students get to learn by doing.</li>
+                        <li><strong>🤝 Fostering Empathy and Collaboration</strong> – Our sessions are designed to build a sense of agency and teamwork, helping children find their voice and act for the planet.</li>
+                        <li><strong>🔍 Adaptable and Evolving</strong> – Each after-school program is tailored to the interests of students and the needs of the school. We’re continuously co-creating and piloting new ideas to keep learning fresh, relevant, and impactful.</li>
+                    </ul>
+                </div>
+    
+                <div class="center-block custom-center-block">
+                    <h3 class="vision-title custom-title">Why Choose our ASP?</h3>
+                    <ul class="custom-list">
+                        <li>Flexible formats with customized curriculum, best suited for the school (weekly/bi-weekly/seasonal)</li>
+                        <li>Age-appropriate content for students</li>
+                        <li>Build scientific thinking and systems understanding</li>
+                        <li>Boost creativity, collaboration, purpose, and climate confidence</li>
+                        <li>Connect local actions with global challenges</li>
+                        <li>Nurture leadership and empathy for the planet</li>
+                    </ul>
+                </div>
+    
+                <div class="call-to-action mt-5 text-center">
+                    <h2>Let’s co-create a program that suits your students and supports your vision for a more sustainable future.</h2>
+                    <p class="lead">Contact us today.</p>
+                    <a href="contact.html" class="btn btn-primary btn-lg">Reach Out</a>
+                </div>
+            </div>
+        </section>
+    
+        <style>
+            .custom-title {
+                font-family: "Montserrat", sans-serif;
+                font-weight: 700;
+                color: #2e7d32;
+                font-size: 32px;
+                line-height: 40px;
+                margin-bottom: 20px;
+                text-align: center;
+            }
+    
+            .custom-paragraph {
+                font-family: "Helvetica Neue", sans-serif;
+                font-weight: 400;
+                color: #000;
+                font-size: 18px;
+                line-height: 28px;
+                max-width: 900px;
+                margin: 0 auto 30px auto;
+                text-align: center;
+                letter-spacing: 0.4px;
+            }
+    
+            .custom-list {
+                list-style-type: none;
+                padding: 0;
+                text-align: left;
+                margin: 20px auto;
+                max-width: 900px;
+            }
+    
+            .custom-list li {
+                margin-bottom: 12px;
+                font-size: 17px;
+                font-weight: 500;
+            }
+    
+            .call-to-action h2 {
+                font-size: 28px;
+                color: #388e3c;
+                font-weight: 700;
+            }
+    
+            .call-to-action .lead {
+                font-size: 18px;
+                color: #000;
+                margin-bottom: 20px;
+            }
+    
+            .call-to-action .btn {
+                background-color: #46C0BE;
+                border-color: #46C0BE;
+                font-size: 18px;
+            }
+    
+            .call-to-action .btn:hover {
+                background-color: #388e3c;
+                border-color: #388e3c;
+            }
+    
+            @media (max-width: 768px) {
+                .custom-title {
+                    font-size: 24px;
+                }
+    
+                .custom-paragraph, .custom-list li {
+                    font-size: 16px;
+                    line-height: 24px;
+                }
+    
+                .call-to-action h2 {
+                    font-size: 22px;
+                }
+    
+                .call-to-action .lead {
+                    font-size: 16px;
+                }
+    
+                .call-to-action .btn {
+                    font-size: 16px;
+                }
+            }
+        </style>
+    </main>
+    
     <style>
         /* Dark Green Border Above Footer */
         .footer-wrapper {
@@ -487,54 +571,84 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
-    <footer id="footer" class="footer-area position-relative light-background">
+    <footer>
         <div class="footer-wrapper">
-            <div class="container footer-top footer-area">
-                <div class="row gy-5 justify-content-between" style="margin: 0; width: 100%;">
-                    
-                    <!-- Column 1: Logo Only -->
-                    <div class="col-lg-4 col-md-6 footer-logo text-center px-5">
-                        <div class="logo mb-4">
-                            <a href="index.html">
-                                <img src="assets/img/logo/Rearth.Big.png" alt="REarth Logo" style="width:120px; height:auto;">
-                            </a>
+            <div class="footer-area">
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-xl-4 col-lg-3 col-md-8 col-sm-8">
+                            <div class="single-footer-caption">
+                                <div class="footer-logo">
+                                    <a href="index.html"><img src="assets/img/logo/Rearth.Big.png" alt="Rearth Community Logo - Climate Education Yokohama" style="max-width: 120px; height: auto;"></a>
+                                </div>
+                                <div class="footer-tittle">
+                                    <div class="footer-pera">
+                                        <p>Leading climate education and sustainability initiatives Join us in creating a sustainable future through education and action.</p>
+                                         
+                                        
+                                    </div>
+                                </div>
+                                <div class="footer-social">
+                                    <!-- <a href="https://www.facebook.com/rearthcommunity" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a> -->
+                                    <a href="https://www.instagram.com/rearthcommunity" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                                    <!-- <a href="https://twitter.com/rearthcommunity" aria-label="Twitter"><i class="fab fa-twitter"></i></a> -->
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-3 col-md-4 col-sm-4">
+                            <div class="single-footer-caption">
+                                <div class="footer-tittle">
+                                    <h4>Our Programs</h4>
+                                    <ul>
+                                        <li><a href="#education">Education Programs</a></li>
+                                        <li><a href="#workshops">Awareness Workshops</a></li>
+                                        <li><a href="#community-engagement">Community Engagement</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 col-lg-2 col-md-4 col-sm-4">
+                            <div class="single-footer-caption">
+                                <div class="footer-tittle">
+                                    <h4>Quick Links</h4>
+                                    <ul>
+                                        <li><a href="about.html">About Us</a></li>
+                                        <li><a href="projects.html">Our Projects</a></li>
+                                        <li><a href="eventdetials.html">Events</a></li>
+                                     
+                                        <li><a href="contact.html">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-4">
+                            <div class="single-footer-caption">
+                                <div class="footer-tittle">
+                                    <h4>Contact Information</h4>
+                                    <ul>
+                                        <li><a href="mailto:contact.us@rearthforfuture.org">contact.us@rearthforfuture.org</a></li>
+                                        <li><a href="https://maps.google.com/?q=Midori-ku,Yokohama,Tokyo,Japan" target="_blank">Midori-ku, Yokohama, Tokyo, Japan</a></li>
+                                       
+                                 
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    
-                    <!-- Column 2: Social Media Links -->
-                    <div class="col-lg-4 col-md-6 footer-about text-center px-5">
-     
-                        <div class="footer-contact mt-3">
-                            <h4>Address:</h4>
-        
-                            <p>Yokohama-shi,</p>
-                            <p>Japan 226-0016</p>
-                            <p><strong>Email:</strong> <span>contact.rearth@gmail.com</span></p>
+                </div>
+                <div class="footer-bottom-area">
+                    <div class="container">
+                        <div class="footer-border">
+                            <div class="row d-flex align-items-center">
+                                <div class="col-xl-12">
+                                    <div class="footer-copy-right text-center">
+                                        <!-- <p>
+                                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> Rearth Community - Climate Education Center in Yokohama, Tokyo, Japan. All rights reserved.
+                                        </p>
+                                    </div> -->
+                                </div>
+                            </div>
                         </div>
-                        <div class="social-links footer-social d-flex justify-content-center mt-4">
-                            <a href="https://www.instagram.com/rearthcommunity" target="_blank" class="me-3">
-                                <i class="fab fa-instagram" style="color: #fff;"></i>
-                            </a>
-                            <a href="https://whatsapp.com/channel/0029Vaix7dJ0G0Xihuesov1M" target="_blank" class="me-3">
-                                <i class="fab fa-whatsapp" style="color: #fff;"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/bageshree-katneshwarkar-phd-07956a50/" target="_blank">
-                                <i class="fab fa-linkedin" style="color: #fff;"></i>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <!-- Column 3: Useful Links -->
-                    <div class="col-lg-4 col-md-3 footer-links px-5">
-                        <h4>Useful Links</h4>
-                        <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="resources.html">Resources</a></li>
-                            <li><a href="events.html">Events</a></li>
-                            <li><a href="contact.html">Contact Us</a></li>
-                            <li><a href="#">Projects</a></li>
-                        </ul>
                     </div>
                 </div>
             </div>
@@ -543,67 +657,127 @@
     
     <style>
         .footer-wrapper {
-            background: linear-gradient(90deg, #6fd66c 0%, #48c1b9 100%);
-            padding: 100px 0;
-            width: 100%;
+            background: linear-gradient(135deg, #46C0BE, #6DD56F);
+            padding: 20px 0 5px 0;
+            border-top: 10px solid #2e7d32;
         }
     
-        .footer-area p, .footer-area a {
-            color: #fff;
-            font-size: 20px;
-            line-height: 2.2;
-            text-decoration: none;
-        }
-    
-        .footer-area .footer-links h4,
-        .footer-area .footer-newsletter h4 {
-            color: #fff;
-            font-size: 24px;
-            margin-bottom: 30px;
-            font-weight: 700;
-            font-family: "Montserrat", sans-serif;
-        }
-    
-        .footer-area .footer-links ul {
-            list-style: none;
+        .footer-area {
             padding: 0;
         }
     
-        .footer-area .footer-links ul li {
+        .single-footer-caption {
             margin-bottom: 15px;
         }
     
-        .footer-area .footer-links ul li a:hover {
-            text-decoration: underline;
+        .footer-logo {
+            margin-bottom: 20px;
+        }
+    
+        .footer-logo img {
+            max-width: 120px !important;
+            height: auto !important;
+            transition: transform 0.3s ease;
+        }
+    
+        .footer-logo img:hover {
+            transform: scale(1.05);
+        }
+    
+        @media (max-width: 768px) {
+            .footer-logo img {
+                max-width: 100px !important;
+            }
         }
     
         .footer-social a {
-            background: rgba(255, 254, 254, 0.1);
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            font-size: 18px;
+            margin-right: 5px;
+        }
+    
+        .footer-bottom-area {
+            padding: 5px 0;
+        }
+    
+        .footer-tittle ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+    
+        .footer-tittle ul li {
+            margin-bottom: 15px;
+        }
+    
+        .footer-tittle ul li a {
+            color: #ffffff !important;
+            font-size: 18px;
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 5px 0;
+        }
+    
+        .footer-tittle ul li a:hover {
+            color: #2E7D32 !important;
+            padding-left: 5px;
+        }
+    
+        .footer-tittle h4 {
+            color: #ffffff;
             font-size: 24px;
-            line-height: 60px;
-            text-align: center;
-            display: inline-block;
-            transition: background 0.3s, color 0.3s;
-            margin: 0 10px;
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 15px;
         }
     
-        .footer-social a:hover {
-            background: #09cc7f;
+        .footer-tittle h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background: #2E7D32;
         }
     
-        .footer-social a i {
-            transition: transform 0.4s;
+        .footer-pera p {
+            color: #ffffff;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
         }
     
-        .footer-social a:hover i {
-            transform: rotate(360deg);
+        .footer-copy-right p {
+            color: #ffffff;
+            font-size: 18px;
+            margin: 0;
+            padding: 10px 0;
+        }
+    
+        @media (max-width: 768px) {
+            .footer-tittle ul li a {
+                font-size: 16px;
+            }
+            
+            .footer-tittle h4 {
+                font-size: 20px;
+            }
+    
+            .footer-pera p {
+                font-size: 16px;
+            }
+    
+            .footer-copy-right p {
+                font-size: 16px;
+            }
         }
     </style>
-    
-    
+      <!-- Scroll Up -->
+     
         
           <!-- Scroll Up -->
           <div id="back-top" >
@@ -653,6 +827,86 @@
         <script src="./assets/js/plugins.js"></script>
         <script src="./assets/js/main.js"></script>
         
+        <!-- Remove Google Translate element and scripts -->
+        <script>
+            // Remove translation related JavaScript
+            document.addEventListener('DOMContentLoaded', function() {
+                const translateElements = document.querySelectorAll('#google_translate_element, .translate-btn, .translation-widget');
+                translateElements.forEach(el => {
+                    if (el) el.remove();
+                });
+            });
+        </script>
+    
+        <!-- Main JS -->
+        <script src="assets/js/main.js"></script>
+        
+        <!-- Chatbot Script -->
+        <script src="assets/js/chatbot.js"></script>
+    
+        <!-- Google Cloud Translation API -->
+        <script>
+            // Add translation button to navigation
+            document.addEventListener('DOMContentLoaded', function() {
+                const nav = document.querySelector('.main-menu');
+                if (nav) {
+                    // Remove translation button code
+                }
+            });
+    
+            // Translation function
+            async function translatePage() {
+                try {
+                    const response = await fetch('https://translation.googleapis.com/language/translate/v2', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'Authorization': 'Bearer YOUR_API_KEY' // Replace with your API key
+                        },
+                        body: JSON.stringify({
+                            q: document.body.innerText,
+                            target: 'ja',
+                            source: 'en'
+                        })
+                    });
+    
+                    const data = await response.json();
+                    if (data.data && data.data.translations) {
+                        const translation = data.data.translations[0].translatedText;
+                        document.body.innerHTML = translation;
+                    }
+                } catch (error) {
+                    console.error('Translation error:', error);
+                    alert('Translation failed. Please try again later.');
+                }
+            }
+        </script>
+    
+        <script>
+            function translatePage() {
+                const select = document.querySelector('.goog-te-combo');
+                if (select) {
+                    select.value = 'ja';
+                    select.dispatchEvent(new Event('change'));
+                }
+            }
+    
+            // Add translation button to mobile menu
+            document.addEventListener('DOMContentLoaded', function() {
+                const mobileMenu = document.querySelector('.mobile-menu-content ul');
+                if (mobileMenu) {
+                    const mobileTranslationBtn = document.createElement('li');
+                    mobileTranslationBtn.innerHTML = `
+                        <a href="#" class="translation-btn" onclick="translatePage()">
+                            <i class="fas fa-flag"></i>
+                            <span>日本語</span>
+                        </a>
+                    `;
+                    mobileMenu.appendChild(mobileTranslationBtn);
+                }
+            });
+        </script>
+    
+        
     </body>
     </html>
-    
